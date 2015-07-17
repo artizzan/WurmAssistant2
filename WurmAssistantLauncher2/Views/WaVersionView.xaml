@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Aldurcraft.WurmAssistantLauncher2.Views.WaVersionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="http://schemas.awesomium.com/winfx"
+             mc:Ignorable="d" 
+             Loaded="WaVersionView_OnLoaded">
+    <Grid Background="#FFE5E5E5" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <controls:WebControl Grid.Column="0" Margin="3" Name="WebCtrl" />
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Button Name="LaunchButton" Grid.Row="1" Content="Launch!" Margin="3" Command="{Binding LaunchCommand}" />
+            <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <StackPanel Name="UpdatePanel">
+                        <ProgressBar IsIndeterminate="True" Height="8" BorderThickness="0"
+                                     Visibility="{Binding CheckingVersion, Converter={StaticResource BoolToVisibilityConverter}}"></ProgressBar>
+                        <TextBlock Visibility="{Binding AvailabilityStatus, Converter={StaticResource StringNotEmptyToVisibilityConverter}}"
+                                   HorizontalAlignment="Center" TextWrapping="Wrap"
+                               Text="{Binding AvailabilityStatus}"></TextBlock>
+                        <Border CornerRadius="3" BorderThickness="1" Margin="3">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFEEF900" Offset="0"/>
+                                    <GradientStop Color="#FFFFD100" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" Text="Update available!" Margin="3" 
+                                           Visibility="{Binding NewVersionAvailable, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                <Button Content="Install" Margin="3" 
+                                        IsEnabled="{Binding UpdateInProgress, Converter={StaticResource NegativeBoolConverter}}"
+                                        Command="{Binding UpdateCommand}"
+                                        Visibility="{Binding NewVersionAvailable, Converter={StaticResource BoolToVisibilityConverter}}">
+                                </Button>
+                                <ProgressBar Margin="3" Height="20" 
+                                             Visibility="{Binding UpdateInProgress, Converter={StaticResource BoolToVisibilityConverter}}"
+                                             Minimum="0" Maximum="1000" 
+                                             Value="{Binding Path=UpdateProgress}"
+                                             IsIndeterminate="{Binding UpdateProgressIndeterminate}"></ProgressBar>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" 
+                                           Margin="3" 
+                                           Text="{Binding Path=UpdateStatus}" 
+                                           Visibility="{Binding UpdateStatus, Converter={StaticResource StringNotEmptyToVisibilityConverter}}"></TextBlock>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <Border CornerRadius="3" BorderBrush="Gray" Background="LightGray" BorderThickness="1" Margin="3">
+                        <StackPanel Name="BackupPanel">
+                            <TextBlock TextWrapping="Wrap" Text="{Binding LastBackup}" Margin="3"></TextBlock>
+                            <Button Content="{Binding CreateBackupStatus}" Margin="3" Command="{Binding CreateBackupCommand}"></Button>
+                            <Button Content="Manage backups" Margin="3" Command="{Binding ManageBackupsCommand}"></Button>
+                            <Button Content="Import WA settings" Margin="3" Command="{Binding ImportSettingsCommand}"></Button>
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="3" BorderBrush="Gray" Background="LightGray" BorderThickness="1" Margin="3">
+                        <StackPanel Name="ReinstallPanel">
+                            <Button Content="Reinstall" Margin="3" Command="{Binding ReinstallCommand}"></Button>
+                        </StackPanel>
+                    </Border>
+                    <Border CornerRadius="3" BorderBrush="Gray" Background="LightBlue" BorderThickness="1" Margin="3">
+                        <StackPanel Name="UpdaterSettingsPanel">
+                            <CheckBox Content="Notify on new version" IsChecked="{Binding Path=Settings.Data.NotifyOnNewVersion, Mode=TwoWay}" Margin="3"></CheckBox>
+                            <CheckBox Content="Autoupdate to latest version" IsChecked="{Binding Path=Settings.Data.AutoUpdate, Mode=TwoWay}" Margin="3"></CheckBox>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,3 @@
+﻿yes it is, needs namespace requalifications to be useful again
+
+skip in build

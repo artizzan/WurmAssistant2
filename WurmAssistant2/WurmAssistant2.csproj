@@ -1,0 +1,1053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61F1FEBB-E029-421E-AC7B-2AD690481263}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aldurcraft.WurmOnline.WurmAssistant2</RootNamespace>
+    <AssemblyName>WurmAssistant2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>ftp://ftp.aldurcraft.com/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://aldurcraft.com/WurmAssistant/Deploy/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E93F59647BFA8F8363B5072152A6042EE4BBDACF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WurmAssistant2_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WurmAssistantIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stable|AnyCPU' ">
+    <OutputPath>bin\Stable\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|AnyCPU'">
+    <OutputPath>bin\Beta\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DbLinq, Version=0.20.0.0, Culture=neutral, PublicKeyToken=61e015a67077348b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\DbLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="DbLinq.Sqlite, Version=0.20.0.0, Culture=neutral, PublicKeyToken=61e015a67077348b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\DbLinq.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.16\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.82.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.82.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.0.19\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugWindows\DebugMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugWindows\DebugMain.Designer.cs">
+      <DependentUpon>DebugMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\AssistantEngine.cs" />
+    <Compile Include="Engine\ConfigWizard\FormConfigWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\ConfigWizard\FormConfigWizard.Designer.cs">
+      <DependentUpon>FormConfigWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\ConfigWizard\TabControlNoTabs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engine\FormChangelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormChangelog.Designer.cs">
+      <DependentUpon>FormChangelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\ModuleManager\FormModuleManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\ModuleManager\FormModuleManager.Designer.cs">
+      <DependentUpon>FormModuleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\ModuleManager\ModuleManager.cs" />
+    <Compile Include="Engine\FormCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\FormCredits.Designer.cs">
+      <DependentUpon>FormCredits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\OtherManager\FormOtherManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\OtherManager\FormOtherManager.Designer.cs">
+      <DependentUpon>FormOtherManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\OtherManager\OtherManager.cs" />
+    <Compile Include="Engine\OtherManager\OtherTool.cs" />
+    <Compile Include="Modules\Triggers\SoundTriggersImporter.cs" />
+    <Compile Include="Wa2SpellBook.cs" />
+    <Compile Include="Engine\TrayContextMenuManager.cs" />
+    <Compile Include="FormUncaughtException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUncaughtException.Designer.cs">
+      <DependentUpon>FormUncaughtException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormCalendar.Designer.cs">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormChooseSeasons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Calendar\FormChooseSeasons.Designer.cs">
+      <DependentUpon>FormChooseSeasons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Calendar\ModuleCalendar.cs" />
+    <Compile Include="Modules\Granger\Advisor\BreedingAdvisor.cs" />
+    <Compile Include="Modules\Granger\Advisor\BreedingEvaluator.cs" />
+    <Compile Include="Modules\Granger\Advisor\Default\BreedingEvaluatorDefaultConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\Advisor\Default\BreedingEvaluatorDefaultConfig.Designer.cs">
+      <DependentUpon>BreedingEvaluatorDefaultConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\Advisor\Disabled\DisabledBreedingEvaluator.cs" />
+    <Compile Include="Modules\Granger\Advisor\Default\DefaultBreedingEvaluator.cs" />
+    <Compile Include="Modules\Granger\Exceptions.cs" />
+    <Compile Include="Modules\Granger\FormChooseHerd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormChooseHerd.Designer.cs">
+      <DependentUpon>FormChooseHerd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormEditComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormEditComments.Designer.cs">
+      <DependentUpon>FormEditComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerGeneralOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerGeneralOptions.Designer.cs">
+      <DependentUpon>FormGrangerGeneralOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerNewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerNewInfo.Designer.cs">
+      <DependentUpon>FormGrangerNewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\ImportExport.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\GrangerDebugLogger.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\GrangerHelpers.cs" />
+    <Compile Include="Modules\Granger\HorseEdit\FormHorseViewEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\HorseEdit\FormHorseViewEdit.Designer.cs">
+      <DependentUpon>FormHorseViewEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\Horse.cs" />
+    <Compile Include="Modules\Granger\FormChoosePlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormChoosePlayers.Designer.cs">
+      <DependentUpon>FormChoosePlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\DBLayer\GrangerContext.cs" />
+    <Compile Include="Modules\Granger\DBLayer\HorseEntity.cs" />
+    <Compile Include="Modules\Granger\DBLayer\TraitValueEntity.cs" />
+    <Compile Include="Modules\Granger\FormGrangerImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerImportExport.Designer.cs">
+      <DependentUpon>FormGrangerImportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerMain.Designer.cs">
+      <DependentUpon>FormGrangerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormGrangerOptions.Designer.cs">
+      <DependentUpon>FormGrangerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdMerge.Designer.cs">
+      <DependentUpon>FormHerdMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\FormHerdName.Designer.cs">
+      <DependentUpon>FormHerdName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\GrangerSettings.cs" />
+    <Compile Include="Modules\Granger\DBLayer\HerdEntity.cs" />
+    <Compile Include="Modules\Granger\Enums.cs" />
+    <Compile Include="Modules\Granger\HorseEdit\HorseViewEditOpType.cs" />
+    <Compile Include="Modules\Granger\HorseTrait.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\HorseProcessor.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\HorseUpdatesManager.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\LogFeedManager.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\PlayerManager.cs" />
+    <Compile Include="Modules\Granger\LogFeedManager\WurmEventParser.cs" />
+    <Compile Include="Modules\Granger\ModuleGranger.cs" />
+    <Compile Include="Modules\Granger\DBLayer\Schema.cs" />
+    <Compile Include="Modules\Granger\TraitViewManager.cs" />
+    <Compile Include="Modules\Granger\ValuePreset\FormEditValuePresets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\FormEditValuePresets.Designer.cs">
+      <DependentUpon>FormEditValuePresets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\FormEditValuePresetsNewNameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\FormEditValuePresetsNewNameDialog.Designer.cs">
+      <DependentUpon>FormEditValuePresetsNewNameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\TraitValuator.cs" />
+    <Compile Include="Modules\Granger\UCGrangerHerdList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\UCGrangerHerdList.Designer.cs">
+      <DependentUpon>UCGrangerHerdList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\UCGrangerHorseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\UCGrangerHorseList.Designer.cs">
+      <DependentUpon>UCGrangerHorseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\UCGrangerTraitView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\UCGrangerTraitView.Designer.cs">
+      <DependentUpon>UCGrangerTraitView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\TraitValueMap.cs" />
+    <Compile Include="Modules\Granger\ValuePreset\UCGrangerTraitValueEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Granger\ValuePreset\UCGrangerTraitValueEdit.Designer.cs">
+      <DependentUpon>UCGrangerTraitValueEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LogSearcher\ModuleLogSearcher.cs" />
+    <Compile Include="Modules\Module.cs" />
+    <Compile Include="Modules\ModuleTest\TestModuleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ModuleTest\TestModuleUI.Designer.cs">
+      <DependentUpon>TestModuleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ModuleTest\TestModule.cs" />
+    <Compile Include="Modules\Triggers\EditTrigger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\EditTrigger.Designer.cs">
+      <DependentUpon>EditTrigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\FormChoosePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\FormChoosePlayer.Designer.cs">
+      <DependentUpon>FormChoosePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\FormTriggersMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\FormTriggersMain.Designer.cs">
+      <DependentUpon>FormTriggersMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\LogQueueParseHelper.cs" />
+    <Compile Include="Modules\Triggers\ModuleTriggers.cs" />
+    <Compile Include="Modules\Triggers\FormTriggersConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\FormTriggersConfig.Designer.cs">
+      <DependentUpon>FormTriggersConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\PlaylistEntry.cs" />
+    <Compile Include="Modules\Triggers\PlaylistEntryCacheable.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\ActionQueueTriggerConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\ActionQueueTriggerConfig.Designer.cs">
+      <DependentUpon>ActionQueueTriggerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\RegexTriggerConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\RegexTriggerConfig.Designer.cs">
+      <DependentUpon>RegexTriggerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\SimpleConditionTriggerBaseConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\SimpleConditionTriggerBaseConfig.Designer.cs">
+      <DependentUpon>SimpleConditionTriggerBaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\ITrigger.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\SimpleTrigger.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\RegexTrigger.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\ActionQueueTrigger.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\SimpleConditionTriggerBase.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerAbstract.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerBaseConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerBaseConfig.Designer.cs">
+      <DependentUpon>TriggerBaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerChoice.Designer.cs">
+      <DependentUpon>TriggerChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerException.cs" />
+    <Compile Include="Modules\Triggers\TriggerManager.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\TriggerBase.cs" />
+    <Compile Include="Modules\Triggers\TriggersManager\UcPlayerTriggersController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Triggers\TriggersManager\UcPlayerTriggersController.Designer.cs">
+      <DependentUpon>UcPlayerTriggersController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Alignment\AlignmentTimerOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Alignment\AlignmentTimerOptions.Designer.cs">
+      <DependentUpon>AlignmentTimerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Alignment\AlignmentTimer.cs" />
+    <Compile Include="Modules\Timers\Alignment\FormVerifyAlignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Alignment\FormVerifyAlignment.Designer.cs">
+      <DependentUpon>FormVerifyAlignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Custom\CustomTimersManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Custom\CustomTimersManager.Designer.cs">
+      <DependentUpon>CustomTimersManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Custom\CustomTimersManagerEditWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Custom\CustomTimersManagerEditWindow.Designer.cs">
+      <DependentUpon>CustomTimersManagerEditWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormChooseTimers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormChooseTimers.Designer.cs">
+      <DependentUpon>FormChooseTimers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimerGlobalSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimerGlobalSettings.Designer.cs">
+      <DependentUpon>FormTimerGlobalSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\JunkSale\JunkSaleTimer.cs" />
+    <Compile Include="Modules\Timers\MeditPath\FormChooseQTimerManually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\MeditPath\FormChooseQTimerManually.Designer.cs">
+      <DependentUpon>FormChooseQTimerManually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Meditation\MeditationTimerOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Meditation\MeditationTimerOptions.Designer.cs">
+      <DependentUpon>MeditationTimerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimers.Designer.cs">
+      <DependentUpon>FormTimers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimerSettingsDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\FormTimerSettingsDefault.Designer.cs">
+      <DependentUpon>FormTimerSettingsDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\ModuleTimers.cs" />
+    <Compile Include="Modules\Timers\CooldownHandler.cs" />
+    <Compile Include="Modules\Timers\PlayerTimersGroup.cs" />
+    <Compile Include="Modules\Timers\MeditPath\MeditPathTimerOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\MeditPath\MeditPathTimerOptions.Designer.cs">
+      <DependentUpon>MeditPathTimerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\MeditPath\MeditPathTimer.cs" />
+    <Compile Include="Modules\Timers\Prayer\PrayerTimer.cs" />
+    <Compile Include="Modules\Timers\Prayer\PrayerTimerOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\Prayer\PrayerTimerOptions.Designer.cs">
+      <DependentUpon>PrayerTimerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\Sermon\SermonTimer.cs" />
+    <Compile Include="Modules\Timers\Test\TestTimer.cs" />
+    <Compile Include="Modules\Timers\UControlPlayerLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\UControlPlayerLayout.Designer.cs">
+      <DependentUpon>UControlPlayerLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\UControlTimerDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Timers\UControlTimerDisplay.Designer.cs">
+      <DependentUpon>UControlTimerDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Timers\WurmTimer.cs" />
+    <Compile Include="Modules\Timers\Custom\CustomTimer.cs" />
+    <Compile Include="Modules\Timers\Meditation\MeditationTimer.cs" />
+    <Compile Include="Modules\Backpack\FormBackpack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Backpack\FormBackpack.Designer.cs">
+      <DependentUpon>FormBackpack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Backpack\ModuleBackpack.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Engine\WurmAssistant2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\WurmAssistant2.Designer.cs">
+      <DependentUpon>WurmAssistant2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\ModuleManager\UContolListModules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Engine\ModuleManager\UContolListModules.Designer.cs">
+      <DependentUpon>UContolListModules.cs</DependentUpon>
+    </Compile>
+    <Content Include="CHANGELOG_NEWADDS.txt" />
+    <Content Include="ikpMP3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Backpack\backpack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Granger\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Triggers\QueueSoundMod.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Timers\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\beer.png" />
+    <Content Include="Modules\Triggers\triggersicon.png" />
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\transp_placeholder.png" />
+    <None Include="Resources\lampsFlow.png" />
+    <Content Include="WurmAssistantIcon.ico" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DeleteRed_small.png" />
+    <EmbeddedResource Include="DebugWindows\DebugMain.resx">
+      <DependentUpon>DebugMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\ConfigWizard\FormConfigWizard.resx">
+      <DependentUpon>FormConfigWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormChangelog.resx">
+      <DependentUpon>FormChangelog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormCredits.resx">
+      <DependentUpon>FormCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\ModuleManager\FormModuleManager.resx">
+      <DependentUpon>FormModuleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\ModuleManager\UContolListModules.resx">
+      <DependentUpon>UContolListModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\OtherManager\FormOtherManager.resx">
+      <DependentUpon>FormOtherManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUncaughtException.resx">
+      <DependentUpon>FormUncaughtException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Calendar\FormCalendar.resx">
+      <DependentUpon>FormCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Calendar\FormChooseSeasons.resx">
+      <DependentUpon>FormChooseSeasons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\Advisor\Default\BreedingEvaluatorDefaultConfig.resx">
+      <DependentUpon>BreedingEvaluatorDefaultConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormChooseHerd.resx">
+      <DependentUpon>FormChooseHerd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormChoosePlayers.resx">
+      <DependentUpon>FormChoosePlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormEditComments.resx">
+      <DependentUpon>FormEditComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerGeneralOptions.resx">
+      <DependentUpon>FormGrangerGeneralOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerImportExport.resx">
+      <DependentUpon>FormGrangerImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerMain.resx">
+      <DependentUpon>FormGrangerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerNewInfo.resx">
+      <DependentUpon>FormGrangerNewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormGrangerOptions.resx">
+      <DependentUpon>FormGrangerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormHerdMerge.resx">
+      <DependentUpon>FormHerdMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\FormHerdName.resx">
+      <DependentUpon>FormHerdName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\HorseEdit\FormHorseViewEdit.resx">
+      <DependentUpon>FormHorseViewEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\UCGrangerHerdList.resx">
+      <DependentUpon>UCGrangerHerdList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\UCGrangerHorseList.resx">
+      <DependentUpon>UCGrangerHorseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\UCGrangerTraitView.resx">
+      <DependentUpon>UCGrangerTraitView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\ValuePreset\FormEditValuePresets.resx">
+      <DependentUpon>FormEditValuePresets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\ValuePreset\FormEditValuePresetsNewNameDialog.resx">
+      <DependentUpon>FormEditValuePresetsNewNameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Granger\ValuePreset\UCGrangerTraitValueEdit.resx">
+      <DependentUpon>UCGrangerTraitValueEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ModuleTest\TestModuleUI.resx">
+      <DependentUpon>TestModuleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\EditTrigger.resx">
+      <DependentUpon>EditTrigger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\FormChoosePlayer.resx">
+      <DependentUpon>FormChoosePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\FormTriggersMain.resx">
+      <DependentUpon>FormTriggersMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\FormTriggersConfig.resx">
+      <DependentUpon>FormTriggersConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\ActionQueueTriggerConfig.resx">
+      <DependentUpon>ActionQueueTriggerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\RegexTriggerConfig.resx">
+      <DependentUpon>RegexTriggerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\SimpleConditionTriggerBaseConfig.resx">
+      <DependentUpon>SimpleConditionTriggerBaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\TriggerBaseConfig.resx">
+      <DependentUpon>TriggerBaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\TriggerChoice.resx">
+      <DependentUpon>TriggerChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Triggers\TriggersManager\UcPlayerTriggersController.resx">
+      <DependentUpon>UcPlayerTriggersController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Alignment\AlignmentTimerOptions.resx">
+      <DependentUpon>AlignmentTimerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Alignment\FormVerifyAlignment.resx">
+      <DependentUpon>FormVerifyAlignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Custom\CustomTimersManager.resx">
+      <DependentUpon>CustomTimersManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Custom\CustomTimersManagerEditWindow.resx">
+      <DependentUpon>CustomTimersManagerEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormChooseTimers.resx">
+      <DependentUpon>FormChooseTimers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormTimerGlobalSettings.resx">
+      <DependentUpon>FormTimerGlobalSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\MeditPath\FormChooseQTimerManually.resx">
+      <DependentUpon>FormChooseQTimerManually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Meditation\MeditationTimerOptions.resx">
+      <DependentUpon>MeditationTimerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormTimers.resx">
+      <DependentUpon>FormTimers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\FormTimerSettingsDefault.resx">
+      <DependentUpon>FormTimerSettingsDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\Prayer\PrayerTimerOptions.resx">
+      <DependentUpon>PrayerTimerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\UControlPlayerLayout.resx">
+      <DependentUpon>UControlPlayerLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\UControlTimerDisplay.resx">
+      <DependentUpon>UControlTimerDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Timers\MeditPath\MeditPathTimerOptions.resx">
+      <DependentUpon>MeditPathTimerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Backpack\FormBackpack.resx">
+      <DependentUpon>FormBackpack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Engine\WurmAssistant2.resx">
+      <DependentUpon>WurmAssistant2.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Modules\Triggers\defQueueSound.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WurmAssistant2_1_TemporaryKey.pfx" />
+    <None Include="WurmAssistant2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WurmAssistantIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WurmAssistantIcon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\irrklang_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paypal_donate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundDisabledSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoundEnabledSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WurmAssistantImage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CHANGELOG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Calendar\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Calendar\SeasonDataV2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Guidelines.txt" />
+    <Content Include="Modules\LogSearcher\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\ModuleTest\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Modules\Triggers\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Modules\Triggers\soundnotifyicon.ico" />
+    <None Include="Resources\close_icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HSLColor\HSLColor\HSLColor.csproj">
+      <Project>{a0582342-9c11-42e4-b8b3-9a2ff003ce57}</Project>
+      <Name>HSLColor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabelAutowrap\LabelAutowrap.csproj">
+      <Project>{db1da2f1-9ec8-4d87-b82e-230e1f4cb788}</Project>
+      <Name>LabelAutowrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListViewNF\ListViewNF.csproj">
+      <Project>{bd067afd-a43a-43b7-a5db-4046b225d2fe}</Project>
+      <Name>ListViewNF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectListView\ObjectListView\ObjectListView2010.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>ObjectListView2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeSpanInput\TimeSpanInput.csproj">
+      <Project>{cf27f44e-bb28-46f1-abc7-90c332f7a880}</Project>
+      <Name>TimeSpanInput</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{05f47f92-65ab-4067-bea7-603bd5fb96f1}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WurmAssistantMutexBarrier\WurmAssistantMutexBarrier.csproj">
+      <Project>{47400663-bb43-4963-90f7-935a90d0f0a0}</Project>
+      <Name>WurmAssistantMutexBarrier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WurmUtils\WurmUtils.csproj">
+      <Project>{ad7b3d41-714a-4905-a0e8-1cec609684e7}</Project>
+      <Name>WurmUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Aldurcraft_Utility.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Aldurcraft_WinFormsControls_TimeSpanInput.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Aldurcraft_WurmOnline_WurmUtils.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DbLinq.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DbLinq.Sqlite.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HSLColor.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="LabelAutowrap.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ListViewNF.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="NotificationWindow.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ObjectListView.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.SQLite.Linq.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.SQLite.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="WurmAssistant2.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.5\tools\Microsoft.Bcl.Build.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)\PublishRobot\PublishRobot\bin\Release\PublishRobot.exe Command::VersionUpdate Command::UpdateChangelog BuildConfig::$(ConfigurationName) ProjDirRoot::$(ProjectDir) OutputDir::$(TargetDir)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)\PublishRobot\PublishRobot\bin\Release\PublishRobot.exe Command::Publish BuildConfig::$(ConfigurationName) ProjDirRoot::$(ProjectDir) OutputDir::$(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

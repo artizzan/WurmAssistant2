@@ -1,0 +1,79 @@
+﻿=== This should be moved to github wiki! ===
+
+Guidelines for adding new modules.
+
+First of all, I assume you have cloned/forked the github project. 
+Please work on your own repo and while working, avoid modifying/calling anything 
+beyond what this spec covers and what you have been explicitly allowed to edit.
+This is to avoid merge conflicts. Merge should be performed only after module is finished.
+
+Create a new dir under Modules with an appropriate name describing your module.
+Create a class within that dir, that is named like this: ModuleMyCoolName.
+Make this class inherit from AssistantModule.
+
+Implementing your module class:
+
+- set this class namespace to WurmAssistant2.ModuleNS.YourCoolName
+
+- add a small icon file (for example icon.png) to represent this module on main interface,
+  drop the file to your module dir and set it's property as Content.
+
+! avoid using your module constructor, use overriden Initialize method instead.
+
+- override Initialize, make sure to call base.Initialize which will create properties for file paths. 
+  This method is called when module is added by user or created on WA startup and serves as constructor.
+
+- override OpenUI, this should open module interface when user clicks the button.
+
+- override Update, this is called every 100ms by Assistant engine and should be used to for update logic, 
+  each call is running on main synchronization context
+
+- override Stop, this is called when user decides to disable the module or if assistant is closed,
+  NOTE: user disabling module causes module to be disposed. Should user re-enable it later, it will be a fresh instance,
+  most other common things to do here: unsubscribe from log feeds, dispose any unmanaged resources, save settings
+
+Implementing your module descriptor:
+
+Descriptors are used to create a list of modules available for the user.
+In the static constructor of AssistantModuleDescriptors please add another list entry providing following arguments:
+	typeof(yourModule),
+	your module name for presentation,
+	your module short description,
+	your module directory name (as described earlier, just the top dir name),
+	icon file name (just the name + extension, no dir path assuming you have put the icon file in your module dir)
+
+Further notes:
+
+You should use protected AssistantModule members:
+ModuleDataDir (this dir can be used to store any persistent information, such as settings)
+ModuleAssetDir (this dir will hold any files you add to your module solution directory as Content)
+
+Buttons are 50x50 pixels.
+
+Your modules can use common assistant functionality through API in following namespaces:
+WurmState (please do not use methods to modify Wurm config files, this must be done with assistant config wizard)
+WurmLogsManager
+WurmLogsManager.LogSearcher
+SoundEngine
+PopupNotify
+Helpers
+
+Some library methods are Async, use C# 5.0 async-await pattern to handle them.
+
+Please be aware your module will run synchronously with the rest of wurm assistant. 
+If it blocks or goes into infinite loop, entire program will hang.
+If you want to do computation-heavy work, please either run it on Task threadpool 
+or run entire module on separate thread using Module class to marshall communication.
+Libraries listed above should be thread-safe whenever declared in documentation, 
+but there are no warranties.
+
+Unhandled UI exceptions may crash entire Assistant. Please be aggressive with try-catch
+and use LoggingEngine.Logger to log them.
+Use logger following methods: LogDebug, LogInfo, LogError, LogCritical.
+Parameters are: 
+	text message to log, 
+	object where this happened, or a string describing code location, you can use "this" keyword
+	captured exception object (message, source and trace will be auto-appended to log file)
+
+Any further questions or issues to fix: ask Aldur
+Aldurro@gmail.com or WurmAssistant@gmail.com

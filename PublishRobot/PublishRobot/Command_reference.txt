@@ -1,0 +1,43 @@
+﻿--Args format:
+[name]::[value]
+names and values are not case sensitive
+
+Command
+--multiple will be executed in sequence
+::VersionUpdate
+::BetaPublish
+::StablePublish
+::UpdateChangelog
+
+BuildConfig
+::Debug
+::Release
+::Publish
+
+ProjDirRoot
+OutputDir
+TargetBetaDir
+TargetPublishDir
+
+
+currently used:
+
+PRE-BUILD:
+
+$(SolutionDir)\PublishRobot\PublishRobot\bin\Release\PublishRobot.exe 
+Command::VersionUpdate
+Command::UpdateChangelog
+BuildConfig::$(ConfigurationName) 
+ProjDirRoot::$(ProjectDir) 
+OutputDir::$(TargetDir)
+
+POST-BUILD:
+
+$(SolutionDir)\PublishRobot\PublishRobot\bin\Release\PublishRobot.exe 
+Command::BetaPublish
+Command::StablePublish
+BuildConfig::$(ConfigurationName) 
+ProjDirRoot::$(ProjectDir) 
+OutputDir::$(TargetDir)
+TargetBetaDir::$(SolutionDir)\_releasePublish\Published\WurmAssistant\Beta
+TargetPublishDir::$(SolutionDir)\_releasePublish\Published\WurmAssistant 

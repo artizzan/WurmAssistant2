@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:Aldurcraft.Spellbook40.WPF.Converters;assembly=Aldurcraft.Spellbook40.WPF">
+    <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    <converters:ValueNotNullToVisibilityConverter x:Key="ValueNotNullToVisibilityConverter" />
+    <converters:NegativeBoolConverter x:Key="NegativeBoolConverter" />
+    <converters:StringNotEmptyToVisibilityConverter x:Key="StringNotEmptyToVisibilityConverter"></converters:StringNotEmptyToVisibilityConverter>
+</ResourceDictionary>

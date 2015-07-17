@@ -1,0 +1,22 @@
+the root is config, which is saved for each player in it's folder:
+\players\name\config.txt (text file with single config name inside)
+
+config is here:
+\configs\default\gamesettings.txt
+it describes source for additional configuration files
+	
+custim_timer_source=1			//where timers are located: 0 = profilefolder 1 = playerfolder
+exec_source=0				//where autoexec is located: 0 = profilefolder 1 = playerfolder
+key_bindings_source=0			//where keybindings are located: 0 = profilefolder 1 = playerfolder
+auto_run_source=0			//where autorun is located: 0=profilefolder 1=playerfolder
+
+irc_log_rotation=2			//IRC message logging, 0=nolog, 1=onefile, 2=monthly, 3=daily
+other_log_rotation=2			//other message logging, 0=nolog, 1=onefile, 2=monthly, 3=daily
+event_log_rotation=2			//event message logging, 0=nolog, 1=onefile, 2=monthly, 3=daily
+
+skillgain_minimum=4			//skillgain tab updates, 0=never 1=perint 2=per0.1 3=per0.01 4=per0.001 5=always
+
+skillgain_no_alignment=false		//hide alignment updates
+skillgain_no_favor=true			//hide favor updates
+save_skills_on_quit=true		//save skils on exit (skill dumps)
+setting_timestamps=true			//timestamp messages

@@ -1,0 +1,159 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:custom="http://schemas.awesomium.com/winfx" 
+    xmlns:local="clr-namespace:WurmAssistantLauncher2"
+    xmlns:views1="clr-namespace:Aldurcraft.WurmAssistantLauncher2.Views"
+    xmlns:tb="http://www.hardcodet.net/taskbar"
+    x:Class="Aldurcraft.WurmAssistantLauncher2.Views.MainWindow"
+    Title="Wurm Assistant Launcher" 
+    Height="583" 
+    Width="818"
+    Loaded="MainWindow_OnLoaded"
+    Closed="MainWindow_OnClosed"
+    Icon="/Resources/AldurcraftRoundedTiny.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="/Resources/WA-background-cropped.jpg" Opacity="1" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"></ImageBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="TabItem">
+            <Setter Property="Margin" Value="0, 10, 0, 10"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="Width" Value="130"></Setter>
+            <Setter Property="TextAlignment" Value="Center"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="115"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid ColumnSpan="2" Visibility="{Binding NewVersionAvailable, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEEF900" Offset="0"/>
+                    <GradientStop Color="#FFFFD100" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="1" Margin="3" 
+                       Content="Launcher update is available! " HorizontalAlignment="Right" ></Label>
+            <Button Grid.Row="0" Grid.Column="2" Margin="3" Content="Download" Command="{Binding DownloadNewLauncherCommand}"></Button>
+        </Grid>
+        <TabControl Grid.Column="0" Margin="3" Grid.Row="2" Grid.ColumnSpan="2" TabStripPlacement="Left" Opacity="0.9">
+            <TabItem>
+                <views1:WaVersionView x:Name="StableVersionView" BuildType="Stable" />
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{StaticResource TabItem}">Wurm Assistant Stable</TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+            </TabItem>
+            <TabItem>
+                <views1:WaVersionView x:Name="BetaVersionView" BuildType="Beta" />
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{StaticResource TabItem}">Wurm Assistant Beta</TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+            </TabItem>
+            <TabItem>
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{StaticResource TabItem}">Help and Feedback</TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border BorderThickness="1" Grid.Column="0" Margin="2" BorderBrush="Black">
+                            <StackPanel>
+                                <TextBlock Padding="3" Text="General help" HorizontalAlignment="Center" Margin="0, 0, 0, 40" TextWrapping="Wrap"></TextBlock>
+                                <TextBlock Padding="3" TextWrapping="Wrap" Margin="0,0,0,0" TextAlignment="Center">Use Wurm Assistant Wiki to learn more about all WA features.</TextBlock>
+                                <TextBlock Padding="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Margin="0, 0, 0, 30">
+                                    <Hyperlink NavigateUri="http://wurmassistant.wikia.com/wiki/Wurm_Assistant_Wiki"
+                                                RequestNavigate="Hyperlink_OnRequestNavigate">Visit the wiki</Hyperlink>
+                                </TextBlock>
+                                <TextBlock Padding="3" TextWrapping="Wrap" Margin="0,0,0,0" TextAlignment="Center">If Wiki is not a solution, try asking in the official Wurm Assistant forum thread</TextBlock>
+                                <TextBlock Padding="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Margin="0, 0, 0, 30">
+                                    <Hyperlink NavigateUri="http://forum.wurmonline.com/index.php?/topic/68031-wurm-assistant-2x-bundle-of-useful-tools/"
+                                                RequestNavigate="Hyperlink_OnRequestNavigate">Visit the forum</Hyperlink>
+                                </TextBlock>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderThickness="1" Grid.Column="1" Margin="2" BorderBrush="Black">
+                            <StackPanel >
+                                <TextBlock Padding="3" Text="Feedback and bug reports" HorizontalAlignment="Center" Margin="0, 0, 0, 40" TextWrapping="Wrap" ></TextBlock>
+                                <TextBlock Padding="3" TextWrapping="Wrap" Margin="0,0,0,10" TextAlignment="Center">All feedback is very appreciated, especially bug reports. Feel free to use any of the available channels.</TextBlock>
+                                <TextBlock Padding="5" TextAlignment="Center" FontSize="18" Margin="0, 0, 0, 10" TextWrapping="Wrap">
+                                    <Hyperlink NavigateUri="http://forum.wurmonline.com/index.php?/topic/68031-wurm-assistant-2x-bundle-of-useful-tools/" 
+                                               RequestNavigate="Hyperlink_OnRequestNavigate">Post in official forum thread</Hyperlink>
+                                </TextBlock>
+                                <TextBlock Padding="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Margin="0, 0, 0, 10">
+                                    <Hyperlink NavigateUri="http://forum.wurmonline.com/index.php?/user/6302-aldur/" 
+                                               RequestNavigate="Hyperlink_OnRequestNavigate">Send author a PM</Hyperlink>
+                                </TextBlock>
+                                <TextBlock Padding="0" TextAlignment="Center" TextWrapping="Wrap" FontSize="18" Margin="0, 0, 0, 0">Send author an email
+                                </TextBlock>
+                                <TextBlock Padding="0" TextAlignment="Center" TextWrapping="Wrap" FontSize="18" Margin="0, 0, 0, 30">
+                                    <Hyperlink NavigateUri="mailto:aldurcraft@gmail.com" RequestNavigate="Hyperlink_OnRequestNavigate">aldurcraft@gmail.com</Hyperlink>
+                                </TextBlock>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderThickness="1" Grid.Column="2" Margin="2" BorderBrush="Black">
+                            <StackPanel >
+                                <TextBlock Padding="3" Text="Development" HorizontalAlignment="Center" Margin="0, 0, 0, 40" TextWrapping="Wrap" ></TextBlock>
+                                <TextBlock Padding="3" TextWrapping="Wrap" Margin="0,0,0,0" TextAlignment="Center">All Wurm Assistant related development can be tracked on the Trello board.</TextBlock>
+                                <TextBlock Padding="5" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Margin="0, 0, 0, 00">
+                                    <Hyperlink NavigateUri="https://trello.com/b/Wl58d6PR/wurm-assistant" RequestNavigate="Hyperlink_OnRequestNavigate">Visit the board</Hyperlink>
+                                </TextBlock>
+                                <TextBlock Padding="3" TextWrapping="Wrap" Margin="0,0,0,0" TextAlignment="Center">After registering on the board, it is possible to vote on features and post comments. All contributions are most welcome!</TextBlock>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="2" BorderBrush="Black">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Padding="3" TextWrapping="Wrap" TextAlignment="Center" FontSize="14" FontWeight="Bold">Has WA helped you?</TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="0" Padding="3" TextWrapping="Wrap" TextAlignment="Center" FontSize="14"  FontWeight="Bold">Why not help the author(s)?</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Padding="3" TextWrapping="Wrap" TextAlignment="Center" FontSize="16" FontWeight="Bold">
+                                    <Hyperlink NavigateUri="http://blog.aldurcraft.com/WurmAssistant/page/Buy-me-a-beer" RequestNavigate="Hyperlink_OnRequestNavigate">Donate to the project</Hyperlink>
+                                </TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Padding="3" TextWrapping="Wrap"  TextAlignment="Center" FontSize="16">
+                                    <Hyperlink NavigateUri="http://blog.aldurcraft.com/WurmAssistant/page/Contributors-and-Supporters" RequestNavigate="Hyperlink_OnRequestNavigate">Contributors and Credits</Hyperlink>
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+        <custom:WebControl Grid.Row="1" Grid.Column="1" Margin="3" x:Name="Banner" Grid.RowSpan="1" Opacity="0.9" />
+        <Image Margin="3" Grid.Row="1" Grid.Column="0" Source="/Images/WurmAssistantIcon.png"/>
+    </Grid>
+</Window>

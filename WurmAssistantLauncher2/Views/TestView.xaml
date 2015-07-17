@@ -1,0 +1,13 @@
+﻿<Window x:Class="Aldurcraft.WurmAssistantLauncher2.Views.TestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TestView" Height="370" Width="590" Loaded="TestView_OnLoaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="TextData" HorizontalAlignment="Left" Height="106" Margin="126,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="364"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="211,180,0,0" VerticalAlignment="Top" Width="198" Height="43" Click="ButtonBase_OnClick"/>
+
+    </Grid>
+</Window>

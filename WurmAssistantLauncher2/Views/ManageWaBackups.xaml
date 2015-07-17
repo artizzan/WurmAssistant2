@@ -1,0 +1,65 @@
+﻿<Window x:Class="Aldurcraft.WurmAssistantLauncher2.Views.ManageWaBackups"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:behaviors="clr-namespace:Aldurcraft.Spellbook40.WPF.Behaviors;assembly=Aldurcraft.Spellbook40.WPF"
+        xmlns:interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+        Title="{Binding Title}"
+        Width="550" Height="300">
+    <Grid>
+        <DataGrid Name="BackupsGrid" ItemsSource="{Binding WaBackups}" AutoGenerateColumns="False" Loaded="FrameworkElement_OnLoaded">
+            <DataGrid.RowValidationRules>
+                <ExceptionValidationRule></ExceptionValidationRule>
+            </DataGrid.RowValidationRules>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Padding" Value="2"/>
+                    <Style.Triggers>
+                        <Trigger Property="Validation.HasError" Value="True">
+                            <Setter Property="Background" Value="Red"/>
+                            <Setter Property="ToolTip" 
+                                  Value="{Binding RelativeSource={RelativeSource Self},
+                                    Path=(Validation.Errors)[0].ErrorContent}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Backup date" Binding="{Binding TimeStamp, Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" 
+                                    Binding="{Binding BackupName}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Comment" Binding="{Binding Comment, Mode=OneWay}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="RestoreBtn" Content="Restore">
+                                <interactivity:Interaction.Behaviors>
+                                    <behaviors:ConfirmationBehavior
+                                        Message="This will overwrite your current WA settings, are you sure?"
+                                        Caption="Warning"
+                                        Command="{Binding RestoreCommand}"
+                                    />
+                                </interactivity:Interaction.Behaviors>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="DeleteBtn"  Content="Delete">
+                                <interactivity:Interaction.Behaviors>
+                                    <behaviors:ConfirmationBehavior
+                                        Message="Delete this backup?"
+                                        Caption="Confirm"
+                                        Command="{Binding DeleteCommand}"
+                                    />
+                                </interactivity:Interaction.Behaviors>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿# delete (or comment out) below line to enable your custom list
+USE_DEFAULT_LIST
+
+# You can modify these seasons, add new seasons and add seasons for completely new things (just use it's name)
+# Format: Season name, day in wurm year this season starts, day in wurm year this season ends
+# Separate with comas only, order does not matter, invalid lines will be discarded
+#
+# If you enable this file and assistant is updated in future with new seasons or new time frames, 
+# they will not be added automatically.
+# You can restore default list by adding "USE_DEFAULT_LIST" at the top of this file,
+# or simply by deleting this file.
+
+Oleander, 85, 91
+Maple, 113, 119
+Rose, 113, 140
+Rose, 141, 147
+Lavender, 113, 119
+Lavender, 141, 147
+Camellia, 113, 126
+Cherry, 176, 196
+Olive, 204, 224
+Olive, 92, 112
+Grape, 225, 252
+Apple, 225, 252
+Lemon, 288, 308
+Walnut, 258, 261
+Chestnut, 42, 46

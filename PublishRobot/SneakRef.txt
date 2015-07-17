@@ -1,0 +1,10 @@
+pre-build
+
+"D:\Dropbox\Developer\NET_Framework\Projects\Aldurcraft\DevTools\BuildAssist\BuildAssist\bin\Release\BuildAssist.exe" UPDATE_VERSION $(ConfigurationName) $(ProjectDir)\Properties\AssemblyInfo.cs $(ProjectDir)\Properties\app.manifest
+
+post-build
+	
+"D:\Dropbox\Developer\NET_Framework\Projects\Aldurcraft\DevTools\BuildAssist\BuildAssist\bin\Release\BuildAssist.exe" RELEASE_PUBLISH $(ConfigurationName) $(ProjectDir)\Properties\AssemblyInfo.cs $(TargetDir) $(SolutionDir)\Published\$(ProjectName)
+
+async 4.0 => package console
+in nuget console: Install-Package Microsoft.Bcl.Async

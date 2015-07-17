@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{05F47F92-65AB-4067-BEA7-603BD5FB96F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aldurcraft.Utility</RootNamespace>
+    <AssemblyName>Aldurcraft_Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stable|AnyCPU' ">
+    <OutputPath>bin\Stable\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Beta|AnyCPU'">
+    <OutputPath>bin\Beta\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="irrKlang.NET4, Version=1.0.4534.25937, Culture=neutral, PublicKeyToken=a854741bd80517c7, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_lib\irrKlang.NET4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\_lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\_lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\WeakEventHandler.cs" />
+    <Compile Include="Extensions\System\Windows\Forms\FormEx.cs" />
+    <Compile Include="Extensions\System\StringEx.cs" />
+    <Compile Include="Extensions\System\Drawing\ColorEx.cs" />
+    <Compile Include="Extensions\System\TimeSpanEx.cs" />
+    <Compile Include="Helpers\AppRun.cs" />
+    <Compile Include="Helpers\EventExtensions.cs" />
+    <Compile Include="Helpers\FormHelper.cs" />
+    <Compile Include="Helpers\GeneralHelper.cs" />
+    <Compile Include="Helpers\IoExtensions.cs" />
+    <Compile Include="Helpers\SQLiteHelper.cs" />
+    <Compile Include="Helpers\TimeHelper.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LoggerOldLogsCleaner.cs" />
+    <Compile Include="MessageSystem\IMessage.cs" />
+    <Compile Include="MessageSystem\Message.cs" />
+    <Compile Include="MessageSystem\MessageRouterEventArgs.cs" />
+    <Compile Include="MessageSystem\MessageRouter.cs" />
+    <Compile Include="Notifier\ChooseNotifierType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifier\ChooseNotifierType.Designer.cs">
+      <DependentUpon>ChooseNotifierType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifier\INotifier.cs" />
+    <Compile Include="Notifier\MessageConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notifier\MessageConfig.Designer.cs">
+      <DependentUpon>MessageConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifier\MessageNotifier.cs" />
+    <Compile Include="Notifier\NotifierAbstract.cs" />
+    <Compile Include="Notifier\NotifierBase.cs" />
+    <Compile Include="Notifier\NotifierException.cs" />
+    <Compile Include="Notifier\PopupConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notifier\PopupConfig.Designer.cs">
+      <DependentUpon>PopupConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifier\PopupNotifier.cs" />
+    <Compile Include="Notifier\SoundConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notifier\SoundConfig.Designer.cs">
+      <DependentUpon>SoundConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifier\SoundNotifier.cs" />
+    <Compile Include="OSDetector\OperatingSystemInfo.cs" />
+    <Compile Include="PersistentObject\PersistentObject.cs" />
+    <Compile Include="PopupNotify\FormPopupContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupNotify\FormPopupContainer.Designer.cs">
+      <DependentUpon>FormPopupContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupNotify\Popup.cs" />
+    <Compile Include="PopupNotify\PopupManager.cs" />
+    <Compile Include="PopupNotify\PopupMessage.cs" />
+    <Compile Include="ProcessManager\ProcessManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Events\CrashSafeEvent.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SoundEngine\FormChooseSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoundEngine\FormChooseSound.Designer.cs">
+      <DependentUpon>FormChooseSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoundEngine\FormSoundBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoundEngine\FormSoundBank.Designer.cs">
+      <DependentUpon>FormSoundBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoundEngine\FormSoundBankRename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoundEngine\FormSoundBankRename.Designer.cs">
+      <DependentUpon>FormSoundBankRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoundEngine\SB_SoundPlayer.cs" />
+    <Compile Include="SoundEngine\SoundBank.cs" />
+    <Compile Include="SQLiteDB\SQLiteDB.cs" />
+    <Compile Include="TextFileObject\TextFileObject.cs" />
+    <Compile Include="NativeHooks\Win32Hooks.cs" />
+    <Compile Include="WinFormsManagers\WidgetModeEventArgs.cs" />
+    <Compile Include="WinFormsManagers\WidgetModeManager.cs" />
+    <Compile Include="WurmHelpers\WurmHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ikpMP3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLiteDB\ReadMe.txt" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Notifier\ChooseNotifierType.resx">
+      <DependentUpon>ChooseNotifierType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifier\MessageConfig.resx">
+      <DependentUpon>MessageConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifier\PopupConfig.resx">
+      <DependentUpon>PopupConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifier\SoundConfig.resx">
+      <DependentUpon>SoundConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupNotify\FormPopupContainer.resx">
+      <DependentUpon>FormPopupContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoundEngine\FormChooseSound.resx">
+      <DependentUpon>FormChooseSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoundEngine\FormSoundBank.resx">
+      <DependentUpon>FormSoundBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoundEngine\FormSoundBankRename.resx">
+      <DependentUpon>FormSoundBankRename.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Snippets\" />
+    <Folder Include="SoundEngine\SoundBank\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationWindow\NotificationWindow.csproj">
+      <Project>{605006eb-d4e6-4312-a293-3a43fac43240}</Project>
+      <Name>NotificationWindow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

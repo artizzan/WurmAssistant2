@@ -1,0 +1,523 @@
+2.0.131.20 (05-07-2015 18:29:20)
+- debugging for an issue with crashing during log searching
+
+2.0.131.19 (05-07-2015 11:14:22)
+- bugfix: error in prayer timer: System.ArgumentException: parsing "???" - Quantifier {x,y} following nothing.
+
+2.0.131.18 (04-07-2015 16:16:37)
+- bugfix: values of favor notification level, in player timer, will no longer revert to whole number on editing
+
+2.0.131.15 (03-07-2015 20:57:10)
+- fix for System.ArgumentOutOfRangeException in meditation timer
+
+2.0.131.11 (03-07-2015 18:03:28)
+- bugfix: when using archived meditation skill level, timer was initially not set to correct state
+
+2.0.131.8 (03-07-2015 17:46:19)
+- Debugging events and tweaks for meditation timer
+
+2.0.131.1 (10-04-2015 20:03:39)
+- more fixes for recognizing correct server the characters are on.
+
+2.0.130.25 (09-04-2015 21:00:58)
+- Fix for recognizing server, that the character is logged on.
+
+2.0.130.21 (28-03-2015 16:03:07)
+- Fix for code, that recognizes server name in event logs. Epic servers should once again work correctly. It is advised to do cache rebuild (Options -> Rebuild logs cache.)
+
+2.0.130.18 (11-02-2015 22:27:25)
+- Added support for Cauldron challenge server
+
+2.0.130.13 (31-01-2015 14:07:30)
+- added a link to poll about future of WA
+- minor bugfixes
+
+2.0.130.12 (14-12-2014 15:12:34)
+- Added support for Challenge server group and Storm server
+
+2.0.130.5 (01-11-2014 17:20:44)
+- Fix for WA not remembering manually set Wurm Dir, when running in virtual machine
+
+2.0.130.1 (16-08-2014 16:37:02)
+- bugfixes for regex triggers
+- bugfix for uptime / wurm date tracking
+- added more action queue conditions for leveling ground and caves, flattening caves still needs love
+- added fishing action queue conditions
+- added many missing action queue conditions for various actions
+
+2.0.129.2 (01-08-2014 21:21:47)
+- minor fixes
+
+2.0.129.1 (30-07-2014 1:00:28)
+- publishing new version into new update location only
+
+2.0.128.1 (30-07-2014 0:12:32)
+- Added download new launcher link due to moving hosting location of the WA 2.x launcher / update services. All future updates will be available only from new launcher version.
+
+2.0.127.15 (21-07-2014 23:47:46)
+- bugfix for situation, where changing windows culture would break log searching cache.
+
+2.0.127.7 (12-06-2014 19:24:52)
+- Added support for Xanadu
+
+2.0.127.1 (27-04-2014 18:19:58)
+- Removed an, apparently useless, help link from Trigger config window
+- Updated action queue trigger with more conditions
+- Added title for 12th level of Meditation path of Hate: Harbinger
+- Granger: added "branded for" column
+- Added new seasons to Calendar
+- Tracked season window now correctly shows all available seasons, including those added manually
+- Calendar season popup now shows time until season ends.
+- Minor fixes for names and layout in few places.
+
+2.0.126.129 (27-04-2014 3:18:14)
+- Fixed bug causing error messages in WurmServer.
+- Fixed problems with running WA on Win XP (and in general on framework 4.0), however this patch is also required for everything to run correctly: http://support.microsoft.com/kb/2468871
+- Fixed the problem in wizard, when Wurm dir path was set manually.
+- Updated links to wurm server stats, this should stop the exception spam, among other things.
+- Fixed bug with custom Epic timers resurrecting after being removed.
+- Some tweaks and fixes to error logging.
+
+2.0.126.85 (30-03-2014 18:50:31)
+- Some tweaks to make WA work with new launcher
+
+2.0.126.51 (25-02-2014 22:00:30)
+- missing icon crisis has been resolved, there have been no fatalities
+
+2.0.126.25 (24-02-2014 23:53:25)
+- no changes, publish required for new launcher web apis
+
+2.0.126.5 (08-02-2014 22:52:29)
+- Minor tweaks, testing if publishing still works correctly for old launcher
+
+2.0.126.1 (08-02-2014 22:19:04)
+- Minor tweaks
+
+2.0.125.7 (23-01-2014 7:34:31)
+- fix for trigger list not updating on add/remove trigger
+
+2.0.125.2 (20-01-2014 20:37:29)
+- Minor tweaks
+
+2.0.125.0 (20-01-2014 18:13:22)
+- A handful of Trigger bugfixes
+
+2.0.124.0 (18-01-2014 0:47:28)
+- added help link under cooldown / delay section in trigger config
+
+2.0.123.0 (14-01-2014 1:02:12)
+- lots of fixes for how windows are shown, now (hopefully) all windows will be back, visible, on screen and dancing every time they are called upon!
+- added delay notification option for all triggers
+- fixed "show until clicked" option for popup notificator
+- in trigger configs, checked list box for log types would force a focus on entire window on all mouseovers, had to be disabled
+- tiny fix for meditation cooldown for when a character has just gained 20 meditation skill
+
+2.0.122.0 (12-01-2014 18:39:40)
+- fix for a weird glitch where code handling updates would fire multiple times instead of just once
+
+2.0.121.0 (12-01-2014 18:27:59)
+- Feature revamp: Sounds Triggers are now called Triggers, have major gui changes and support multiple types of notification (currently just sound and popup)
+- Fix for Granger, where adding new horse would incorrectly flag it as coming from freedom
+- Temporarily disabled renaming sounds in sound bank, because it was causing them to stop working in places where they were used
+
+2.0.120.0 (05-01-2014 20:49:16)
+- Minor tweaks
+
+2.0.119.0 (02-01-2014 19:28:17)
+- Timers widget mode can now also be toggled by ctrl + alt + shift + RMB
+
+2.0.118.0 (30-12-2013 16:36:38)
+- Minor tweaks
+
+2.0.117.0 (30-12-2013 16:30:17)
+- Minor tweaks
+
+2.0.116.0 (30-12-2013 16:06:18)
+- Timers have been (finally) made much more compact
+
+2.0.115.0 (29-12-2013 21:07:34)
+- fix for custom sound triggers list having too wide columns
+
+2.0.114.0 (29-12-2013 20:46:08)
+- Minor tweaks
+
+2.0.113.0 (29-12-2013 20:14:10)
+- New "widget" mode for timers, so they can be placed on top of Wurm game window
+
+2.0.112.0 (27-12-2013 22:15:20)
+- Minor tweaks
+
+2.0.111.0 (27-12-2013 21:37:11)
+- Granger: exact horse age can now be manually entered while editing horse, 2 new columns available: Birth date and Exact age.
+- Granger: it is now possible to adjust weights for each horse color, pair final value is multiplied by average of mates color weights
+
+2.0.110.0 (27-12-2013 15:47:47)
+- Minor tweaks
+
+2.0.109.0 (27-12-2013 15:39:01)
+- Rebuild log cache option added to main WA window "options" menu
+- Minor tweaks
+
+2.0.108.0 (25-12-2013 22:12:29)
+- Sermon and Alignment timer no longer resets every 24h uptime
+- Support added for log types: Deaths, Mol-Rehan, Jenn-Kellon and HotS (server and global)
+- Granger will now also try to apply "dead" tag on RIP messages
+- It is now possible to completely disable scanning official wurm server feeds
+- Configuration wizard, if run from WA menu, will now cause complete log cache rebuild after WA restarts
+
+2.0.107.0 (24-12-2013 18:26:18)
+- Merry Christmas!
+
+2.0.106.0 (21-12-2013 21:15:02)
+- Beer button is back, but it can be hidden in WA settings
+
+2.0.105.0 (21-12-2013 17:49:11)
+- publishing WA to new autoupdate host
+
+2.0.104.0 (17-12-2013 20:36:58)
+- wizard will no longer change IRC logging mode along with event and other modes
+
+2.0.103.0 (17-12-2013 20:19:12)
+- turned off logging mode check for IRC since it was not used
+
+2.0.102.0 (17-12-2013 20:02:53)
+- added more error logging for log engine creation
+
+2.0.101.0 (15-12-2013 16:06:45)
+- Granger: Export tweaks
+
+2.0.100.0 (15-12-2013 15:50:38)
+- Granger: Import/Export tweaks
+
+2.0.99.0 (15-12-2013 15:47:52)
+- Granger: it is now possible to export and import herds
+
+2.0.98.0 (14-12-2013 20:58:29)
+- disabled beer and feedback buttons
+
+2.0.97.0 (30-11-2013 21:39:03)
+- some changes to main window layout
+- hidden other empty sections and menu options until they are functional
+- few minor bugfixes
+
+2.0.96.0 (14-11-2013 21:19:16)
+- fixed char encoding issues when reading chat logs
+
+2.0.95.0 (14-11-2013 20:01:42)
+- fixed incorrect age updates from non-examine events
+- fixed age updates from events where age is not capitalized
+
+2.0.94.0 (12-11-2013 22:30:33)
+- Granger special option "always update horse" will now attempt to update horse in currectly active herds, before trying entire db
+- Granger new feature to track health/age from any log events improved, now attempts selected herds before trying entire db (if entire db option is selected)
+- Granger: added and tweaked tray notifications
+
+2.0.93.0 (09-11-2013 1:08:16)
+- added options button to granger
+- new option in granger: updating horse age and health from any event log line, default enabled
+- new option in granger: allow updating/adding horses regardless of selected herds, default off, note: when adding, horse goes to random selected herd, at least one has to be selected and it is still not possible to add duplicate names to same herd
+- new option in granger: grooming column time hiding is now adjustable (by default, groomed time is not visible if more than 1 hour ago)
+- few granger tweaks
+
+2.0.92.0 (06-11-2013 23:09:19)
+- fixed bug, where granger would constantly wait for AH skill lookup (due to server group search not being triggered)
+
+2.0.91.0 (06-11-2013 22:00:06)
+- ok, NOW the download size is smaller! ... I hope.
+
+2.0.90.0 (06-11-2013 21:52:12)
+- when creating new herd, it is now possible to simply hit enter after entering name in dialog box
+- added a special popup warning to Granger, for a situation when no Animal Husbandry skill is available, but newly adding horse shows traits (indicating that player has some skill in reality)
+- exception traces in wa logs should no longer show incorrect local code file paths
+- reduced download size of updates
+
+2.0.89.0 (06-11-2013 20:34:28)
+- fix for bug, when changing favor notify sound would not work until WA is restarted
+
+2.0.88.0 (03-11-2013 17:01:20)
+- new system to track current server name, for each group, for each game character
+- improved server group handling in timers
+
+2.0.87.0 (03-11-2013 13:54:57)
+- more fixes for rock leveling
+- to make gathering and sending feedback easier, log is now saved in individual files per program session
+- log button on the main assistant screen now opens current log file, while the "open log dir" option is moved to options menu
+
+2.0.86.0 (02-11-2013 20:58:52)
+- fixed bug with individually adjusted sound volume not always working
+
+2.0.85.0 (01-11-2013 10:38:40)
+- fix for granger not finding correct AH skill for epic players
+
+2.0.84.0 (30-10-2013 20:45:59)
+- Wurm Assistant is now safeguarded against being run multiple times at the same time.
+- Launcher has also received multiple-run safeguard, but new launcher version must be downloaded manually.
+
+2.0.83.0 (29-10-2013 23:36:31)
+- fix for bug, where granger incorrectly determines player server group
+- fix for bug, where granger finds incorrect skill level for player
+- server name/group tracking of granger has been moved to new dedicated tracking system for better reliabity
+
+2.0.82.0 (27-10-2013 19:23:13)
+- more tweaks to queue sounds for leveling
+
+2.0.81.0 (27-10-2013 18:20:36)
+- fix for queue sound triggering all the time while leveling mine floors
+
+2.0.80.0 (13-10-2013 22:54:59)
+- more publish system testing
+
+2.0.79.0 (13-10-2013 21:38:35)
+- new publish system testing
+
+2.0.78.0 (13-10-2013 19:55:48)
+- Exit prompt is now optional and off by default
+
+2.0.77.0 (13-10-2013 18:11:32)
+- Fix for mp3 playback in installer version of WA
+- When server status web feed is not available, log will now correctly show server name for that link
+- Debugging symbols temporarily added to installer version
+- WA2 will now automatically add "say /uptime" and "say /time" to autorun.txt for all wurm client players, if it's not there already
+- Uptime and wurm date time is now checked against both web feeds and data gathered from wurm logs, with preference to wurm logs unless very outdated
+- Readded minimize to tray and start minimized options
+- Readded context menu on tray icon
+- Added a system to bring up latest news on program updates, when appropriate
+- Failure to obtaining latest web feed information is no longer reported as error
+- Program now asks for close confirmation
+
+2.0.76.0 (06-10-2013 17:34:01)
+- New timer for new wurm junk selling feature, tracking the time until next reset and the amount sold during current cooldown
+
+2.0.75.0 (03-10-2013 14:10:40)
+- Granger: fix for a bug involving adding / updating horses, where examining second horse before first is finalize, would cause overwriting of branding or foal status
+
+2.0.74.0 (30-09-2013 21:15:44)
+- bugfix for Backpack throwing errors on remove attempts, if the backpack window was not created
+
+2.0.73.0 (24-09-2013 18:30:24)
+- Fix for mp3 support
+
+2.0.72.0 (22-09-2013 16:40:51)
+- icon is back
+- publishing is set and bugfixed, ready for website
+- wiki menu option is now more visible
+- blog menu option is now called discussion and links to official WA thread rather than blog
+- news will again be posted in the WA thread and blog will serve for more techy posts that may be of use to future WA devs, if any
+
+2.0.71.0 (22-09-2013 0:34:42)
+- Fix for popups stealing focus
+- Fix for medit cooldown from before uptime reset to still apply afterwards (only up to 30 minutes, until further testing is done)
+- Calendar now remembers window size
+
+2.0.70.0 (06-09-2013 21:46:02)
+- Reorganized the code again, so that solution is completely self-contained
+- New build robot for version updates, publishing and updating changelog
+
+2.0.69.0 (05-09-2013)
+- Error window disabled due to many issues
+- Bugfix for Backpack
+
+2.0.68.0 (04-09-2013)
+- New module: Backpack, will contain all the little tools
+
+2.0.67.0 (02-09-2013)
+- Better error window for GUI and similar peculiar exceptions
+
+2.0.66.0 (01-09-2013)
+- Granger: bugfix for Prefer Unique Traits advisor option working totally incorrectly.
+
+2.0.65.0 (18-08-2013)
+- Granger: fix for horse age glitches
+- Granger: fixed the granger help window appearing behind the granger window
+- WurmUtils lib fix: changed how server status web feeds are queried, to avoid issues on some Windows configurations
+
+2.0.64.0
+- Timers: added special option to show skill for timers: player (faith) and meditation
+
+2.0.63.0
+- Fix for Rolf's time machine temporal distortions causing timers to go whaacko
+
+2.0.61.0
+- Timers bugfix: attempt to fix sermon reset issues for prayer timer
+- Log will now show what was exactly extracted for server uptimes and dates
+- Granger fix: reworded breeding problem popup, added some creature names to blacklist
+
+2.0.60.0
+- Granger bugfix: possible fix for Genesis issues
+
+2.0.59.0
+- Granger bugfix: another bug with incorrect color hints fixed
+
+2.0.58.0
+- Granger bugfix: negative breed values caused incorrect color hints
+
+2.0.57.0
+- Granger bugfixes: bred tooltips, age sorting, attempt to fix Genesis handler
+
+2.0.56.0
+- Granger: breeding not-in-mood is now back to 45 minutes instead of 24 hours
+
+2.0.55.0
+- A menu link to Contributions and Supporters page
+- A menu link to assistant blog
+
+2.0.54.0
+- Granger: temporary help window until wiki is up to date
+
+2.0.53.0
+- Granger: Bad trait exclude option bugfix
+
+2.0.52.0
+- Granger: Bugfix for 24-hour not in mood context menu option
+
+2.0.51.0
+- Granger: Doubleclick on horse opens comments editing window
+- Granger: Option to keep comparing low age horses, if the low age horse is the selected one
+
+2.0.50.0
+- Granger: more debugging window size issues
+
+2.0.49.0
+- Granger: debugging window size issues
+
+2.0.48.0
+- Granger: fixes for clearing/setting diseased/dead flags on smile-examine
+
+2.0.47.0
+- Granger: breed advisor can now ignore dead tags
+
+2.0.46.0
+- Granger: breed advisor can now ignore sold tags
+
+2.0.45.0
+- Granger: Genesis cast handling: horse update trait sanity check disabled for 1 hour after such cast
+- Granger: Best candidate highligh is now full-row
+- Added donation button
+
+2.0.42.0
+- Granger: And yet another WinXP fix
+
+2.0.41.0
+- Granger: Disabled import/export until it's implemented
+- Granger: Another bugfix for WinXP
+
+2.0.40.0
+- Granger: Bugfix for WinXP and saving horselist layout
+
+2.0.39.0
+- Granger 2.0 added => http://blog.aldurcraft.com/WurmAssistant/post/Granger-The-Second1
+
+2.0.38.0
+- Popup duration option for meditation timer
+
+2.0.37.0
+- Bugfix for 0-duration timers
+
+2.0.36.0
+- Settings bugfix
+
+2.0.35.0
+- Duration of a timer can now be adjusted in its options
+
+2.0.34.0
+- some code to prevent some common reasons for settings resets
+- should settings reset happen regardless of above, old .xml file will be preserves so the file can be recovered/fixed
+
+2.0.33.0
+- added button to mod calendar season lists
+- not-yet-working granger UI prototype
+
+2.0.32.0
+- accidental build, but fully working
+
+2.0.31.0
+
+- minor bugfixes
+- button on main assistant window now opens entire log dir as opposed to single file
+
+2.0.30.0
+
+- Small tweak for potential bugs involving wurm log reading
+
+2.0.29.0
+
+- Timers should now correctly update themselves after server uptime changes between wurm sessions
+- Assistant log will now be saved in daily files (old files will be deleted if logs go above 64 MB)
+
+2.0.28.0
+
+- Added menu option to open Wurm Assistant Wiki
+
+2.0.27.0
+
+- Fixed a bug where clicking X on popup with "wait until clicked" timer setting would stop all future popups from showing
+
+2.0.26.0
+
+- Main window will no longer remember it's position due to issues with starting off-screen
+
+2.0.25.0
+
+- Readded the "(max)" text to prayer timer, when it hits daily limit
+- Added a timer option to make popup/sound happen, when cooldown is ready on assistant launch
+
+2.0.23.0
+
+- Fix for custom timers not triggering for past events
+
+2.0.21.0
+
+- Fix for crashing Timers window
+
+2.0.20.0
+
+- Timer main window remembers its size
+- Fixed bug with removing custom timers
+
+2.0.19.0
+
+- Turn Off button on timer settings window is now on the other side and has proper icon
+
+2.0.18.0
+
+- Timers are back and improved greatly:
+  ^ MUCH better display
+  ^ They will work seamlessly for players traveling between Freedom and Epic
+  ^ It is now possible to add more custom timers
+  ^ Popups can now be made persistent (stay visible until closed manually)
+  ^ Some of the old bugs should be fixed
+- Fixed issues with displaying changelog.txt on updates
+- Assistant settings window added
+- Wizard can now be started again via options menu
+
+2.0.17.0
+
+- Changelog on new versions now appears if that option was chosen in wizard
+- Log Searcher can now detect and open links in default windows browser
+- Log Searcher will no longer rebuild itself after each update
+
+2.0.15.0
+
+- WinXP detection and layout adjustments
+
+2.0.14.0
+
+- SoundNotify is back and renamed Sound Triggers,
+- Sound Triggers also got some love: 
+  ^ better ui for alt support
+  ^ moddable queue sound trigger list as an advanced option
+  ^ added tooltips and changed some names to make it less confusing
+- Font in module configurator is now bigger
+- Season list for calendar is now moddable
+- Log output is now a bit more readable
+- Module configurator now shows correct module names
+
+2.0.12.0
+
+- Log Searcher is back (added some tooltips to clarify things)
+- Calendar is back (slightly improved, fixes for all know problems included)
+- added a little window to track error counts
+- Main UI: buttons to open log file and forum thread now work, disabled menu options that aren't yet implemented
+- Program will now work correctly if placed in directores that have whitespace in their names
+- Fixes for Win XP: pictures in wizard will now size properly, log searcher will handle low desktop resolution better
+- Fixed crash on disabling modules
