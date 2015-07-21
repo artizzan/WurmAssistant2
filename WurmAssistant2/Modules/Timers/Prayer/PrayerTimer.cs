@@ -177,7 +177,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
 
                 foreach (string line in lines)
                 {
-                    if (line.Contains("You finish your prayer"))
+                    if (line.Contains("You feel sincere devotion") || line.Contains("Was that a sudden gust of wind") || 
+                        line.Contains("You are relying on") || line.Contains("feel that an envoy of") || 
+                        line.Contains("Deep in your heart") || line.Contains("You feel calm and solemn") ||
+                        line.Contains("is here with you now."))
                     {
                         DateTime datetime;
                         if (WurmLogSearcherAPI.TryParseDateTimeFromSearchResultLine(line, out datetime))
@@ -245,7 +248,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
 
         public override void HandleNewEventLogLine(string line)
         {
-            if (line.StartsWith("You finish your prayer", StringComparison.Ordinal))
+            if (line.Contains("You feel sincere devotion") || line.Contains("Was that a sudden gust of wind") ||
+                        line.Contains("You are relying on") || line.Contains("feel that an envoy of") ||
+                        line.Contains("Deep in your heart") || line.Contains("You feel calm and solemn") ||
+                        line.Contains("is here with you now."))
             {
                 PrayerHistory.Add(new PrayHistoryEntry(PrayHistoryEntryTypes.Prayed, DateTime.Now));
                 UpdatePrayerCooldown();
