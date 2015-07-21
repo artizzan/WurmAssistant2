@@ -1,6 +1,6 @@
 This version is discontinued. Work on version 3.0 has moved to:
 
-[https://github.com/PeterAldur/WurmAssistant3]()
+https://github.com/PeterAldur/WurmAssistant3
 
 Wurm Assistant (2.x)
 ====================
@@ -15,7 +15,7 @@ This project is licensed under [GPL]. Some 3rd party components/libraries may be
 
 Contributions and Credits
 --------------
-[http://blog.aldurcraft.com/WurmAssistant/page/Contributors-and-Supporters]()
+http://blog.aldurcraft.com/WurmAssistant/page/Contributors-and-Supporters
 
 About the code
 --------------
@@ -25,7 +25,7 @@ Repository is 100% self-contained, all the dependencies are either projects in t
 
 Old version (1.x) of this project is available here:
 
-[https://github.com/PeterAldur/WurmAssistant]()
+https://github.com/PeterAldur/WurmAssistant
 
 [3rdpartycomponents]: http://blog.aldurcraft.com/WurmAssistant/page/Contributors-and-Supporters
 [Wurm Online]: http://wurmonline.com/
