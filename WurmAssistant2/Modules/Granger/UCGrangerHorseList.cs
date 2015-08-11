@@ -36,7 +36,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             set
             {
                 _SelectedSingleHorse = value;
-                if (MainForm != null) //some designed bug, this prop appear in designer which tries to set it to null initially
+                if (MainForm != null) //some designer bug, this prop appear in designer which tries to set it to null initially
                 {
                     MainForm.TriggerSelectedSingleHorseChanged();
                     UpdateDataForView();
@@ -396,7 +396,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             textBoxHerds.Text = string.Join(", ", ActiveHerds.Select(x => x.HerdID));
 
             CurrentHorses = Context.Horses
-                .AsEnumerable() //pull all horses from context, so can use better queries
+                .AsEnumerable()
                 .Where(x => ActiveHerds
                     .Select(y => y.HerdID) //create a temporary collection of herdID's
                     .Contains(x.Herd)) //select this horse if herd is in temp collection
@@ -429,7 +429,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
             foreach (var horse in CurrentHorses)
             {
-                horse.RebuildBreedHintColor(minValue, maxValue);
+                horse.ClearColorHints();
+                if (!MainForm.Settings.Value.DisableRowColoring)
+                {
+                    horse.RefreshBreedHintColor(minValue, maxValue);
+                }
             }
 
             objectListView1.SetObjects(CurrentHorses, true);
@@ -647,7 +651,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         public void SaveStateToSettings()
         {
-            //this crashes module on XP, ordering events happen before mainform assigned,
+            //this causes crash on Win XP, ordering events happen before mainform assigned,
             //because mainform is assigned after constructor
             if (!_debug_MainFormAssigned && MainForm == null) return;
 

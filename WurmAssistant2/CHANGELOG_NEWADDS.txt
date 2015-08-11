@@ -1,1 +1,2 @@
 # anything added below this comment line will be appended to changelog on next non-debug build
+- Granger: option to disable background coloring for grid columns (creature grid, traits grid)

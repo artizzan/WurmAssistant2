@@ -34,6 +34,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxUpdateAgeHealthAllEvents = new System.Windows.Forms.CheckBox();
+            this.checkBoxDisableRowColoring = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkBoxAlwaysUpdateUnlessMultiples
@@ -49,8 +50,8 @@
             // 
             // timeSpanInputGroomingTime
             // 
-            this.timeSpanInputGroomingTime.Location = new System.Drawing.Point(12, 98);
-            this.timeSpanInputGroomingTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timeSpanInputGroomingTime.Location = new System.Drawing.Point(11, 150);
+            this.timeSpanInputGroomingTime.Margin = new System.Windows.Forms.Padding(2);
             this.timeSpanInputGroomingTime.Name = "timeSpanInputGroomingTime";
             this.timeSpanInputGroomingTime.Size = new System.Drawing.Size(231, 45);
             this.timeSpanInputGroomingTime.TabIndex = 2;
@@ -59,7 +60,7 @@
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(221, 175);
+            this.buttonOK.Location = new System.Drawing.Point(221, 229);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(92, 29);
             this.buttonOK.TabIndex = 3;
@@ -70,7 +71,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(319, 175);
+            this.buttonCancel.Location = new System.Drawing.Point(319, 229);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(92, 29);
             this.buttonCancel.TabIndex = 4;
@@ -81,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 83);
+            this.label1.Location = new System.Drawing.Point(8, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 13);
             this.label1.TabIndex = 5;
@@ -98,11 +99,22 @@
     "tes only when smile-examining)";
             this.checkBoxUpdateAgeHealthAllEvents.UseVisualStyleBackColor = true;
             // 
+            // checkBoxDisableRowColoring
+            // 
+            this.checkBoxDisableRowColoring.AutoSize = true;
+            this.checkBoxDisableRowColoring.Location = new System.Drawing.Point(12, 84);
+            this.checkBoxDisableRowColoring.Name = "checkBoxDisableRowColoring";
+            this.checkBoxDisableRowColoring.Size = new System.Drawing.Size(183, 17);
+            this.checkBoxDisableRowColoring.TabIndex = 7;
+            this.checkBoxDisableRowColoring.Text = "Disable grid row color highlighting";
+            this.checkBoxDisableRowColoring.UseVisualStyleBackColor = true;
+            // 
             // FormGrangerGeneralOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 216);
+            this.ClientSize = new System.Drawing.Size(423, 270);
+            this.Controls.Add(this.checkBoxDisableRowColoring);
             this.Controls.Add(this.checkBoxUpdateAgeHealthAllEvents);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxUpdateAgeHealthAllEvents;
+        private System.Windows.Forms.CheckBox checkBoxDisableRowColoring;
     }
 }

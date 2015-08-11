@@ -75,18 +75,23 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         static System.Drawing.Color? DefaultBestBreedHintColor = (System.Drawing.Color)(new HSLColor(120D, 240D, 180D));
 
-        public void RebuildBreedHintColor(double minBreedValue, double maxBreedValue)
+        public void RefreshBreedHintColor(double minBreedValue, double maxBreedValue)
         {
-            BreedHintColor = null;
-
             if (CachedBreedValue == maxBreedValue)
+            {
                 HorseBestCandidateColor = DefaultBestBreedHintColor;
-            else HorseBestCandidateColor = null;
+            }
 
             if (MainForm.SelectedSingleHorse != null)
             {
                 BreedHintColor = MainForm.CurrentAdvisor.GetHintColor(this, minBreedValue, maxBreedValue);
             }
+        }
+
+        public void ClearColorHints()
+        {
+            BreedHintColor = null;
+            HorseBestCandidateColor = null;
         }
 
         public System.Drawing.Color? HorseColorBkColor

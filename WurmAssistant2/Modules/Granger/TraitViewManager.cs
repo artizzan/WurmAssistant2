@@ -43,6 +43,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             {
                 get
                 {
+                    if (DisableBackgroundColors)
+                    {
+                        return null;
+                    }
+
                     if (Exists) 
                     {
                         if (Value > 0) return System.Drawing.Color.LightGreen;
@@ -56,6 +61,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     return null; //no coloring for this item
                 }
             }
+
+            public bool DisableBackgroundColors { get; set; }
         }
 
         ObjectListView OLV;
@@ -150,7 +157,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     Trait = trait,
                     Exists = currentHorseTraits.Contains(trait),
                     Unknown = trait.IsUnknownForThisHorse(horse),
-                    Value = trait.GetTraitValue(MainForm.CurrentValuator)
+                    Value = trait.GetTraitValue(MainForm.CurrentValuator),
+                    DisableBackgroundColors = MainForm.Settings.Value.DisableRowColoring
                 });
             }
         }
@@ -166,7 +174,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     Trait = trait,
                     Exists = false,
                     Unknown = false,
-                    Value = MainForm.CurrentValuator.GetValueForTrait(trait)
+                    Value = MainForm.CurrentValuator.GetValueForTrait(trait),
+                    DisableBackgroundColors = MainForm.Settings.Value.DisableRowColoring
                 });
             }
         }

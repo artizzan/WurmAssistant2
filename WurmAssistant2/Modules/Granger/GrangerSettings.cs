@@ -59,6 +59,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         [DataMember]
         private Dictionary<LogFeedManager.CachedAHSkillID, float> CachedAHSkillVals;
 
+        [DataMember] 
+        public bool DisableRowColoring;
+
         public bool TryGetAHSkill(LogFeedManager.CachedAHSkillID id, out float result)
         {
             return CachedAHSkillVals.TryGetValue(id, out result);
