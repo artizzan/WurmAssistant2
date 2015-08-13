@@ -87,8 +87,8 @@
             this.olvColumnComments = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnBirthDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnExactAge = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.olvColumnBrandedFor = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -111,7 +111,7 @@
             this.deleteToolStripMenuItem,
             this.tESTToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(190, 242);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(190, 220);
             // 
             // setColorToolStripMenuItem
             // 
@@ -124,7 +124,7 @@
             this.toolStripSeparator3,
             this.notAHorseToolStripMenuItem});
             this.setColorToolStripMenuItem.Name = "setColorToolStripMenuItem";
-            this.setColorToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.setColorToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.setColorToolStripMenuItem.Text = "Set color";
             // 
             // blackToolStripMenuItem
@@ -184,7 +184,7 @@
             this.deadToolStripMenuItem,
             this.soldToolStripMenuItem});
             this.toggleTagToolStripMenuItem.Name = "toggleTagToolStripMenuItem";
-            this.toggleTagToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.toggleTagToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.toggleTagToolStripMenuItem.Text = "Toggle tag";
             // 
             // fatToolStripMenuItem
@@ -235,7 +235,7 @@
             this.setTo1HourFromNowToolStripMenuItem,
             this.setTo24HoursFromNowToolStripMenuItem});
             this.setNotInMoodToolStripMenuItem.Name = "setNotInMoodToolStripMenuItem";
-            this.setNotInMoodToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.setNotInMoodToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.setNotInMoodToolStripMenuItem.Text = "Set Not In Mood";
             // 
             // clearToolStripMenuItem1
@@ -269,7 +269,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(231, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
             // 
             // mateToolStripMenuItem
             // 
@@ -297,7 +297,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(231, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(186, 6);
             // 
             // viewToolStripMenuItem
             // 
@@ -323,7 +323,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(231, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
             // 
             // deleteToolStripMenuItem
             // 
@@ -336,7 +336,7 @@
             // 
             this.tESTToolStripMenuItem.Name = "tESTToolStripMenuItem";
             this.tESTToolStripMenuItem.ShowShortcutKeys = false;
-            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.tESTToolStripMenuItem.Text = "TEST";
             this.tESTToolStripMenuItem.Visible = false;
             this.tESTToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem_Click);
@@ -573,15 +573,15 @@
             this.olvColumnExactAge.AspectName = "ExactAgeAspect";
             this.olvColumnExactAge.Text = "Exact Age";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 60000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // olvColumnBrandedFor
             // 
             this.olvColumnBrandedFor.AspectName = "BrandedFor";
             this.olvColumnBrandedFor.Text = "Branded for";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 60000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // UCGrangerHorseList
             // 

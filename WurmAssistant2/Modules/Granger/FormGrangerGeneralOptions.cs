@@ -27,6 +27,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             timeSpanInputGroomingTime.Value = _settings.Value.ShowGroomingTime;
             checkBoxUpdateAgeHealthAllEvents.Checked = _settings.Value.UpdateHorseDataFromAnyEventLine;
             checkBoxDisableRowColoring.Checked = _settings.Value.DisableRowColoring;
+            checkBoxAdjustForDarkThemes.Checked = _settings.Value.AdjustForDarkThemes;
         }
 
         private void CommitChanges()
@@ -35,6 +36,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             _settings.Value.ShowGroomingTime = timeSpanInputGroomingTime.Value;
             _settings.Value.UpdateHorseDataFromAnyEventLine = checkBoxUpdateAgeHealthAllEvents.Checked;
             _settings.Value.DisableRowColoring = checkBoxDisableRowColoring.Checked;
+            _settings.Value.AdjustForDarkThemes = checkBoxAdjustForDarkThemes.Checked;
             _settings.Save();
         }
 

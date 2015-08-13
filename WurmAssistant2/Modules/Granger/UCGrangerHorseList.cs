@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Aldurcraft.Utility;
 using Aldurcraft.Utility.Helpers;
+using BrightIdeasSoftware;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 {
@@ -19,6 +20,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         GrangerContext Context;
 
         List<Horse> CurrentHorses = new List<Horse>(); //cached
+
+        readonly DateTime _treshholdDtValueForBirthDate = new DateTime(1990, 1, 1);
+        readonly TimeSpan _treshholdTsValueForExactAge = DateTime.Now - new DateTime(1990, 1, 1);
+        readonly int _treshholdDaysValueForExactAge = (int)(DateTime.Now - new DateTime(1990, 1, 1)).TotalDays;
+
         public Horse[] SelectedHorses
         {
             get
@@ -27,9 +33,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 return array;
             }
         }
+
         List<HerdEntity> ActiveHerds = new List<HerdEntity>(); //cached
 
         Horse _SelectedSingleHorse = null;
+
         public Horse SelectedSingleHorse
         {
             get { return _SelectedSingleHorse; }
@@ -45,6 +53,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         }
 
         bool _debug_MainFormAssigned = false;
+
         public UCGrangerHorseList()
         {
             InitializeComponent();
@@ -54,6 +63,12 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         {
             MainForm = mainForm;
             _debug_MainFormAssigned = true;
+
+            if (MainForm.Settings.Value.AdjustForDarkThemes)
+            {
+                MakeDarkHighContrastFriendly();
+            }
+
             if (mainForm.Settings.Value.HorseListState != null)
             {
                 this.objectListView1.RestoreState(mainForm.Settings.Value.HorseListState);
@@ -357,9 +372,25 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             timer1.Enabled = true;
         }
 
-        readonly DateTime _treshholdDtValueForBirthDate = new DateTime(1990, 1, 1);
-        readonly TimeSpan _treshholdTsValueForExactAge = DateTime.Now - new DateTime(1990, 1, 1);
-        readonly int _treshholdDaysValueForExactAge = (int)(DateTime.Now - new DateTime(1990, 1, 1)).TotalDays;
+        private void MakeDarkHighContrastFriendly()
+        {
+            objectListView1.HeaderUsesThemes = false;
+            objectListView1.HeaderFormatStyle = new HeaderFormatStyle()
+            {
+                Normal = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+                Hot = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+                Pressed = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+            };
+        }
 
         void MainForm_Granger_ValuatorChanged(object sender, EventArgs e)
         {

@@ -1,3 +1,6 @@
+2.0.134.1 (13-08-2015 22:01:53)
+- Granger: option to fix some issues when using dark high-contrast windows theme
+
 2.0.133.1 (11-08-2015 19:45:20)
 - Granger: option to disable background coloring for grid columns (creature grid, traits grid)
 

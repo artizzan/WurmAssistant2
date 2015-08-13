@@ -56,7 +56,7 @@
             this.toolStripSeparator1,
             this.deleteToolStripMenuItem});
             this.contextMenuStripHerds.Name = "contextMenuStripHerds";
-            this.contextMenuStripHerds.Size = new System.Drawing.Size(206, 154);
+            this.contextMenuStripHerds.Size = new System.Drawing.Size(206, 132);
             // 
             // addNewToolStripMenuItem
             // 
@@ -146,6 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.objectListView1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCGrangerHerdList";
             this.Size = new System.Drawing.Size(309, 318);

@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxUpdateAgeHealthAllEvents = new System.Windows.Forms.CheckBox();
             this.checkBoxDisableRowColoring = new System.Windows.Forms.CheckBox();
+            this.checkBoxAdjustForDarkThemes = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkBoxAlwaysUpdateUnlessMultiples
@@ -50,7 +51,7 @@
             // 
             // timeSpanInputGroomingTime
             // 
-            this.timeSpanInputGroomingTime.Location = new System.Drawing.Point(11, 150);
+            this.timeSpanInputGroomingTime.Location = new System.Drawing.Point(11, 185);
             this.timeSpanInputGroomingTime.Margin = new System.Windows.Forms.Padding(2);
             this.timeSpanInputGroomingTime.Name = "timeSpanInputGroomingTime";
             this.timeSpanInputGroomingTime.Size = new System.Drawing.Size(231, 45);
@@ -60,7 +61,7 @@
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(221, 229);
+            this.buttonOK.Location = new System.Drawing.Point(221, 252);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(92, 29);
             this.buttonOK.TabIndex = 3;
@@ -71,7 +72,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(319, 229);
+            this.buttonCancel.Location = new System.Drawing.Point(319, 252);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(92, 29);
             this.buttonCancel.TabIndex = 4;
@@ -82,7 +83,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 135);
+            this.label1.Location = new System.Drawing.Point(8, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 13);
             this.label1.TabIndex = 5;
@@ -109,11 +110,23 @@
             this.checkBoxDisableRowColoring.Text = "Disable grid row color highlighting";
             this.checkBoxDisableRowColoring.UseVisualStyleBackColor = true;
             // 
+            // checkBoxAdjustForDarkThemes
+            // 
+            this.checkBoxAdjustForDarkThemes.AutoSize = true;
+            this.checkBoxAdjustForDarkThemes.Location = new System.Drawing.Point(12, 107);
+            this.checkBoxAdjustForDarkThemes.Name = "checkBoxAdjustForDarkThemes";
+            this.checkBoxAdjustForDarkThemes.Size = new System.Drawing.Size(292, 30);
+            this.checkBoxAdjustForDarkThemes.TabIndex = 8;
+            this.checkBoxAdjustForDarkThemes.Text = "Fix issues when using dark high-contrast windows theme\r\n(Wurm Assistant restart r" +
+    "equired)";
+            this.checkBoxAdjustForDarkThemes.UseVisualStyleBackColor = true;
+            // 
             // FormGrangerGeneralOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 270);
+            this.ClientSize = new System.Drawing.Size(423, 293);
+            this.Controls.Add(this.checkBoxAdjustForDarkThemes);
             this.Controls.Add(this.checkBoxDisableRowColoring);
             this.Controls.Add(this.checkBoxUpdateAgeHealthAllEvents);
             this.Controls.Add(this.label1);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxUpdateAgeHealthAllEvents;
         private System.Windows.Forms.CheckBox checkBoxDisableRowColoring;
+        private System.Windows.Forms.CheckBox checkBoxAdjustForDarkThemes;
     }
 }

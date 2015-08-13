@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Aldurcraft.Utility;
+using BrightIdeasSoftware;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 {
@@ -26,9 +27,35 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         {
             MainForm = formGrangerMain;
             _debug_MainFormAssigned = true;
+
+            if (MainForm.Settings.Value.AdjustForDarkThemes)
+            {
+                MakeDarkHighContrastFriendly();
+            }
+
             Context = context;
             if (MainForm.Settings.Value.TraitViewState != null) objectListView1.RestoreState(MainForm.Settings.Value.TraitViewState);
             Manager = new TraitViewManager(MainForm, Context, objectListView1);
+        }
+
+        private void MakeDarkHighContrastFriendly()
+        {
+            objectListView1.HeaderUsesThemes = false;
+            objectListView1.HeaderFormatStyle = new HeaderFormatStyle()
+            {
+                Normal = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+                Hot = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+                Pressed = new HeaderStateStyle()
+                {
+                    ForeColor = Color.Yellow
+                },
+            };
         }
 
         public void SaveStateToSettings()
