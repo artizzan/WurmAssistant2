@@ -33,12 +33,13 @@ namespace Aldurcraft.Utility
                 SQLiteTransaction trans = con.BeginTransaction();
                 try
                 {
+                    Logger.LogDebug("sqlite nonquery: " + sqlcommand);
                     SQLiteCommand command = con.CreateCommand();
                     command.Transaction = trans;
                     command.CommandText = sqlcommand;
                     int result = command.ExecuteNonQuery();
                     trans.Commit();
-                    Logger.LogDebug("sqlite nonquerry: " + sqlcommand + " ;result = " + result);
+                    Logger.LogDebug("sqlite result: " + result + " for nonquery: " + sqlcommand);
                     return result;
                 }
                 catch (Exception _e)
@@ -72,12 +73,12 @@ namespace Aldurcraft.Utility
                 SQLiteCommand command = con.CreateCommand();
                 command.CommandText = sqlcommand;
                 DataTable result = new DataTable();
-                Logger.LogDebug("sqlite querry: " + sqlcommand);
+                Logger.LogDebug("sqlite query: " + sqlcommand);
                 using (SQLiteDataReader sqlitedatareader = command.ExecuteReader())
                 {
                     result.Load(sqlitedatareader);
                 }
-                Logger.LogDebug("sqlite querry: " + sqlcommand + " ;result = " + result);
+                Logger.LogDebug("sqlite query: " + sqlcommand + " ;result = " + result);
                 return result;
             }
         }

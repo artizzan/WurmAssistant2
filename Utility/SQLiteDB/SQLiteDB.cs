@@ -51,11 +51,21 @@ namespace Aldurcraft.Utility
 
         private int ExecuteNonQuery(string sqlcommand)
         {
-            SQLiteCommand command = new SQLiteCommand(Connection);
-            if (Transaction != null) command.Transaction = Transaction;
-            command.CommandText = sqlcommand;
-            int rowsUpdated = command.ExecuteNonQuery();
-            return rowsUpdated;
+            try
+            {
+                SQLiteCommand command = new SQLiteCommand(Connection);
+                if (Transaction != null)
+                    command.Transaction = Transaction;
+                command.CommandText = sqlcommand;
+                int rowsUpdated = command.ExecuteNonQuery();
+                return rowsUpdated;
+            }
+            catch (Exception exception)
+            {
+                Logger.LogInfo("Exception at ExecuteNonQuery: " + sqlcommand, this, exception);
+                throw;
+            }
+
         }
 
         /// <summary>
@@ -78,8 +88,9 @@ namespace Aldurcraft.Utility
                 if (Transaction == null) Disconnect();
                 return datatable;
             }
-            catch (Exception _e)
+            catch (Exception exception)
             {
+                Logger.LogInfo("Exception at RunCustomQuery: " + query, this, exception);
                 if (Transaction == null)
                 {
                     //Logger.WriteLine("Database RunQuery exception: " + Connection.ConnectionString);
@@ -87,7 +98,7 @@ namespace Aldurcraft.Utility
                     Disconnect();
                     return null;
                 }
-                else throw _e;
+                else throw exception;
             }
         }
 
@@ -100,23 +111,25 @@ namespace Aldurcraft.Utility
         {
             if (Transaction == null) Connect();
             DataTable datatable = new DataTable();
+            var cmdtext = "SELECT * FROM " + tablename;
+            if (where != null)
+            {
+                cmdtext += " WHERE " + where;
+            }
             try
             {
                 SQLiteCommand command = new SQLiteCommand(Connection);
                 if (Transaction != null) command.Transaction = Transaction;
-                command.CommandText = "SELECT * FROM " + tablename;
-                if (where != null)
-                {
-                    command.CommandText += " WHERE " + where;
-                }
+                command.CommandText = cmdtext;
                 SQLiteDataReader sqlitedatareader = command.ExecuteReader();
                 datatable.Load(sqlitedatareader);
                 sqlitedatareader.Close();
                 if (Transaction == null) Disconnect();
                 return datatable;
             }
-            catch (Exception _e)
+            catch (Exception exception)
             {
+                Logger.LogInfo("Exception at GetDataTable: " + cmdtext, this, exception);
                 if (Transaction == null)
                 {
                     //Logger.WriteLine("Database GetTable exception: " + Connection.ConnectionString);
@@ -124,7 +137,7 @@ namespace Aldurcraft.Utility
                     Disconnect();
                     return null;
                 }
-                else throw _e;
+                else throw exception;
             }
         }
 
@@ -177,8 +190,9 @@ namespace Aldurcraft.Utility
                     return value.ToString();
                 else return null;
             }
-            catch (Exception _e)
+            catch (Exception exception)
             {
+                Logger.LogDebug("Exception at ExecuteScalar: " + sqlcommand, this, exception);
                 if (Transaction == null)
                 {
                     //Logger.WriteLine("Exception at ExecuteScalar: " + Connection.ConnectionString);
@@ -186,7 +200,7 @@ namespace Aldurcraft.Utility
                     Disconnect();
                     return null;
                 }
-                else throw _e;
+                else throw exception;
             }
         }
 
@@ -208,11 +222,12 @@ namespace Aldurcraft.Utility
                 {
                     foreach (DBField field in fieldsList)
                     {
-                        fields += String.Format(" {0} = '{1}',", field.Name, field.Value);
+                        fields += String.Format(" {0} = '{1}',", field.Name, (field.Value ?? string.Empty).Replace("'", "''"));
                     }
                     fields = fields.Substring(0, fields.Length - 1);
                 }
-                int updatedCount = this.ExecuteNonQuery(String.Format("UPDATE {0} SET {1} WHERE {2};", tableName, fields, where));
+                var commandText = String.Format("UPDATE {0} SET {1} WHERE {2};", tableName, fields, where);
+                int updatedCount = this.ExecuteNonQuery(commandText);
                 if (Transaction == null) Disconnect();
                 if (updatedCount > 0) return true;
                 else return false;

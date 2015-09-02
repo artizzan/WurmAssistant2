@@ -1,3 +1,9 @@
+2.0.136.1 (02-09-2015 14:50:40)
+- fixed DB query exceptions, when an argument had apostrophe in literal
+
+2.0.135.1 (01-09-2015 15:23:49)
+- improved logging of SQL errors
+
 2.0.134.1 (13-08-2015 22:01:53)
 - Granger: option to fix some issues when using dark high-contrast windows theme
 
