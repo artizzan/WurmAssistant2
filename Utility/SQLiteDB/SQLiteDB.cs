@@ -289,7 +289,7 @@ namespace Aldurcraft.Utility
                 foreach (DBField field in fieldsList)
                 {
                     columns += String.Format(" {0},", field.Name);
-                    values += String.Format(" '{0}',", field.Value);
+                    values += String.Format(" '{0}',", (field.Value ?? string.Empty).Replace("'", "''"));
                 }
                 columns = columns.Substring(0, columns.Length - 1);
                 values = values.Substring(0, values.Length - 1);
