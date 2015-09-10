@@ -117,32 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="beer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Wurm Assistant 3 is close!
+
+But did you know, that a cross-platform version of the app is also being worked on?
+Wurm Assistant Lite aims to bring some, perhaps even all, Wurm Assistant features, to other operating systems (Linux and Mac).
+
+However, making cross-platform app is not easy. In fact, WA Lite will probably not happen, without help from the Linux and Mac users!</value>
   </data>
-  <data name="SoundEnabledSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SoundEnabledSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DeleteRed_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DeleteRed_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SoundDisabledSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SoundDisabledSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WurmAssistantIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WurmAssistantIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_icon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="irrklang_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\irrklang_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lampsFlow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lampsFlow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WurmAssistantLiteIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WurmAssistantLiteIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Not only WA Lite could use your help. New features can be added to Wurm Assistant and existing ones can be improved. 
+
+Or, alternatively, completely new apps can be created, thanks to WurmApi project. This api is used by new Assistants and works on all systems, not just Windows.
+
+And you don't need to be a pro to work on WA! If you want to learn or master programming with this project, you are most welcome!</value>
   </data>
 </root>

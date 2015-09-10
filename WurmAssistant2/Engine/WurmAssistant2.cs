@@ -23,18 +23,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
         public WurmAssistant()
         {
             InitializeComponent();
-            EnableDebagButton(); //only in debag mode!
-            if (DateTime.Now > new DateTime(2015, 1, 31).AddDays(14))
-            {
-                linkLabelAssistantFuture.Visible = false;
-            }
             _contextMenuManager = new TrayContextMenuManager(this, contextMenuStrip1);
-        }
-
-        [Conditional("DEBUG")]
-        private void EnableDebagButton()
-        {
-            buttonDebag.Enabled = buttonDebag.Visible = true;
         }
 
         bool _initCompleted = false;
@@ -79,6 +68,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
         {
             timerInit.Enabled = false;
             // why on earth would this fire a few times, when timerInit.Enabled=false is at the end and sometimes even when at the top??
+            // answer: race, next invocation is scheduled before this handler stops the timer
             if (!_timerInitCompleted)
             {
                 _timerInitCompleted = true;
@@ -431,12 +421,6 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             if (AssistantEngine.Settings.Value.AlwaysShowNotifyIcon) notifyIcon1.Visible = true;
         }
 
-        private void buttonDebag_Click(object sender, EventArgs e)
-        {
-            var ui = new DebugMain();
-            ui.Show();
-        }
-
         private void rdPartyToolsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -471,16 +455,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             }
         }
 
-        private void linkLabelAssistantFuture_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelHighlightContent_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                Process.Start(@"https://www.surveymonkey.com/s/QNRZSQF");
-            }
-            catch (Exception _e)
-            {
-                Logger.LogError("Problem at linkLabelAssistantFuture_LinkClicked", this, _e);
-            }
+            AssistantEngine.DisplayWa3Promo();
         }
 
     }

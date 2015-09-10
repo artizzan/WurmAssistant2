@@ -59,6 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.linkLabelHighlightContent = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerUpdateLoop = new System.Windows.Forms.Timer(this.components);
             this.buttonForumThread = new System.Windows.Forms.Button();
@@ -66,9 +67,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.buttonDebag = new System.Windows.Forms.Button();
             this.buttonBuyBeerYarr = new System.Windows.Forms.Button();
-            this.linkLabelAssistantFuture = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
             this.panelLog.SuspendLayout();
             this.tableLayoutPanelLog.SuspendLayout();
@@ -370,13 +369,24 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.linkLabelAssistantFuture);
+            this.panel3.Controls.Add(this.linkLabelHighlightContent);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(90, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(478, 20);
             this.panel3.TabIndex = 7;
+            // 
+            // linkLabelHighlightContent
+            // 
+            this.linkLabelHighlightContent.AutoSize = true;
+            this.linkLabelHighlightContent.Location = new System.Drawing.Point(4, 4);
+            this.linkLabelHighlightContent.Name = "linkLabelHighlightContent";
+            this.linkLabelHighlightContent.Size = new System.Drawing.Size(367, 13);
+            this.linkLabelHighlightContent.TabIndex = 0;
+            this.linkLabelHighlightContent.TabStop = true;
+            this.linkLabelHighlightContent.Text = "Take part in development of WA 3 and cross-platform WA Lite. Read more...";
+            this.linkLabelHighlightContent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHighlightContent_LinkClicked);
             // 
             // toolTip1
             // 
@@ -431,19 +441,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // buttonDebag
-            // 
-            this.buttonDebag.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDebag.Enabled = false;
-            this.buttonDebag.Location = new System.Drawing.Point(463, 338);
-            this.buttonDebag.Name = "buttonDebag";
-            this.buttonDebag.Size = new System.Drawing.Size(112, 23);
-            this.buttonDebag.TabIndex = 10;
-            this.buttonDebag.Text = "debag button";
-            this.buttonDebag.UseVisualStyleBackColor = true;
-            this.buttonDebag.Visible = false;
-            this.buttonDebag.Click += new System.EventHandler(this.buttonDebag_Click);
-            // 
             // buttonBuyBeerYarr
             // 
             this.buttonBuyBeerYarr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -461,23 +458,11 @@
             this.buttonBuyBeerYarr.UseVisualStyleBackColor = false;
             this.buttonBuyBeerYarr.Click += new System.EventHandler(this.buttonBuyBeerYarr_Click);
             // 
-            // linkLabelAssistantFuture
-            // 
-            this.linkLabelAssistantFuture.AutoSize = true;
-            this.linkLabelAssistantFuture.Location = new System.Drawing.Point(4, 4);
-            this.linkLabelAssistantFuture.Name = "linkLabelAssistantFuture";
-            this.linkLabelAssistantFuture.Size = new System.Drawing.Size(322, 13);
-            this.linkLabelAssistantFuture.TabIndex = 0;
-            this.linkLabelAssistantFuture.TabStop = true;
-            this.linkLabelAssistantFuture.Text = "Follow this link to take part in a survey about Wurm Assistant future";
-            this.linkLabelAssistantFuture.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAssistantFuture_LinkClicked);
-            // 
             // WurmAssistant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 357);
-            this.Controls.Add(this.buttonDebag);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.buttonForumThread);
             this.Controls.Add(this.buttonBuyBeerYarr);
@@ -550,12 +535,11 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button buttonDebag;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripMenuItem rebuildLogsCacheToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roadmapToolStripMenuItem;
-        private System.Windows.Forms.LinkLabel linkLabelAssistantFuture;
+        private System.Windows.Forms.LinkLabel linkLabelHighlightContent;
     }
 }

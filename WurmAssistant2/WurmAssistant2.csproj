@@ -201,6 +201,12 @@
     </Compile>
     <Compile Include="Engine\OtherManager\OtherManager.cs" />
     <Compile Include="Engine\OtherManager\OtherTool.cs" />
+    <Compile Include="Engine\Wa3PromoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\Wa3PromoForm.Designer.cs">
+      <DependentUpon>Wa3PromoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Triggers\SoundTriggersImporter.cs" />
     <Compile Include="Wa2SpellBook.cs" />
     <Compile Include="Engine\TrayContextMenuManager.cs" />
@@ -580,6 +586,7 @@
     </Content>
     <None Include="Resources\transp_placeholder.png" />
     <None Include="Resources\lampsFlow.png" />
+    <None Include="Resources\WurmAssistantLiteIcon.png" />
     <Content Include="WurmAssistantIcon.ico" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -611,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Engine\OtherManager\FormOtherManager.resx">
       <DependentUpon>FormOtherManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\Wa3PromoForm.resx">
+      <DependentUpon>Wa3PromoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUncaughtException.resx">
       <DependentUpon>FormUncaughtException.cs</DependentUpon>

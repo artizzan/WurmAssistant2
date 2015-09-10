@@ -11,7 +11,9 @@ using Aldurcraft.Utility.PopupNotify;
 using Aldurcraft.WurmOnline.WurmLogsManager;
 using System.Diagnostics;
 using System.Reflection;
+using System.Windows.Forms;
 using Aldurcraft.Utility;
+using Aldurcraft.WurmOnline.WurmAssistant2.Engine;
 using Aldurcraft.WurmOnline.WurmLogsManager.Searcher;
 using Aldurcraft.WurmOnline.WurmState;
 
@@ -60,10 +62,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             public string WurmDirOverride = null;
             [DataMember]
             public bool AssistantFuturePollDisplayed = false;
+            [DataMember]
+            public bool Wa3PromoDisplayed { get; set; }
 
             //nonpersisted, update to have assistant open this link on next launch
             public const string CurrentNewsUrl = @"http://forum.wurmonline.com/index.php?/topic/68031-wurm-assistant-2x-bundle-of-useful-tools/page-48#entry944197";
-
         }
 
         const string THIS = "AssistantEngine";
@@ -245,6 +248,28 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             Logger.LogInfo("checking for new assistant version");
             Version assistantVersion = Assembly.GetEntryAssembly().GetName().Version;
             HandleVersionUpdates(assistantVersion);
+            if (!Settings.Value.Wa3PromoDisplayed)
+            {
+                DisplayWa3Promo();
+                Settings.Value.Wa3PromoDisplayed = true;
+            }
+        }
+
+        public static void DisplayWa3Promo()
+        {
+            try
+            {
+                var promoForm = new Wa3PromoForm
+                {
+                    StartPosition = FormStartPosition.CenterScreen
+                };
+                promoForm.Show();
+                promoForm.BringToFront();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
         }
 
         //update loop def 100ms
