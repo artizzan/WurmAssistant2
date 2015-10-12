@@ -43,10 +43,10 @@
             this.checkBoxAlwaysUpdateUnlessMultiples.AutoSize = true;
             this.checkBoxAlwaysUpdateUnlessMultiples.Location = new System.Drawing.Point(12, 12);
             this.checkBoxAlwaysUpdateUnlessMultiples.Name = "checkBoxAlwaysUpdateUnlessMultiples";
-            this.checkBoxAlwaysUpdateUnlessMultiples.Size = new System.Drawing.Size(307, 30);
+            this.checkBoxAlwaysUpdateUnlessMultiples.Size = new System.Drawing.Size(320, 30);
             this.checkBoxAlwaysUpdateUnlessMultiples.TabIndex = 0;
-            this.checkBoxAlwaysUpdateUnlessMultiples.Text = "Always update horse, regardless which herd they are in, \r\nunless multiple horses " +
-    "with same name exist in the database";
+            this.checkBoxAlwaysUpdateUnlessMultiples.Text = "Always update creature, regardless which herd they are in, \r\nunless multiple crea" +
+    "tures with same name exist in the database";
             this.checkBoxAlwaysUpdateUnlessMultiples.UseVisualStyleBackColor = true;
             // 
             // timeSpanInputGroomingTime
@@ -94,10 +94,10 @@
             this.checkBoxUpdateAgeHealthAllEvents.AutoSize = true;
             this.checkBoxUpdateAgeHealthAllEvents.Location = new System.Drawing.Point(12, 48);
             this.checkBoxUpdateAgeHealthAllEvents.Name = "checkBoxUpdateAgeHealthAllEvents";
-            this.checkBoxUpdateAgeHealthAllEvents.Size = new System.Drawing.Size(306, 30);
+            this.checkBoxUpdateAgeHealthAllEvents.Size = new System.Drawing.Size(319, 30);
             this.checkBoxUpdateAgeHealthAllEvents.TabIndex = 6;
-            this.checkBoxUpdateAgeHealthAllEvents.Text = "Try to update horse age and health data from any log event\r\n(when unchecked, upda" +
-    "tes only when smile-examining)";
+            this.checkBoxUpdateAgeHealthAllEvents.Text = "Try to update creature age and health data from any log event\r\n(when unchecked, u" +
+    "pdates only when smile-examining)";
             this.checkBoxUpdateAgeHealthAllEvents.UseVisualStyleBackColor = true;
             // 
             // checkBoxDisableRowColoring

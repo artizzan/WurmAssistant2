@@ -148,7 +148,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 return mate.First();
             else if (mate.Length == 0) 
                 return null;
-            else throw new Exception("duplicate horses found?");
+            else throw new Exception("duplicate creatures found?");
         }
 
         public bool HasMate()
@@ -255,7 +255,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 {
                     if (horse.IsIdenticalIdentity(this))
                     {
-                        throw new Exception("can not change herd because nonunique horse already exists in target herd");
+                        throw new Exception("can not change herd because nonunique creatures already exists in target herd");
                     }
                 }
 

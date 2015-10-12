@@ -479,7 +479,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (objectListView1.SelectedObjects.Count > 1) MessageBox.Show("Select a single horse for editing");
+            if (objectListView1.SelectedObjects.Count > 1)
+                MessageBox.Show("Select a single creature for editing");
             else
             {
                 var selected = objectListView1.SelectedObjects.Cast<Horse>().ToArray();
@@ -517,7 +518,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 }
 
                 if (nonuniqueHorses.Count > 0)
-                    MessageBox.Show("could not change herd for selected horses, because following horses have same identity (name+gender):\r\n"
+                    MessageBox.Show("could not change herd for selected creatures, because following creatures have same identity (name+gender):\r\n"
                         + string.Join(", ", nonuniqueHorses.Select(x => x.ToString())));
                 else
                 {
@@ -533,7 +534,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var selected = objectListView1.SelectedObjects.Cast<Horse>().OrderBy(x => x.NameAspect).ToArray();
-            if (MessageBox.Show("This will permanently delete following horses:\r\n" +
+            if (MessageBox.Show("This will permanently delete following creatures:\r\n" +
                 string.Join(",\r\n", (IEnumerable<Horse>)selected) + "\r\nContinue?",
                 "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
@@ -543,7 +544,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (objectListView1.SelectedObjects.Count > 1) MessageBox.Show("Select a single horse for viewing");
+            if (objectListView1.SelectedObjects.Count > 1)
+                MessageBox.Show("Select a single creature for viewing");
             else
             {
                 var selected = objectListView1.SelectedObjects.Cast<Horse>().ToArray();
@@ -617,7 +619,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
             if (selected.Length > 2)
             {
-                if (System.Windows.Forms.MessageBox.Show("This will set color for following horses:\r\n" +
+                if (System.Windows.Forms.MessageBox.Show("This will set color for following creatures:\r\n" +
                     string.Join(", ", (IEnumerable<Horse>)selected) + "\r\nContinue?",
                     "Confirm", System.Windows.Forms.MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
                 {
@@ -695,7 +697,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             catch (Exception _e)
             {
                 Logger.LogError(
-                    string.Format("Something went wrong when trying to save horselist layout, mainform null: {0}", MainForm)
+                    string.Format("Something went wrong when trying to save creaturelist layout, mainform null: {0}", MainForm)
                     , this, _e);
             }
         }
@@ -705,7 +707,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             var selected = objectListView1.SelectedObjects.Cast<Horse>().ToArray();
             if (selected.Length != 2)
             {
-                MessageBox.Show("Select exactly 2 horses that should be paired together");
+                MessageBox.Show("Select exactly 2 creatures that should be paired together");
                 return;
             }
 
@@ -713,7 +715,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             Horse secondHorseMate = selected[1].GetMate();
             if (firstHorseMate != null || secondHorseMate != null)
             {
-                if (MessageBox.Show("At least one of selected horses already has a mate. Continue to change their mates?",
+                if (MessageBox.Show("At least one of selected creatures already has a mate. Continue to change their mates?",
                     "Confirm", MessageBoxButtons.OKCancel) != DialogResult.OK)
                 {
                     return;
@@ -736,7 +738,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
             if (selected.Length > 0)
             {
-                if (MessageBox.Show("Mates will be cleared for following horses:\r\n" +
+                if (MessageBox.Show("Mates will be cleared for following creatures:\r\n" +
                     string.Join(",\r\n", (IEnumerable<Horse>)selected) + "\r\nContinue?",
                     "Confirm", MessageBoxButtons.OKCancel) != DialogResult.OK)
                 {
@@ -760,14 +762,14 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             if (!_updatingListView && changed)
             {
                 var selhorses = newSelectedHorses;
-                Logger.LogDebug("Selected horses changed, array count: " + selhorses.Length);
+                Logger.LogDebug("Selected creatures changed, array count: " + selhorses.Length);
                 if (selhorses.Length == 1)
                 {
-                    Logger.LogDebug("Selected single horse, array count: " + selhorses.Length);
+                    Logger.LogDebug("Selected single creature, array count: " + selhorses.Length);
                     var horse = selhorses[0];
                     if (!horse.Equals(SelectedSingleHorse)) //change only if new selected horse is different
                     {
-                        Logger.LogDebug("Selected single horse changing");
+                        Logger.LogDebug("Selected single creature changing");
                         SelectedSingleHorse = selhorses[0];
                     }
                 }

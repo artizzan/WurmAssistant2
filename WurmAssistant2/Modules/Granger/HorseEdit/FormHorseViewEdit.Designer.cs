@@ -606,7 +606,7 @@
             this.Name = "FormHorseViewEdit";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Horse";
+            this.Text = "Creature";
             this.Load += new System.EventHandler(this.FormHorseViewEdit_Load);
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();

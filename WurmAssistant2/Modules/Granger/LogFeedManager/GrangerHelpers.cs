@@ -96,12 +96,15 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         /// <returns></returns>
         public static bool IsBlacklistedCreatureName(string prefixedObjectName)
         {
-            prefixedObjectName = prefixedObjectName.ToUpperInvariant();
-            foreach (string name in WildCreatureNames)
-            {
-                if (prefixedObjectName.Contains(name.ToUpperInvariant())) return true;
-            }
+            // allow adding any creature
             return false;
+
+            //prefixedObjectName = prefixedObjectName.ToUpperInvariant();
+            //foreach (string name in WildCreatureNames)
+            //{
+            //    if (prefixedObjectName.Contains(name.ToUpperInvariant())) return true;
+            //}
+            //return false;
         }
 
         /// <summary>

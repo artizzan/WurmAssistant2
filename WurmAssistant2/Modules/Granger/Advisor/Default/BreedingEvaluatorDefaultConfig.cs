@@ -199,7 +199,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry, not written yet! :(");
+            MessageBox.Show("Still not written after 3 years! Lazy Aldur!");
         }
 
         private void checkBoxExcludeFoals_CheckedChanged(object sender, EventArgs e)

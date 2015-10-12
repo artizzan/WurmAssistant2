@@ -1,3 +1,6 @@
+2.0.138.1 (12-10-2015 21:29:22)
+- Granger: support for adding any creature, even non unique, but mostly intented for those branded and renamed. Note that changing creature name will change it's Id
+
 2.0.137.1 (03-09-2015 15:04:35)
 - bugfix for SQL
 

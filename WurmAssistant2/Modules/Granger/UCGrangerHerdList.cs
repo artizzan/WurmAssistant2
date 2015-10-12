@@ -82,8 +82,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             else
             {
                 HorseEntity[] horses = Context.Horses.Where(x => x.Herd == selHerd.HerdID).ToArray();
-                if (MessageBox.Show("Following herd will be deleted: " + selHerd + "\r\n" + "all horses in this herd will also be deleted:" + "\r\n"
-                    + (horses.Length == 0 ? "no horses in this herd" : string.Join(", ", (IEnumerable<HorseEntity>)horses)) + "\r\n\r\n" +
+                if (MessageBox.Show("Following herd will be deleted: " + selHerd + "\r\n" + "all creatures in this herd will also be deleted:" + "\r\n"
+                    + (horses.Length == 0 ? "no creatures in this herd" : string.Join(", ", (IEnumerable<HorseEntity>)horses)) + "\r\n\r\n" +
                     "Continue?", "confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
                 {
                     Context.DeleteHerd(selHerd.HerdID);

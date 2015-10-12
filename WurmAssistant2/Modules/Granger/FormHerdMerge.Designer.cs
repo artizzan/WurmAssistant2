@@ -48,19 +48,21 @@
             // 
             this.textBoxFromHerd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFromHerd.Location = new System.Drawing.Point(3, 20);
+            this.textBoxFromHerd.Location = new System.Drawing.Point(2, 16);
+            this.textBoxFromHerd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFromHerd.Name = "textBoxFromHerd";
             this.textBoxFromHerd.ReadOnly = true;
-            this.textBoxFromHerd.Size = new System.Drawing.Size(262, 22);
+            this.textBoxFromHerd.Size = new System.Drawing.Size(199, 20);
             this.textBoxFromHerd.TabIndex = 0;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(471, 342);
+            this.buttonCancel.Location = new System.Drawing.Point(353, 278);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(90, 31);
+            this.buttonCancel.Size = new System.Drawing.Size(68, 25);
             this.buttonCancel.TabIndex = 9;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.Enabled = false;
-            this.buttonOK.Location = new System.Drawing.Point(372, 342);
+            this.buttonOK.Location = new System.Drawing.Point(279, 278);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(90, 31);
+            this.buttonOK.Size = new System.Drawing.Size(68, 25);
             this.buttonOK.TabIndex = 8;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -81,18 +84,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "From herd:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "To Herd:";
             // 
@@ -102,9 +107,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxToHerd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxToHerd.FormattingEnabled = true;
-            this.comboBoxToHerd.Location = new System.Drawing.Point(6, 18);
+            this.comboBoxToHerd.Location = new System.Drawing.Point(4, 15);
+            this.comboBoxToHerd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxToHerd.Name = "comboBoxToHerd";
-            this.comboBoxToHerd.Size = new System.Drawing.Size(260, 24);
+            this.comboBoxToHerd.Size = new System.Drawing.Size(196, 21);
             this.comboBoxToHerd.TabIndex = 12;
             this.comboBoxToHerd.SelectedIndexChanged += new System.EventHandler(this.comboBoxToHerd_SelectedIndexChanged);
             // 
@@ -114,10 +120,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxFromHerd.FormattingEnabled = true;
-            this.listBoxFromHerd.ItemHeight = 16;
-            this.listBoxFromHerd.Location = new System.Drawing.Point(3, 49);
+            this.listBoxFromHerd.Location = new System.Drawing.Point(2, 40);
+            this.listBoxFromHerd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxFromHerd.Name = "listBoxFromHerd";
-            this.listBoxFromHerd.Size = new System.Drawing.Size(262, 260);
+            this.listBoxFromHerd.Size = new System.Drawing.Size(199, 212);
             this.listBoxFromHerd.TabIndex = 13;
             this.listBoxFromHerd.DoubleClick += new System.EventHandler(this.listBoxFromHerd_DoubleClick);
             // 
@@ -127,10 +133,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxToHerd.FormattingEnabled = true;
-            this.listBoxToHerd.ItemHeight = 16;
-            this.listBoxToHerd.Location = new System.Drawing.Point(6, 49);
+            this.listBoxToHerd.Location = new System.Drawing.Point(4, 40);
+            this.listBoxToHerd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxToHerd.Name = "listBoxToHerd";
-            this.listBoxToHerd.Size = new System.Drawing.Size(260, 260);
+            this.listBoxToHerd.Size = new System.Drawing.Size(196, 212);
             this.listBoxToHerd.TabIndex = 14;
             this.listBoxToHerd.DoubleClick += new System.EventHandler(this.listBoxToHerd_DoubleClick);
             // 
@@ -144,11 +150,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 10);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(549, 324);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(412, 263);
             this.tableLayoutPanel1.TabIndex = 15;
             // 
             // panel1
@@ -157,9 +164,10 @@
             this.panel1.Controls.Add(this.textBoxFromHerd);
             this.panel1.Controls.Add(this.listBoxFromHerd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 318);
+            this.panel1.Size = new System.Drawing.Size(202, 259);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -168,19 +176,21 @@
             this.panel2.Controls.Add(this.listBoxToHerd);
             this.panel2.Controls.Add(this.comboBoxToHerd);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(277, 3);
+            this.panel2.Location = new System.Drawing.Point(208, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(269, 318);
+            this.panel2.Size = new System.Drawing.Size(202, 259);
             this.panel2.TabIndex = 1;
             // 
             // FormHerdMerge
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 385);
+            this.ClientSize = new System.Drawing.Size(430, 313);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHerdMerge";

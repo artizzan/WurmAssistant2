@@ -113,14 +113,14 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             Horse mate = horse.GetMate();
             if (mate != null) textBoxMate.Text = mate.ToString();
 
-            this.Text = "Viewing horse: " + horse.NameAspect + " in herd: " + HerdID;
+            this.Text = "Viewing creature: " + horse.NameAspect + " in herd: " + HerdID;
         }
 
         void prepareFieldsForEdit()
         {
             prepareFieldsForView();
             enableAllFields();
-            this.Text = "Editing horse: " + horse.NameAspect + " in herd: " + HerdID;
+            this.Text = "Editing creature: " + horse.NameAspect + " in herd: " + HerdID;
             ValidateHorseIdentity();
         }
 
@@ -145,7 +145,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             checkedListBoxTraits.Items.AddRange(HorseTrait.GetAllTraitWurmText());
 
             enableAllFields();
-            this.Text = "Adding new horse to herd: " + HerdID;
+            this.Text = "Adding new creature to herd: " + HerdID;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -178,7 +178,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         }
                         catch (Exception _e)
                         {
-                            Logger.LogError("failed to create horse trait from text:" + item.ToString(), this, _e);
+                            Logger.LogError("failed to create creature trait from text:" + item.ToString(), this, _e);
                         }
                     }
                     var traitlistArray = traitlist.ToArray();
@@ -253,37 +253,39 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             if (textBoxName.Text == "")
             {
                 labelWarn.Visible = true;
-                labelWarn.Text = "Horse name can't be empty";
+                labelWarn.Text = "Creature name can't be empty";
                 buttonOK.Enabled = false;
                 return false;
             }
 
-            textBoxName.Text = RefactorHorseName(textBoxName.Text);
-            if (!Regex.IsMatch(textBoxName.Text, @"^[A-Z][a-z]+$"))
-            {
-                labelWarn.Visible = true;
-                labelWarn.Text = "Horse name has invalid format";
-                buttonOK.Enabled = false;
-                return false;
-            }
+            // disable extra horse-specific validations to support custom creatures
 
-            comboBoxFather.Text = RefactorHorseName(comboBoxFather.Text);
-            if (comboBoxFather.Text != string.Empty && !Regex.IsMatch(comboBoxFather.Text, @"^[A-Z][a-z]+$"))
-            {
-                labelWarn.Visible = true;
-                labelWarn.Text = "Father name has invalid format";
-                buttonOK.Enabled = false;
-                return false;
-            }
+            //textBoxName.Text = RefactorHorseName(textBoxName.Text);
+            //if (!Regex.IsMatch(textBoxName.Text, @"^[A-Z][a-z]+$"))
+            //{
+            //    labelWarn.Visible = true;
+            //    labelWarn.Text = "Horse name has invalid format";
+            //    buttonOK.Enabled = false;
+            //    return false;
+            //}
 
-            comboBoxMother.Text = RefactorHorseName(comboBoxMother.Text);
-            if (comboBoxMother.Text != string.Empty && !Regex.IsMatch(comboBoxMother.Text, @"^[A-Z][a-z]+$"))
-            {
-                labelWarn.Visible = true;
-                labelWarn.Text = "Mother name has invalid format";
-                buttonOK.Enabled = false;
-                return false;
-            }
+            //comboBoxFather.Text = RefactorHorseName(comboBoxFather.Text);
+            //if (comboBoxFather.Text != string.Empty && !Regex.IsMatch(comboBoxFather.Text, @"^[A-Z][a-z]+$"))
+            //{
+            //    labelWarn.Visible = true;
+            //    labelWarn.Text = "Father name has invalid format";
+            //    buttonOK.Enabled = false;
+            //    return false;
+            //}
+
+            //comboBoxMother.Text = RefactorHorseName(comboBoxMother.Text);
+            //if (comboBoxMother.Text != string.Empty && !Regex.IsMatch(comboBoxMother.Text, @"^[A-Z][a-z]+$"))
+            //{
+            //    labelWarn.Visible = true;
+            //    labelWarn.Text = "Mother name has invalid format";
+            //    buttonOK.Enabled = false;
+            //    return false;
+            //}
 
             var otherHorses = Context.Horses.Where(x => x.Herd == HerdID).ToArray();
             var nonuniques = otherHorses.Where(x => x.Name == textBoxName.Text).ToArray();
@@ -294,7 +296,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             if (nonuniques.Length > 0)
             {
                 labelWarn.Visible = true;
-                labelWarn.Text = "Horse with this identity already exists in this herd";
+                labelWarn.Text = "Creature with this identity already exists in this herd";
                 buttonOK.Enabled = false;
                 return false;
             }

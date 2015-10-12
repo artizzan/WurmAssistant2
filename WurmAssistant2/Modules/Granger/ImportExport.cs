@@ -36,7 +36,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 // verify this name is not present in current list
                 if (horseEntities.Any(y => y.Name.Equals(entity.Name, StringComparison.InvariantCultureIgnoreCase)))
                 {
-                    throw new GrangerException(string.Format("Horse named {0} was already added from this XML file. Review the file for any errors.", entity.Name));
+                    throw new GrangerException(string.Format("Creature named {0} was already added from this XML file. Review the file for any errors.", entity.Name));
                 }
 
                 entity.FatherName = x.Element("Father").Value;
@@ -118,7 +118,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
             if (horses.Length == 0)
             {
-                throw new GrangerException(string.Format("No horses found in {0} herd or herd did not exist", herdName));
+                throw new GrangerException(string.Format("No creatures found in {0} herd or herd did not exist", herdName));
             }
 
             XElement root = new XElement("Herd", new XAttribute("OriginalHerdName", herdName));

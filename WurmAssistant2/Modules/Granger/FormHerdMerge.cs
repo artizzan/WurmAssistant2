@@ -48,7 +48,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             catch (Exception _e)
             {
                 MessageBox.Show("there was a problem with merging herds:\r\n" + _e.Message);
-                if (_e is GrangerContext.DuplicateHorseIdentityException) Logger.LogDiag("merging herds failed due non-unique horses", this, _e);
+                if (_e is GrangerContext.DuplicateHorseIdentityException) Logger.LogDiag("merging herds failed due non-unique creatures", this, _e);
                 else Logger.LogError("merge herd problem", this, _e);
             }
         }

@@ -105,7 +105,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     {
                         var message =
                             String.Format(
-                                "{0} ({1}) can see traits, but Granger found no Animal Husbandry skill for him. Is this a bug? Horse will be added anyway.",
+                                "{0} ({1}) can see traits, but Granger found no Animal Husbandry skill for him. Is this a bug? Creature will be added anyway.",
                                 _playerMan.PlayerName, _newHorse.ServerGroup);
                         Logger.LogError(message, this);
                         Popup.Schedule("POSSIBLE PROBLEM", message, 5000);
@@ -116,13 +116,13 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 {
                     _newHorse.IsMale = true;
                     _verifyList.Gender = true;
-                    _grangerDebug.Log("horse set to male");
+                    _grangerDebug.Log("creature set to male");
                 }
                 if (line.StartsWith("She", StringComparison.Ordinal) && !_verifyList.Gender)
                 {
                     _newHorse.IsMale = false;
                     _verifyList.Gender = true;
-                    _grangerDebug.Log("horse set to female");
+                    _grangerDebug.Log("creature set to female");
                 }
                 //[01:05:57] Mother is Venerable fat Starkdance. Father is Venerable fat Jollypie. 
                 if ((line.Contains("Mother is") || line.Contains("Father is")) && !_verifyList.Parents)
@@ -169,7 +169,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     {
                         double length = Double.Parse(match.Groups[1].Value) + 1D;
                         _newHorse.PregnantUntil = DateTime.Now + TimeSpan.FromHours(length * 21D);
-                        _grangerDebug.Log("found horse to be pregnant, estimated delivery: " + _newHorse.PregnantUntil);
+                        _grangerDebug.Log("found creature to be pregnant, estimated delivery: " + _newHorse.PregnantUntil);
                     }
                     _verifyList.Pregnant = true;
                     _grangerDebug.Log("finished parsing pregnant line");
@@ -177,7 +177,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 //[20:58:26] A foal skips around here merrily
                 if (line.Contains("A foal skips around here merrily") && !_verifyList.Foalization)
                 {
-                    _grangerDebug.Log("applying foalization to the horse");
+                    _grangerDebug.Log("applying foalization to the creature");
                     try
                     {
                         _newHorse.Age.Foalize();
@@ -186,7 +186,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     catch (Exception _e)
                     {
                         // we can swallow because age is of little significance to granger and can be adjusted easily
-                        Logger.LogError("The horse appears to be a foal, but has invalid age for a foal!", this, _e);
+                        Logger.LogError("The creature appears to be a foal, but has invalid age for a foal!", this, _e);
                     }
                 }
                 //[20:57:27] It has been branded by and belongs to the settlement of Silver Hill Estate.
@@ -198,7 +198,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     {
                         string settlementName = match.Groups[1].Value;
                         _newHorse.BrandedBy = settlementName;
-                        _grangerDebug.Log("found horse to be branded for: " + _newHorse.BrandedBy);
+                        _grangerDebug.Log("found creature to be branded for: " + _newHorse.BrandedBy);
                         _verifyList.Branding = true;
                     }
                 }
@@ -209,11 +209,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
         {
             if (_newHorse != null)
             {
-                _grangerDebug.Log("finishing processing horse: " + _newHorse.Name);
+                _grangerDebug.Log("finishing processing creature: " + _newHorse.Name);
                 //verify if enough fields are filled to warrant updating
                 if (_verifyList.IsValid)
                 {
-                    _grangerDebug.Log("horse data is valid");
+                    _grangerDebug.Log("Creature data is valid");
 
                     var selectedHerds = GetSelectedHerds();
 
@@ -250,7 +250,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         {
                             sanityFail = true;
                             if (sanityFailReason == null)
-                                sanityFailReason = "New horse data would make the horse younger than it was";
+                                sanityFailReason = "New creature data would make the creature younger than it was";
                         }
                         //basically if both horses HAVE a mother name or father name, they cant have different names
                         //but its entirely possible a mother or father dies and reference is lost, with it the name
@@ -301,7 +301,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         if (oldHorse.TraitsInspectedAtSkill.HasValue)
                         {
                             //exclude this check if horse had genesis cast within last 1 hour
-                            _grangerDebug.Log(string.Format("Checking horse for Genesis cast (horse name: {0}",
+                            _grangerDebug.Log(string.Format("Checking creature for Genesis cast (creature name: {0}",
                                 _newHorse.Name));
                             if (!_parentModule.Settings.Value.HasGenesisCast(_newHorse.Name))
                             {
@@ -335,7 +335,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         if (_newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Unknown)
                         {
                             sanityFail = true;
-                            sanityFailReason = "New horse data had unsupported server group: " + _newHorse.ServerGroup;
+                            sanityFailReason = "New creature data had unsupported server group: " + _newHorse.ServerGroup;
                         }
                         //if old horse isEpic != new horse isEpic
                         bool oldIsEpic = oldHorse.EpicCurve ?? false;
@@ -343,17 +343,17 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         if (oldIsEpic != newIsEpic)
                         {
                             sanityFail = true;
-                            sanityFailReason = "Old horse is of different server group than current player server group";
+                            sanityFailReason = "Old creature is of different server group than current player server group";
                         }
 
                         #endregion
 
                         if (sanityFail)
                         {
-                            _grangerDebug.Log("sanity check failed for horse update: " + oldHorse + ". Reason: " +
+                            _grangerDebug.Log("sanity check failed for creature update: " + oldHorse + ". Reason: " +
                                               sanityFailReason);
-                            Popup.Schedule("COULD NOT UPDATE HORSE",
-                                "There was data mismatch when trying to update horse, reason: " + sanityFailReason, 8000);
+                            Popup.Schedule("COULD NOT UPDATE CREATURE",
+                                "There was data mismatch when trying to update creature, reason: " + sanityFailReason, 8000);
                         }
                         else
                         {
@@ -369,7 +369,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                                 oldHorse.Traits = _newHorse.Traits;
                                 oldHorse.TraitsInspectedAtSkill = _newHorse.InspectSkill;
                             }
-                            else _grangerDebug.Log("old horse data had more accurate trait info, skipping");
+                            else
+                                _grangerDebug.Log("old creature data had more accurate trait info, skipping");
                             oldHorse.SetTag("dead", false);
                             //oldHorse.SetTag("diseased", _newHorse.IsDiseased);
                             oldHorse.SetSecondaryInfoTag(_newHorse.SecondaryInfo);
@@ -377,8 +378,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                             oldHorse.PregnantUntil = _newHorse.PregnantUntil;
 
                             _context.SubmitChangesToHorses();
-                            _grangerDebug.Log("successfully updated horse in db");
-                            Popup.Schedule("HORSE UPDATED", String.Format("Updated horse: {0}", oldHorse));
+                            _grangerDebug.Log("successfully updated creature in db");
+                            Popup.Schedule("CREATURE UPDATED", String.Format("Updated creature: {0}", oldHorse));
                         }
 
                         _newHorse = null;
@@ -408,9 +409,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                             }
                             else
                             {
-                                var message = "Horse with name: " + _newHorse.Name +
+                                var message = "Creature with name: " + _newHorse.Name +
                                               " already exists in herd: " + herd;
-                                Popup.Schedule("CAN'T ADD HORSE", message, 4000);
+                                Popup.Schedule("CAN'T ADD CREATURE", message, 4000);
                                 _grangerDebug.Log(message);
                             }
 
@@ -421,10 +422,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         }
                         else if (!entireDB)
                         {
-                            string message = "Horse with name: " + _newHorse.Name +
+                            string message = "Creature with name: " + _newHorse.Name +
                                              " already exists in active herd";
 
-                            Popup.Schedule("CAN'T ADD HORSE", message, 4000);
+                            Popup.Schedule("CAN'T ADD CREATURE", message, 4000);
                             _grangerDebug.Log(message);
                         }
                     }
@@ -434,37 +435,37 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     if (herdsFinds.Length > 1)
                     {
                         var partialMessage = allHerdSearch ? "database" : "selected herds";
-                        _grangerDebug.Log("many horses named " + _newHorse.Name + " found in " + partialMessage +
+                        _grangerDebug.Log("many creatures named " + _newHorse.Name + " found in " + partialMessage +
                                           ", add/update aborted");
-                        Popup.Schedule("CAN'T ADD OR UPDATE HORSE",
-                            partialMessage + " contain many horses named " + _newHorse.Name + ", narrow herd selection",
+                        Popup.Schedule("CAN'T ADD OR UPDATE CREATE",
+                            partialMessage + " contain many creatures named " + _newHorse.Name + ", narrow herd selection",
                             6000);
                         //notify user to narrow the herd selection
                     }
                     else if (!entireDB && (selectedHerds.Length == 0 || selectedHerds.Length > 1))
                     {
-                        const string message = "exactly one herd has to be active to add new horse";
+                        const string message = "exactly one herd has to be active to add new creature";
                         _grangerDebug.Log(message);
-                        Popup.Schedule("CAN'T ADD OR UPDATE HORSE", message, 4000);
+                        Popup.Schedule("CAN'T ADD OR UPDATE CREATE", message, 4000);
                     }
                     else if (entireDB && selectedHerds.Length == 0)
                     {
-                        const string message = "at least one herd must be select to add new horse";
+                        const string message = "at least one herd must be select to add new creature";
                         _grangerDebug.Log(message);
-                        Popup.Schedule("CAN'T ADD OR UPDATE HORSE", message, 4000);
+                        Popup.Schedule("CAN'T ADD OR UPDATE CREATE", message, 4000);
                     }
                     else
                     {
                         //shield against any possibly missed situations
-                        const string message = "add/update horse failed for unknown reasons";
+                        const string message = "add/update creature failed for unknown reasons";
                         _grangerDebug.Log(message);
                         Logger.LogError(message, this);
-                        Popup.Schedule("CAN'T ADD OR UPDATE HORSE", message, 4000);
+                        Popup.Schedule("CAN'T ADD OR UPDATE CREATE", message, 4000);
                     }
                 }
                 else
                 {
-                    _grangerDebug.Log("horse data was invalid, data: " + GetVerifyListData(_verifyList));
+                    _grangerDebug.Log("creature data was invalid, data: " + GetVerifyListData(_verifyList));
                 }
                 //clear the buffer
                 _newHorse = null;
@@ -501,12 +502,12 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             newEntity.EpicCurve = newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Epic;
             if (newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Unknown)
             {
-                Logger.LogError("Adding horse with unknown server group, name: "+newHorse.Name);
+                Logger.LogError("Adding creature with unknown server group, name: "+newHorse.Name);
             }
 
             _context.InsertHorse(newEntity);
-            _grangerDebug.Log("successfully inserted horse to db");
-            Popup.Schedule("HORSE ADDED", String.Format("Added new horse to herd {0}: {1}", selectedHerd, newEntity));
+            _grangerDebug.Log("successfully inserted creature to db");
+            Popup.Schedule("CREATURE ADDED", String.Format("Added new creature to herd {0}: {1}", selectedHerd, newEntity));
         }
 
         private string[] GetAllHerds()
@@ -533,7 +534,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         void AttemptToStartProcessing(string line)
         {
-            _grangerDebug.Log("attempting to start processing horse due to line: " + line);
+            _grangerDebug.Log("attempting to start processing creature due to line: " + line);
             //clean up if there is still non-timed out process
             VerifyAndApplyProcessing();
 
@@ -546,12 +547,12 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 string objectNameWithPrefixes = line.Remove(0, 13).Replace(".", "");
                 if (!GrangerHelpers.IsBlacklistedCreatureName(objectNameWithPrefixes) && GrangerHelpers.HasAgeInName(objectNameWithPrefixes))
                 {
-                    _grangerDebug.Log("object asumed to be a horse");
+                    _grangerDebug.Log("object asumed to be a creature");
                     var ahSkill = _playerMan.GetAhSkill();
                     var currentGroup = _playerMan.GetCurrentServerGroup();
                     if (ahSkill != null && currentGroup != WurmServer.ServerInfo.ServerGroup.Unknown)
                     {
-                        _grangerDebug.Log("building new horse object and moving to processor");
+                        _grangerDebug.Log("building new creature object and moving to processor");
 
                         _isProcessing = true;
                         _startedProcessingOn = DateTime.Now;
@@ -580,8 +581,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     }
                     else
                     {
-                        Popup.Schedule("CAN'T PROCESS HORSE", "Cannot gather data for " + _playerMan.PlayerName + " yet, please try again once Granger fully loads.", 5000);
-                        _grangerDebug.Log("processing horse cancelled, still waiting for AH skill or server group searches to finish (skill: " + ahSkill + " ; server group: " + currentGroup);
+                        Popup.Schedule("CAN'T PROCESS CREATURE", "Cannot gather data for " + _playerMan.PlayerName + " yet, please try again once Granger fully loads.", 5000);
+                        _grangerDebug.Log("processing creature cancelled, still waiting for AH skill or server group searches to finish (skill: " + ahSkill + " ; server group: " + currentGroup);
                     }
                 }
                 else _grangerDebug.Log(objectNameWithPrefixes + " cannot be added. Only named creatures can be added to Granger.");
@@ -599,7 +600,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             {
                 if (DateTime.Now > _startedProcessingOn + _processorTimeout)
                 {
-                    _grangerDebug.Log("processing timed out, attempting to verify and apply last inspected horse");
+                    _grangerDebug.Log("processing timed out, attempting to verify and apply last inspected creature");
                     _isProcessing = false;
                     VerifyAndApplyProcessing();
                 }

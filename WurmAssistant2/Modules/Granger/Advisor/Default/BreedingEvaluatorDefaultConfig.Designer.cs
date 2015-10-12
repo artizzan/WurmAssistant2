@@ -60,6 +60,8 @@
             this.checkBoxExcludeYoung = new System.Windows.Forms.CheckBox();
             this.checkBoxExcludeAdolescent = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBoxExcludeExactAge = new System.Windows.Forms.CheckBox();
+            this.timeSpanInputExcludeExactAge = new Aldurcraft.WinFormsControls.TimeSpanInput();
             this.checkBoxKeepComparingSelected = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.checkBoxIgnoreDead = new System.Windows.Forms.CheckBox();
@@ -69,8 +71,6 @@
             this.olvColumnColorWeight = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.labelAutowrap1 = new Aldurcraft.WinFormsControls.LabelAutowrap();
-            this.timeSpanInputExcludeExactAge = new Aldurcraft.WinFormsControls.TimeSpanInput();
-            this.checkBoxExcludeExactAge = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBadTraitWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPotValBadWeight)).BeginInit();
@@ -117,9 +117,9 @@
             this.checkBoxSkipNotInMood.Location = new System.Drawing.Point(4, 17);
             this.checkBoxSkipNotInMood.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSkipNotInMood.Name = "checkBoxSkipNotInMood";
-            this.checkBoxSkipNotInMood.Size = new System.Drawing.Size(149, 17);
+            this.checkBoxSkipNotInMood.Size = new System.Drawing.Size(162, 17);
             this.checkBoxSkipNotInMood.TabIndex = 2;
-            this.checkBoxSkipNotInMood.Text = "Skip \"not in mood\" horses";
+            this.checkBoxSkipNotInMood.Text = "Skip \"not in mood\" creatures";
             this.checkBoxSkipNotInMood.UseVisualStyleBackColor = true;
             // 
             // checkBoxSkipPregnant
@@ -128,9 +128,9 @@
             this.checkBoxSkipPregnant.Location = new System.Drawing.Point(4, 39);
             this.checkBoxSkipPregnant.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSkipPregnant.Name = "checkBoxSkipPregnant";
-            this.checkBoxSkipPregnant.Size = new System.Drawing.Size(126, 17);
+            this.checkBoxSkipPregnant.Size = new System.Drawing.Size(139, 17);
             this.checkBoxSkipPregnant.TabIndex = 3;
-            this.checkBoxSkipPregnant.Text = "Skip pregnant horses";
+            this.checkBoxSkipPregnant.Text = "Skip pregnant creatures";
             this.checkBoxSkipPregnant.UseVisualStyleBackColor = true;
             this.checkBoxSkipPregnant.CheckedChanged += new System.EventHandler(this.checkBoxSkipPregnant_CheckedChanged);
             // 
@@ -140,9 +140,9 @@
             this.checkBoxSkipGaveBirthInLast24h.Location = new System.Drawing.Point(4, 61);
             this.checkBoxSkipGaveBirthInLast24h.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSkipGaveBirthInLast24h.Name = "checkBoxSkipGaveBirthInLast24h";
-            this.checkBoxSkipGaveBirthInLast24h.Size = new System.Drawing.Size(284, 17);
+            this.checkBoxSkipGaveBirthInLast24h.Size = new System.Drawing.Size(297, 17);
             this.checkBoxSkipGaveBirthInLast24h.TabIndex = 4;
-            this.checkBoxSkipGaveBirthInLast24h.Text = "Skip horses, that gave birth within last 24h (inaccurate)";
+            this.checkBoxSkipGaveBirthInLast24h.Text = "Skip creatures, that gave birth within last 24h (inaccurate)";
             this.checkBoxSkipGaveBirthInLast24h.UseVisualStyleBackColor = true;
             this.checkBoxSkipGaveBirthInLast24h.CheckedChanged += new System.EventHandler(this.checkBoxSkipGaveBirthInLast24h_CheckedChanged);
             // 
@@ -152,9 +152,9 @@
             this.checkBoxSkipHorsesInOtherHerds.Location = new System.Drawing.Point(4, 83);
             this.checkBoxSkipHorsesInOtherHerds.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSkipHorsesInOtherHerds.Name = "checkBoxSkipHorsesInOtherHerds";
-            this.checkBoxSkipHorsesInOtherHerds.Size = new System.Drawing.Size(251, 17);
+            this.checkBoxSkipHorsesInOtherHerds.Size = new System.Drawing.Size(277, 17);
             this.checkBoxSkipHorsesInOtherHerds.TabIndex = 5;
-            this.checkBoxSkipHorsesInOtherHerds.Text = "Skip horses in other herds than evaluated horse";
+            this.checkBoxSkipHorsesInOtherHerds.Text = "Skip creatures in other herds than evaluated creature";
             this.checkBoxSkipHorsesInOtherHerds.UseVisualStyleBackColor = true;
             // 
             // checkBoxIncludePotentialValue
@@ -163,9 +163,9 @@
             this.checkBoxIncludePotentialValue.Location = new System.Drawing.Point(4, 61);
             this.checkBoxIncludePotentialValue.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxIncludePotentialValue.Name = "checkBoxIncludePotentialValue";
-            this.checkBoxIncludePotentialValue.Size = new System.Drawing.Size(162, 17);
+            this.checkBoxIncludePotentialValue.Size = new System.Drawing.Size(175, 17);
             this.checkBoxIncludePotentialValue.TabIndex = 6;
-            this.checkBoxIncludePotentialValue.Text = "Include potential horse value";
+            this.checkBoxIncludePotentialValue.Text = "Include potential creature value";
             this.checkBoxIncludePotentialValue.UseVisualStyleBackColor = true;
             this.checkBoxIncludePotentialValue.CheckedChanged += new System.EventHandler(this.checkBoxIncludePotentialValue_CheckedChanged);
             // 
@@ -186,7 +186,7 @@
             this.groupBox1.Size = new System.Drawing.Size(284, 137);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Horse value";
+            this.groupBox1.Text = "Creature value";
             // 
             // checkBoxDiscardWithBadTraits
             // 
@@ -194,9 +194,9 @@
             this.checkBoxDiscardWithBadTraits.Location = new System.Drawing.Point(4, 39);
             this.checkBoxDiscardWithBadTraits.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDiscardWithBadTraits.Name = "checkBoxDiscardWithBadTraits";
-            this.checkBoxDiscardWithBadTraits.Size = new System.Drawing.Size(197, 17);
+            this.checkBoxDiscardWithBadTraits.Size = new System.Drawing.Size(210, 17);
             this.checkBoxDiscardWithBadTraits.TabIndex = 6;
-            this.checkBoxDiscardWithBadTraits.Text = "Discard all horses with any bad traits";
+            this.checkBoxDiscardWithBadTraits.Text = "Discard all creatures with any bad traits";
             this.checkBoxDiscardWithBadTraits.UseVisualStyleBackColor = true;
             this.checkBoxDiscardWithBadTraits.CheckedChanged += new System.EventHandler(this.checkBoxDiscardWithBadTraits_CheckedChanged);
             // 
@@ -341,9 +341,9 @@
             this.checkBoxDiscardAllCausingInbreed.Location = new System.Drawing.Point(4, 41);
             this.checkBoxDiscardAllCausingInbreed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDiscardAllCausingInbreed.Name = "checkBoxDiscardAllCausingInbreed";
-            this.checkBoxDiscardAllCausingInbreed.Size = new System.Drawing.Size(245, 17);
+            this.checkBoxDiscardAllCausingInbreed.Size = new System.Drawing.Size(258, 17);
             this.checkBoxDiscardAllCausingInbreed.TabIndex = 6;
-            this.checkBoxDiscardAllCausingInbreed.Text = "Discard all horses that would cause inbreeding";
+            this.checkBoxDiscardAllCausingInbreed.Text = "Discard all creatures that would cause inbreeding";
             this.checkBoxDiscardAllCausingInbreed.UseVisualStyleBackColor = true;
             this.checkBoxDiscardAllCausingInbreed.CheckedChanged += new System.EventHandler(this.checkBoxDiscardAllCausingInbreed_CheckedChanged);
             // 
@@ -369,9 +369,9 @@
             this.checkBoxSkipPaired.Location = new System.Drawing.Point(4, 105);
             this.checkBoxSkipPaired.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSkipPaired.Name = "checkBoxSkipPaired";
-            this.checkBoxSkipPaired.Size = new System.Drawing.Size(133, 17);
+            this.checkBoxSkipPaired.Size = new System.Drawing.Size(146, 17);
             this.checkBoxSkipPaired.TabIndex = 6;
-            this.checkBoxSkipPaired.Text = "Skip any paired horses";
+            this.checkBoxSkipPaired.Text = "Skip any paired creatures";
             this.checkBoxSkipPaired.UseVisualStyleBackColor = true;
             this.checkBoxSkipPaired.CheckedChanged += new System.EventHandler(this.checkBoxSkipPaired_CheckedChanged);
             // 
@@ -448,15 +448,37 @@
             this.groupBox5.Text = "Age exclude options";
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
+            // checkBoxExcludeExactAge
+            // 
+            this.checkBoxExcludeExactAge.AutoSize = true;
+            this.checkBoxExcludeExactAge.Location = new System.Drawing.Point(4, 112);
+            this.checkBoxExcludeExactAge.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxExcludeExactAge.Name = "checkBoxExcludeExactAge";
+            this.checkBoxExcludeExactAge.Size = new System.Drawing.Size(278, 30);
+            this.checkBoxExcludeExactAge.TabIndex = 12;
+            this.checkBoxExcludeExactAge.Text = "Exclude creature younger than:\r\n(this works only for creatures  that have birth d" +
+    "ate set)";
+            this.checkBoxExcludeExactAge.UseVisualStyleBackColor = true;
+            this.checkBoxExcludeExactAge.CheckedChanged += new System.EventHandler(this.checkBoxExcludeExactAge_CheckedChanged);
+            // 
+            // timeSpanInputExcludeExactAge
+            // 
+            this.timeSpanInputExcludeExactAge.Location = new System.Drawing.Point(4, 146);
+            this.timeSpanInputExcludeExactAge.Margin = new System.Windows.Forms.Padding(2);
+            this.timeSpanInputExcludeExactAge.Name = "timeSpanInputExcludeExactAge";
+            this.timeSpanInputExcludeExactAge.Size = new System.Drawing.Size(231, 45);
+            this.timeSpanInputExcludeExactAge.TabIndex = 11;
+            this.timeSpanInputExcludeExactAge.Value = System.TimeSpan.Parse("00:00:00");
+            // 
             // checkBoxKeepComparingSelected
             // 
             this.checkBoxKeepComparingSelected.AutoSize = true;
             this.checkBoxKeepComparingSelected.Location = new System.Drawing.Point(4, 83);
             this.checkBoxKeepComparingSelected.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKeepComparingSelected.Name = "checkBoxKeepComparingSelected";
-            this.checkBoxKeepComparingSelected.Size = new System.Drawing.Size(193, 17);
+            this.checkBoxKeepComparingSelected.Size = new System.Drawing.Size(206, 17);
             this.checkBoxKeepComparingSelected.TabIndex = 10;
-            this.checkBoxKeepComparingSelected.Text = "Keep comparing the selected horse";
+            this.checkBoxKeepComparingSelected.Text = "Keep comparing the selected creature";
             this.checkBoxKeepComparingSelected.UseVisualStyleBackColor = true;
             this.checkBoxKeepComparingSelected.CheckedChanged += new System.EventHandler(this.checkBoxKeepComparingSelected_CheckedChanged);
             // 
@@ -559,28 +581,6 @@
             this.labelAutowrap1.TabIndex = 19;
             this.labelAutowrap1.Text = "Total breeding value will be multiplied by an average of both horses color weight" +
     "s. ex: (1.5 + 1.2 ) / 2 = 1.35";
-            // 
-            // timeSpanInputExcludeExactAge
-            // 
-            this.timeSpanInputExcludeExactAge.Location = new System.Drawing.Point(4, 146);
-            this.timeSpanInputExcludeExactAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.timeSpanInputExcludeExactAge.Name = "timeSpanInputExcludeExactAge";
-            this.timeSpanInputExcludeExactAge.Size = new System.Drawing.Size(231, 45);
-            this.timeSpanInputExcludeExactAge.TabIndex = 11;
-            this.timeSpanInputExcludeExactAge.Value = System.TimeSpan.Parse("00:00:00");
-            // 
-            // checkBoxExcludeExactAge
-            // 
-            this.checkBoxExcludeExactAge.AutoSize = true;
-            this.checkBoxExcludeExactAge.Location = new System.Drawing.Point(4, 112);
-            this.checkBoxExcludeExactAge.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxExcludeExactAge.Name = "checkBoxExcludeExactAge";
-            this.checkBoxExcludeExactAge.Size = new System.Drawing.Size(262, 30);
-            this.checkBoxExcludeExactAge.TabIndex = 12;
-            this.checkBoxExcludeExactAge.Text = "Exclude horse younger than:\r\n(this works only for horses that have birth date set" +
-    ")";
-            this.checkBoxExcludeExactAge.UseVisualStyleBackColor = true;
-            this.checkBoxExcludeExactAge.CheckedChanged += new System.EventHandler(this.checkBoxExcludeExactAge_CheckedChanged);
             // 
             // BreedingEvaluatorDefaultConfig
             // 

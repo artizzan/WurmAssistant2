@@ -120,16 +120,16 @@
   <data name="growLabel1.Text" xml:space="preserve">
     <value>Some basics to get you started:
 
-To add your first horses: create a new herd and make sure it's active (checked on the herd list), also add your in-game character to the list on top of granger window.
-In wurm, smile at a horse and then, within next 5 seconds, examine that same horse.
-You can use this trick on a horse, that's already in herd and the horse will be updated (traits, pregnant and such information).
+To add your first creatures: create a new herd and make sure it's active (checked on the herd list), also add your in-game character to the list on top of granger window.
+In wurm, smile at a creature and then, within next 5 seconds, examine that same creature.
+You can use this trick on a creature, that's already in herd and the creature will be updated (traits, pregnant and such information).
 
-You will need to have just one herd active to add a new horse. For updating, breeding and grooming horses, you can have more herds active, but horse name must be unique within them. Horses can be edited manually if any error is made.
+You will need to have just one herd active to add a new creature. For updating, breeding and grooming creatures, you can have more herds active, but creature name must be unique within them. Creatures can be edited manually if any error is made.
 
-Once you have a bit of horses in your herds, you can click one to see breeding suggestions. This colors the rows and also shows number in "breed value" column, that indicates how good this candidate is, in respect to selected horse. 
+Once you have a bit of creatures in your herds, you can click one to see breeding suggestions. This colors the rows and also shows number in "breed value" column, that indicates how good this candidate is, in respect to selected creature. 
 Colors are a gradient, for negative breed value it will be yellow-to-red, for positive breed value it will be yellow-to-green, the best candidate(s) are colored light blue.
 
-You can adjust a lot of how horses are displayed: hide columns, resize them, sort, group and filter by them.
+You can adjust a lot of how creatures are displayed: hide columns, resize them, sort, group and filter by them.
 
 
 See wiki for more help and to get familiar with other features.</value>
