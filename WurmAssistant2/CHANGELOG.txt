@@ -1,3 +1,6 @@
+2.0.139.1 (17-10-2015 22:25:26)
+- Granger: fixed parsing father and mother names for non-horses.
+
 2.0.138.1 (12-10-2015 21:29:22)
 - Granger: support for adding any creature, even non unique, but mostly intented for those branded and renamed. Note that changing creature name will change it's Id
 

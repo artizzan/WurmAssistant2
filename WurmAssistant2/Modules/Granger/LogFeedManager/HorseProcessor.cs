@@ -128,7 +128,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 if ((line.Contains("Mother is") || line.Contains("Father is")) && !_verifyList.Parents)
                 {
                     _grangerDebug.Log("found maybe parents line");
-                    Match match = Regex.Match(line, @"Mother is (?<g>\w+ \w+ \w+)|Mother is (?<g>\w+ \w+)");
+                    Match match = Regex.Match(line, @"Mother is (?<g>\w+ \w+ .+?)\.|Mother is (?<g>\w+ .+?)\.");
                     if (match.Success)
                     {
                         string mother = match.Groups["g"].Value;
@@ -136,7 +136,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                         _newHorse.Mother = mother;
                         _grangerDebug.Log("mother set to: " + mother);
                     }
-                    Match match2 = Regex.Match(line, @"Father is (?<g>\w+ \w+ \w+)|Father is (?<g>\w+ \w+)");
+                    Match match2 = Regex.Match(line, @"Father is (?<g>\w+ \w+ .+?)\.|Father is (?<g>\w+ .+?)\.");
                     if (match2.Success)
                     {
                         string father = match2.Groups["g"].Value;
