@@ -58,10 +58,11 @@
             this.objectListView1.HasCollapsibleGroups = false;
             this.objectListView1.HeaderWordWrap = true;
             this.objectListView1.Location = new System.Drawing.Point(0, 0);
+            this.objectListView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowCommandMenuOnRightClick = true;
             this.objectListView1.ShowGroups = false;
-            this.objectListView1.Size = new System.Drawing.Size(409, 323);
+            this.objectListView1.Size = new System.Drawing.Size(307, 262);
             this.objectListView1.SortGroupItemsByPrimaryColumn = false;
             this.objectListView1.TabIndex = 0;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
@@ -72,18 +73,21 @@
             // olvColumnTrait
             // 
             this.olvColumnTrait.AspectName = "TraitAspect";
+            this.olvColumnTrait.MinimumWidth = 20;
             this.olvColumnTrait.Text = "Trait";
             this.olvColumnTrait.Width = 79;
             // 
             // olvColumnHas
             // 
             this.olvColumnHas.AspectName = "HasAspect";
+            this.olvColumnHas.MinimumWidth = 20;
             this.olvColumnHas.Text = "Has";
             this.olvColumnHas.Width = 43;
             // 
             // olvColumnValue
             // 
             this.olvColumnValue.AspectName = "ValueAspect";
+            this.olvColumnValue.MinimumWidth = 20;
             this.olvColumnValue.Text = "Value";
             this.olvColumnValue.Width = 51;
             // 
@@ -92,7 +96,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setViewModeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 26);
             // 
             // setViewModeToolStripMenuItem
             // 
@@ -101,38 +105,39 @@
             this.compactToolStripMenuItem,
             this.shortcutToolStripMenuItem});
             this.setViewModeToolStripMenuItem.Name = "setViewModeToolStripMenuItem";
-            this.setViewModeToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.setViewModeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.setViewModeToolStripMenuItem.Text = "Set View Mode";
             // 
             // fullToolStripMenuItem
             // 
             this.fullToolStripMenuItem.Name = "fullToolStripMenuItem";
-            this.fullToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.fullToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.fullToolStripMenuItem.Text = "Full";
             this.fullToolStripMenuItem.Click += new System.EventHandler(this.fullToolStripMenuItem_Click);
             // 
             // compactToolStripMenuItem
             // 
             this.compactToolStripMenuItem.Name = "compactToolStripMenuItem";
-            this.compactToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.compactToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.compactToolStripMenuItem.Text = "Compact";
             this.compactToolStripMenuItem.Click += new System.EventHandler(this.compactToolStripMenuItem_Click);
             // 
             // shortcutToolStripMenuItem
             // 
             this.shortcutToolStripMenuItem.Name = "shortcutToolStripMenuItem";
-            this.shortcutToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.shortcutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.shortcutToolStripMenuItem.Text = "Shortcut";
             this.shortcutToolStripMenuItem.Click += new System.EventHandler(this.shortcutToolStripMenuItem_Click);
             // 
             // UCGrangerTraitView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.objectListView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCGrangerTraitView";
-            this.Size = new System.Drawing.Size(409, 323);
+            this.Size = new System.Drawing.Size(307, 262);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

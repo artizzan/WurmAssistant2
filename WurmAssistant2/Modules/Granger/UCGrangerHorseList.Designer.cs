@@ -470,112 +470,134 @@
             // 
             this.olvColumnName.AspectName = "NameAspect";
             this.olvColumnName.Hideable = false;
+            this.olvColumnName.MinimumWidth = 20;
             this.olvColumnName.Text = "Name";
             this.olvColumnName.UseInitialLetterForGroup = true;
             // 
             // olvColumnHerd
             // 
             this.olvColumnHerd.AspectName = "HerdAspect";
+            this.olvColumnHerd.MinimumWidth = 20;
             this.olvColumnHerd.Text = "Herd";
             // 
             // olvColumnBreedValue
             // 
             this.olvColumnBreedValue.AspectName = "BreedValueAspect";
+            this.olvColumnBreedValue.MinimumWidth = 20;
             this.olvColumnBreedValue.Text = "Breed Value";
             // 
             // olvColumnFather
             // 
             this.olvColumnFather.AspectName = "FatherAspect";
+            this.olvColumnFather.MinimumWidth = 20;
             this.olvColumnFather.Text = "Father";
             // 
             // olvColumnMother
             // 
             this.olvColumnMother.AspectName = "MotherAspect";
+            this.olvColumnMother.MinimumWidth = 20;
             this.olvColumnMother.Text = "Mother";
             // 
             // olvColumnTraits
             // 
             this.olvColumnTraits.AspectName = "TraitsAspect";
+            this.olvColumnTraits.MinimumWidth = 20;
             this.olvColumnTraits.Text = "Traits";
             // 
             // olvColumnNotInMoodFor
             // 
             this.olvColumnNotInMoodFor.AspectName = "NotInMoodForAspect";
+            this.olvColumnNotInMoodFor.MinimumWidth = 20;
             this.olvColumnNotInMoodFor.Text = "Not in mood";
             // 
             // olvColumnPregnantFor
             // 
             this.olvColumnPregnantFor.AspectName = "PregnantForAspect";
+            this.olvColumnPregnantFor.MinimumWidth = 20;
             this.olvColumnPregnantFor.Text = "Give birth";
             // 
             // olvColumnGroomedAgo
             // 
             this.olvColumnGroomedAgo.AspectName = "GroomedAgoAspect";
+            this.olvColumnGroomedAgo.MinimumWidth = 20;
             this.olvColumnGroomedAgo.Text = "Last groomed";
             // 
             // olvColumnGender
             // 
             this.olvColumnGender.AspectName = "GenderAspect";
+            this.olvColumnGender.MinimumWidth = 20;
             this.olvColumnGender.Text = "Gender";
             // 
             // olvColumnAge
             // 
             this.olvColumnAge.AspectName = "AgeAspect";
+            this.olvColumnAge.MinimumWidth = 20;
             this.olvColumnAge.Text = "Age";
             // 
             // olvColumnColor
             // 
             this.olvColumnColor.AspectName = "ColorAspect";
+            this.olvColumnColor.MinimumWidth = 20;
             this.olvColumnColor.Text = "Color";
             // 
             // olvColumnValue
             // 
             this.olvColumnValue.AspectName = "ValueAspect";
+            this.olvColumnValue.MinimumWidth = 20;
             this.olvColumnValue.Text = "Value";
             // 
             // olvColumnPotentialValue
             // 
             this.olvColumnPotentialValue.AspectName = "PotentialValueAspect";
+            this.olvColumnPotentialValue.MinimumWidth = 20;
             this.olvColumnPotentialValue.Text = "Potential value";
             // 
             // olvColumnTraitsInspectedAt
             // 
             this.olvColumnTraitsInspectedAt.AspectName = "TraitsInspectedAtSkillAspect";
+            this.olvColumnTraitsInspectedAt.MinimumWidth = 20;
             this.olvColumnTraitsInspectedAt.Text = "Inspect skill";
             // 
             // olvColumnTakenCareOfBy
             // 
             this.olvColumnTakenCareOfBy.AspectName = "TakenCareOfByAspect";
+            this.olvColumnTakenCareOfBy.MinimumWidth = 20;
             this.olvColumnTakenCareOfBy.Text = "Cared by";
             // 
             // olvColumnPairedWith
             // 
             this.olvColumnPairedWith.AspectName = "PairedWithAspect";
+            this.olvColumnPairedWith.MinimumWidth = 20;
             this.olvColumnPairedWith.Text = "Paired with";
             // 
             // olvColumnTags
             // 
             this.olvColumnTags.AspectName = "TagsAspect";
+            this.olvColumnTags.MinimumWidth = 20;
             this.olvColumnTags.Text = "Tags";
             // 
             // olvColumnComments
             // 
             this.olvColumnComments.AspectName = "CommentsAspect";
+            this.olvColumnComments.MinimumWidth = 20;
             this.olvColumnComments.Text = "Comments";
             // 
             // olvColumnBirthDate
             // 
             this.olvColumnBirthDate.AspectName = "BirthDateAspect";
+            this.olvColumnBirthDate.MinimumWidth = 20;
             this.olvColumnBirthDate.Text = "Birth Date";
             // 
             // olvColumnExactAge
             // 
             this.olvColumnExactAge.AspectName = "ExactAgeAspect";
+            this.olvColumnExactAge.MinimumWidth = 20;
             this.olvColumnExactAge.Text = "Exact Age";
             // 
             // olvColumnBrandedFor
             // 
             this.olvColumnBrandedFor.AspectName = "BrandedFor";
+            this.olvColumnBrandedFor.MinimumWidth = 20;
             this.olvColumnBrandedFor.Text = "Branded for";
             // 
             // timer1

@@ -138,6 +138,7 @@
             this.olvColumnHerd.AspectName = "HerdIDAspect";
             this.olvColumnHerd.CheckBoxes = true;
             this.olvColumnHerd.FillsFreeSpace = true;
+            this.olvColumnHerd.MinimumWidth = 20;
             this.olvColumnHerd.Text = "Active herds";
             this.olvColumnHerd.Width = 104;
             // 
