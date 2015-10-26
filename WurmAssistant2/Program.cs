@@ -20,7 +20,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {
-                using (var mutex = new WurmAssistantGateway())
+                using (var mutex = new WurmAssistantUnlimitedGateway())
                 {
 
                     mutex.Enter(1000);

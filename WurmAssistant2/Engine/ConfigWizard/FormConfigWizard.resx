@@ -123,18 +123,10 @@
   <metadata name="CloseClients_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>281, 17</value>
   </metadata>
-  <data name="textBoxP1Desc.Text" xml:space="preserve">
-    <value>Details:
-
-Program has most likely detected correct path, so there shouldn't be any need to change it.
-
-However if not, you need to choose it manually, the correct install directory will most likely be called "wurm" and contain at the very least 3 directories: 
-"configs", "packs" and "players".</value>
-  </data>
   <data name="textBox3.Text" xml:space="preserve">
     <value>Details:
 
-Some features of this program require changes in Wurm Online config files to work correctly. 
+Some features of this program require changes in Wurm Unlimited config files to work correctly. 
 Automatic option will modify them to the most appropriate for Wurm Assistant.
 
 If you'd rather have full control over what is being changed, please choose manual.
@@ -169,5 +161,16 @@ Additionally, if it's set to low resolution value (like per 0.1 skill point gain
 The best option (from Assistant perspective) is Always, however it is also very spammy. With 0.001 and 0.01 all current features should still work well, but it's not guaranteed to be true for all future features.
 
 Note: if any of these settings are already set correctly, they will be skipped. You can still view them by using "back" button.</value>
+  </data>
+  <data name="textBoxP1Desc.Text" xml:space="preserve">
+    <value>Details:
+
+This version of Wurm Assistant is designed to work with Wurm Unlimited only.
+
+An example steam path:
+C:\Games\SteamLibrary\steamapps\common\Wurm Unlimited\WurmLauncher\PlayerFiles
+
+The directory should contain at least these 2 folders: 
+"configs" and "players".</value>
   </data>
 </root>

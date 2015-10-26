@@ -145,7 +145,7 @@
             // modulesToolStripMenuItem
             // 
             this.modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.modulesToolStripMenuItem.Text = "Toolbox";
             this.modulesToolStripMenuItem.Click += new System.EventHandler(this.modulesToolStripMenuItem_Click);
             // 
@@ -153,7 +153,7 @@
             // 
             this.rdPartyToolsToolStripMenuItem.Enabled = false;
             this.rdPartyToolsToolStripMenuItem.Name = "rdPartyToolsToolStripMenuItem";
-            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.rdPartyToolsToolStripMenuItem.Text = "Other";
             this.rdPartyToolsToolStripMenuItem.Visible = false;
             this.rdPartyToolsToolStripMenuItem.Click += new System.EventHandler(this.rdPartyToolsToolStripMenuItem_Click);
@@ -161,12 +161,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(114, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
             // soundsToolStripMenuItem
             // 
             this.soundsToolStripMenuItem.Name = "soundsToolStripMenuItem";
-            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.soundsToolStripMenuItem.Text = "Sounds";
             this.soundsToolStripMenuItem.Click += new System.EventHandler(this.soundsToolStripMenuItem_Click);
             // 
@@ -386,6 +386,7 @@
             this.linkLabelHighlightContent.TabIndex = 0;
             this.linkLabelHighlightContent.TabStop = true;
             this.linkLabelHighlightContent.Text = "Take part in development of WA 3 and cross-platform WA Lite. Read more...";
+            this.linkLabelHighlightContent.Visible = false;
             this.linkLabelHighlightContent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHighlightContent_LinkClicked);
             // 
             // toolTip1
@@ -479,7 +480,7 @@
             this.MinimumSize = new System.Drawing.Size(604, 395);
             this.Name = "WurmAssistant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Wurm Assistant";
+            this.Text = "Wurm Assistant Unlimited";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WurmAssistant2_FormClosing);
             this.Load += new System.EventHandler(this.WurmAssistant2_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.WurmAssistant2_Paint);

@@ -157,7 +157,7 @@
             this.tabControlWizard.Controls.Add(this.tabPageFinished);
             this.tabControlWizard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlWizard.Location = new System.Drawing.Point(0, 0);
-            this.tabControlWizard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlWizard.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlWizard.Name = "tabControlWizard";
             this.tabControlWizard.SelectedIndex = 0;
             this.tabControlWizard.Size = new System.Drawing.Size(555, 378);
@@ -179,9 +179,9 @@
             this.tabPageWurmPath.Controls.Add(this.WurmPath_buttonNext);
             this.tabPageWurmPath.Controls.Add(this.pictureBox1);
             this.tabPageWurmPath.Location = new System.Drawing.Point(4, 22);
-            this.tabPageWurmPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWurmPath.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageWurmPath.Name = "tabPageWurmPath";
-            this.tabPageWurmPath.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageWurmPath.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageWurmPath.Size = new System.Drawing.Size(547, 352);
             this.tabPageWurmPath.TabIndex = 0;
             this.tabPageWurmPath.Text = "WurmPath";
@@ -191,7 +191,7 @@
             // 
             this.WurmPath_buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.WurmPath_buttonReset.Location = new System.Drawing.Point(332, 140);
-            this.WurmPath_buttonReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_buttonReset.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_buttonReset.Name = "WurmPath_buttonReset";
             this.WurmPath_buttonReset.Size = new System.Drawing.Size(86, 24);
             this.WurmPath_buttonReset.TabIndex = 11;
@@ -203,7 +203,7 @@
             // WurmPath_buttonChangePath
             // 
             this.WurmPath_buttonChangePath.Location = new System.Drawing.Point(422, 140);
-            this.WurmPath_buttonChangePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_buttonChangePath.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_buttonChangePath.Name = "WurmPath_buttonChangePath";
             this.WurmPath_buttonChangePath.Size = new System.Drawing.Size(122, 24);
             this.WurmPath_buttonChangePath.TabIndex = 10;
@@ -214,7 +214,7 @@
             // WurmPath_buttonOpenInExplorer
             // 
             this.WurmPath_buttonOpenInExplorer.Location = new System.Drawing.Point(130, 140);
-            this.WurmPath_buttonOpenInExplorer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_buttonOpenInExplorer.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_buttonOpenInExplorer.Name = "WurmPath_buttonOpenInExplorer";
             this.WurmPath_buttonOpenInExplorer.Size = new System.Drawing.Size(123, 24);
             this.WurmPath_buttonOpenInExplorer.TabIndex = 9;
@@ -225,7 +225,7 @@
             // WurmPath_textBoxPath
             // 
             this.WurmPath_textBoxPath.Location = new System.Drawing.Point(132, 117);
-            this.WurmPath_textBoxPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_textBoxPath.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_textBoxPath.Name = "WurmPath_textBoxPath";
             this.WurmPath_textBoxPath.ReadOnly = true;
             this.WurmPath_textBoxPath.Size = new System.Drawing.Size(414, 20);
@@ -238,9 +238,9 @@
             this.label1.Location = new System.Drawing.Point(6, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 20);
+            this.label1.Size = new System.Drawing.Size(388, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Wurm Assistant Configuration Wizard";
+            this.label1.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBoxP1Desc
             // 
@@ -248,7 +248,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxP1Desc.Location = new System.Drawing.Point(6, 169);
-            this.textBoxP1Desc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxP1Desc.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxP1Desc.Multiline = true;
             this.textBoxP1Desc.Name = "textBoxP1Desc";
             this.textBoxP1Desc.ReadOnly = true;
@@ -264,21 +264,21 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.Location = new System.Drawing.Point(130, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(413, 78);
             this.textBox1.TabIndex = 3;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Welcome to Wurm Assistant configuration wizard!\r\n\r\nPlease verify if this is corre" +
-    "ct path to Wurm Online install directory:";
+            this.textBox1.Text = "Welcome to Wurm Assistant Unlimited configuration wizard!\r\n\r\nPlease find the path" +
+    " to PlayerFiles folder in Wurm Unlimited steam library directory:";
             // 
             // WurmPath_buttonExit
             // 
             this.WurmPath_buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.WurmPath_buttonExit.Location = new System.Drawing.Point(6, 321);
-            this.WurmPath_buttonExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_buttonExit.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_buttonExit.Name = "WurmPath_buttonExit";
             this.WurmPath_buttonExit.Size = new System.Drawing.Size(70, 28);
             this.WurmPath_buttonExit.TabIndex = 2;
@@ -292,7 +292,7 @@
             this.WurmPath_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.WurmPath_buttonNext.Enabled = false;
             this.WurmPath_buttonNext.Location = new System.Drawing.Point(472, 321);
-            this.WurmPath_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WurmPath_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.WurmPath_buttonNext.Name = "WurmPath_buttonNext";
             this.WurmPath_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.WurmPath_buttonNext.TabIndex = 1;
@@ -302,9 +302,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox1.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox1.Location = new System.Drawing.Point(6, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,9 +322,9 @@
             this.tabPageConfigMode.Controls.Add(this.ConfigMode_buttonNext);
             this.tabPageConfigMode.Controls.Add(this.pictureBox2);
             this.tabPageConfigMode.Location = new System.Drawing.Point(4, 22);
-            this.tabPageConfigMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageConfigMode.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageConfigMode.Name = "tabPageConfigMode";
-            this.tabPageConfigMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageConfigMode.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageConfigMode.Size = new System.Drawing.Size(547, 352);
             this.tabPageConfigMode.TabIndex = 1;
             this.tabPageConfigMode.Text = "ConfigMode";
@@ -334,7 +334,7 @@
             // 
             this.ConfigMode_radioButtonManual.AutoSize = true;
             this.ConfigMode_radioButtonManual.Location = new System.Drawing.Point(144, 113);
-            this.ConfigMode_radioButtonManual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfigMode_radioButtonManual.Margin = new System.Windows.Forms.Padding(2);
             this.ConfigMode_radioButtonManual.Name = "ConfigMode_radioButtonManual";
             this.ConfigMode_radioButtonManual.Size = new System.Drawing.Size(225, 17);
             this.ConfigMode_radioButtonManual.TabIndex = 19;
@@ -347,7 +347,7 @@
             // 
             this.ConfigMode_radioButtonAuto.AutoSize = true;
             this.ConfigMode_radioButtonAuto.Location = new System.Drawing.Point(144, 91);
-            this.ConfigMode_radioButtonAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfigMode_radioButtonAuto.Margin = new System.Windows.Forms.Padding(2);
             this.ConfigMode_radioButtonAuto.Name = "ConfigMode_radioButtonAuto";
             this.ConfigMode_radioButtonAuto.Size = new System.Drawing.Size(236, 17);
             this.ConfigMode_radioButtonAuto.TabIndex = 17;
@@ -363,9 +363,9 @@
             this.label2.Location = new System.Drawing.Point(6, 4);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(308, 20);
+            this.label2.Size = new System.Drawing.Size(388, 20);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Wurm Assistant Configuration Wizard";
+            this.label2.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox3
             // 
@@ -373,7 +373,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(6, 169);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -389,20 +389,20 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox4.Location = new System.Drawing.Point(130, 34);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(413, 50);
             this.textBox4.TabIndex = 14;
             this.textBox4.TabStop = false;
-            this.textBox4.Text = "Please choose how to configure Assistant and Wurm Client config files:";
+            this.textBox4.Text = "Please choose how to configure Assistant and Wurm Unlimited Client config files:";
             // 
             // ConfigMode_Back
             // 
             this.ConfigMode_Back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfigMode_Back.Location = new System.Drawing.Point(398, 321);
-            this.ConfigMode_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfigMode_Back.Margin = new System.Windows.Forms.Padding(2);
             this.ConfigMode_Back.Name = "ConfigMode_Back";
             this.ConfigMode_Back.Size = new System.Drawing.Size(70, 28);
             this.ConfigMode_Back.TabIndex = 13;
@@ -415,7 +415,7 @@
             this.ConfigMode_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfigMode_buttonNext.Enabled = false;
             this.ConfigMode_buttonNext.Location = new System.Drawing.Point(472, 321);
-            this.ConfigMode_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfigMode_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.ConfigMode_buttonNext.Name = "ConfigMode_buttonNext";
             this.ConfigMode_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.ConfigMode_buttonNext.TabIndex = 12;
@@ -425,9 +425,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox2.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox2.Location = new System.Drawing.Point(6, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(120, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -443,9 +443,9 @@
             this.tabPageCloseClients.Controls.Add(this.CloseClients_buttonNext);
             this.tabPageCloseClients.Controls.Add(this.pictureBox3);
             this.tabPageCloseClients.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCloseClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageCloseClients.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageCloseClients.Name = "tabPageCloseClients";
-            this.tabPageCloseClients.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageCloseClients.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageCloseClients.Size = new System.Drawing.Size(547, 352);
             this.tabPageCloseClients.TabIndex = 2;
             this.tabPageCloseClients.Text = "CloseClients";
@@ -455,7 +455,7 @@
             // 
             this.CloseClients_buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CloseClients_buttonBack.Location = new System.Drawing.Point(398, 322);
-            this.CloseClients_buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CloseClients_buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.CloseClients_buttonBack.Name = "CloseClients_buttonBack";
             this.CloseClients_buttonBack.Size = new System.Drawing.Size(70, 28);
             this.CloseClients_buttonBack.TabIndex = 36;
@@ -470,9 +470,9 @@
             this.label3.Location = new System.Drawing.Point(6, 5);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(308, 20);
+            this.label3.Size = new System.Drawing.Size(388, 20);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Wurm Assistant Configuration Wizard";
+            this.label3.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // CloseClients_textBoxClientsRunning
             // 
@@ -480,7 +480,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseClients_textBoxClientsRunning.Location = new System.Drawing.Point(6, 170);
-            this.CloseClients_textBoxClientsRunning.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CloseClients_textBoxClientsRunning.Margin = new System.Windows.Forms.Padding(2);
             this.CloseClients_textBoxClientsRunning.Multiline = true;
             this.CloseClients_textBoxClientsRunning.Name = "CloseClients_textBoxClientsRunning";
             this.CloseClients_textBoxClientsRunning.ReadOnly = true;
@@ -496,7 +496,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox5.Location = new System.Drawing.Point(130, 35);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -510,7 +510,7 @@
             this.CloseClients_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseClients_buttonNext.Enabled = false;
             this.CloseClients_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.CloseClients_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CloseClients_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.CloseClients_buttonNext.Name = "CloseClients_buttonNext";
             this.CloseClients_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.CloseClients_buttonNext.TabIndex = 21;
@@ -520,9 +520,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox3.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox3.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(120, 130);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -541,9 +541,9 @@
             this.tabPageLoggingMode.Controls.Add(this.LoggingMode_buttonNext);
             this.tabPageLoggingMode.Controls.Add(this.pictureBox4);
             this.tabPageLoggingMode.Location = new System.Drawing.Point(4, 22);
-            this.tabPageLoggingMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageLoggingMode.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageLoggingMode.Name = "tabPageLoggingMode";
-            this.tabPageLoggingMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageLoggingMode.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageLoggingMode.Size = new System.Drawing.Size(547, 352);
             this.tabPageLoggingMode.TabIndex = 3;
             this.tabPageLoggingMode.Text = "LogMode";
@@ -553,7 +553,7 @@
             // 
             this.LoggingMode_buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LoggingMode_buttonExit.Location = new System.Drawing.Point(6, 322);
-            this.LoggingMode_buttonExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoggingMode_buttonExit.Margin = new System.Windows.Forms.Padding(2);
             this.LoggingMode_buttonExit.Name = "LoggingMode_buttonExit";
             this.LoggingMode_buttonExit.Size = new System.Drawing.Size(70, 28);
             this.LoggingMode_buttonExit.TabIndex = 35;
@@ -566,7 +566,7 @@
             // 
             this.LoggingMode_radioButtonKeepOld.AutoSize = true;
             this.LoggingMode_radioButtonKeepOld.Location = new System.Drawing.Point(131, 136);
-            this.LoggingMode_radioButtonKeepOld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoggingMode_radioButtonKeepOld.Margin = new System.Windows.Forms.Padding(2);
             this.LoggingMode_radioButtonKeepOld.Name = "LoggingMode_radioButtonKeepOld";
             this.LoggingMode_radioButtonKeepOld.Size = new System.Drawing.Size(182, 17);
             this.LoggingMode_radioButtonKeepOld.TabIndex = 34;
@@ -579,7 +579,7 @@
             // 
             this.LoggingMode_radioButtonDaily.AutoSize = true;
             this.LoggingMode_radioButtonDaily.Location = new System.Drawing.Point(130, 113);
-            this.LoggingMode_radioButtonDaily.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoggingMode_radioButtonDaily.Margin = new System.Windows.Forms.Padding(2);
             this.LoggingMode_radioButtonDaily.Name = "LoggingMode_radioButtonDaily";
             this.LoggingMode_radioButtonDaily.Size = new System.Drawing.Size(48, 17);
             this.LoggingMode_radioButtonDaily.TabIndex = 33;
@@ -592,7 +592,7 @@
             // 
             this.LoggingMode_radioButtonMonthly.AutoSize = true;
             this.LoggingMode_radioButtonMonthly.Location = new System.Drawing.Point(131, 90);
-            this.LoggingMode_radioButtonMonthly.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoggingMode_radioButtonMonthly.Margin = new System.Windows.Forms.Padding(2);
             this.LoggingMode_radioButtonMonthly.Name = "LoggingMode_radioButtonMonthly";
             this.LoggingMode_radioButtonMonthly.Size = new System.Drawing.Size(62, 17);
             this.LoggingMode_radioButtonMonthly.TabIndex = 32;
@@ -608,9 +608,9 @@
             this.label4.Location = new System.Drawing.Point(6, 5);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(308, 20);
+            this.label4.Size = new System.Drawing.Size(388, 20);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Wurm Assistant Configuration Wizard";
+            this.label4.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox6
             // 
@@ -618,7 +618,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Location = new System.Drawing.Point(6, 170);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -634,7 +634,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox7.Location = new System.Drawing.Point(130, 35);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -648,7 +648,7 @@
             this.LoggingMode_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LoggingMode_buttonNext.Enabled = false;
             this.LoggingMode_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.LoggingMode_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoggingMode_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.LoggingMode_buttonNext.Name = "LoggingMode_buttonNext";
             this.LoggingMode_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.LoggingMode_buttonNext.TabIndex = 27;
@@ -658,9 +658,9 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox4.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox4.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(120, 130);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -679,9 +679,9 @@
             this.tabPageTimestamps.Controls.Add(this.Timestamps_buttonNext);
             this.tabPageTimestamps.Controls.Add(this.pictureBox5);
             this.tabPageTimestamps.Location = new System.Drawing.Point(4, 22);
-            this.tabPageTimestamps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTimestamps.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageTimestamps.Name = "tabPageTimestamps";
-            this.tabPageTimestamps.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTimestamps.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageTimestamps.Size = new System.Drawing.Size(547, 352);
             this.tabPageTimestamps.TabIndex = 4;
             this.tabPageTimestamps.Text = "Timestamp";
@@ -691,7 +691,7 @@
             // 
             this.Timestamps_radioButtonKeepUnchanged.AutoSize = true;
             this.Timestamps_radioButtonKeepUnchanged.Location = new System.Drawing.Point(131, 135);
-            this.Timestamps_radioButtonKeepUnchanged.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Timestamps_radioButtonKeepUnchanged.Margin = new System.Windows.Forms.Padding(2);
             this.Timestamps_radioButtonKeepUnchanged.Name = "Timestamps_radioButtonKeepUnchanged";
             this.Timestamps_radioButtonKeepUnchanged.Size = new System.Drawing.Size(182, 17);
             this.Timestamps_radioButtonKeepUnchanged.TabIndex = 35;
@@ -704,7 +704,7 @@
             // 
             this.Timestamps_buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Timestamps_buttonBack.Location = new System.Drawing.Point(398, 322);
-            this.Timestamps_buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Timestamps_buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.Timestamps_buttonBack.Name = "Timestamps_buttonBack";
             this.Timestamps_buttonBack.Size = new System.Drawing.Size(70, 28);
             this.Timestamps_buttonBack.TabIndex = 34;
@@ -716,7 +716,7 @@
             // 
             this.Timestamps_radioButtonDisabled.AutoSize = true;
             this.Timestamps_radioButtonDisabled.Location = new System.Drawing.Point(131, 113);
-            this.Timestamps_radioButtonDisabled.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Timestamps_radioButtonDisabled.Margin = new System.Windows.Forms.Padding(2);
             this.Timestamps_radioButtonDisabled.Name = "Timestamps_radioButtonDisabled";
             this.Timestamps_radioButtonDisabled.Size = new System.Drawing.Size(66, 17);
             this.Timestamps_radioButtonDisabled.TabIndex = 33;
@@ -729,7 +729,7 @@
             // 
             this.Timestamps_radioButtonEnabled.AutoSize = true;
             this.Timestamps_radioButtonEnabled.Location = new System.Drawing.Point(131, 90);
-            this.Timestamps_radioButtonEnabled.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Timestamps_radioButtonEnabled.Margin = new System.Windows.Forms.Padding(2);
             this.Timestamps_radioButtonEnabled.Name = "Timestamps_radioButtonEnabled";
             this.Timestamps_radioButtonEnabled.Size = new System.Drawing.Size(140, 17);
             this.Timestamps_radioButtonEnabled.TabIndex = 32;
@@ -745,9 +745,9 @@
             this.label5.Location = new System.Drawing.Point(6, 5);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(308, 20);
+            this.label5.Size = new System.Drawing.Size(388, 20);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Wurm Assistant Configuration Wizard";
+            this.label5.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox8
             // 
@@ -755,7 +755,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Location = new System.Drawing.Point(6, 170);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -771,7 +771,7 @@
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox9.Location = new System.Drawing.Point(130, 35);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -785,7 +785,7 @@
             this.Timestamps_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Timestamps_buttonNext.Enabled = false;
             this.Timestamps_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.Timestamps_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Timestamps_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.Timestamps_buttonNext.Name = "Timestamps_buttonNext";
             this.Timestamps_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.Timestamps_buttonNext.TabIndex = 27;
@@ -795,9 +795,9 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox5.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox5.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(120, 130);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -816,9 +816,9 @@
             this.tabPageFavorAlignUpdates.Controls.Add(this.FavorAlignUpdates_buttonNext);
             this.tabPageFavorAlignUpdates.Controls.Add(this.pictureBox6);
             this.tabPageFavorAlignUpdates.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFavorAlignUpdates.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFavorAlignUpdates.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageFavorAlignUpdates.Name = "tabPageFavorAlignUpdates";
-            this.tabPageFavorAlignUpdates.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFavorAlignUpdates.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageFavorAlignUpdates.Size = new System.Drawing.Size(547, 352);
             this.tabPageFavorAlignUpdates.TabIndex = 5;
             this.tabPageFavorAlignUpdates.Text = "FavorAlign";
@@ -828,7 +828,7 @@
             // 
             this.FavorAlignUpdates_radioButtonKeepUnchanged.AutoSize = true;
             this.FavorAlignUpdates_radioButtonKeepUnchanged.Location = new System.Drawing.Point(131, 135);
-            this.FavorAlignUpdates_radioButtonKeepUnchanged.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FavorAlignUpdates_radioButtonKeepUnchanged.Margin = new System.Windows.Forms.Padding(2);
             this.FavorAlignUpdates_radioButtonKeepUnchanged.Name = "FavorAlignUpdates_radioButtonKeepUnchanged";
             this.FavorAlignUpdates_radioButtonKeepUnchanged.Size = new System.Drawing.Size(182, 17);
             this.FavorAlignUpdates_radioButtonKeepUnchanged.TabIndex = 36;
@@ -841,7 +841,7 @@
             // 
             this.FavorAlignUpdates_buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FavorAlignUpdates_buttonBack.Location = new System.Drawing.Point(398, 322);
-            this.FavorAlignUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FavorAlignUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.FavorAlignUpdates_buttonBack.Name = "FavorAlignUpdates_buttonBack";
             this.FavorAlignUpdates_buttonBack.Size = new System.Drawing.Size(70, 28);
             this.FavorAlignUpdates_buttonBack.TabIndex = 34;
@@ -853,7 +853,7 @@
             // 
             this.FavorAlignUpdates_radioButtonHide.AutoSize = true;
             this.FavorAlignUpdates_radioButtonHide.Location = new System.Drawing.Point(131, 113);
-            this.FavorAlignUpdates_radioButtonHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FavorAlignUpdates_radioButtonHide.Margin = new System.Windows.Forms.Padding(2);
             this.FavorAlignUpdates_radioButtonHide.Name = "FavorAlignUpdates_radioButtonHide";
             this.FavorAlignUpdates_radioButtonHide.Size = new System.Drawing.Size(184, 17);
             this.FavorAlignUpdates_radioButtonHide.TabIndex = 33;
@@ -866,7 +866,7 @@
             // 
             this.FavorAlignUpdates_radioButtonDontHide.AutoSize = true;
             this.FavorAlignUpdates_radioButtonDontHide.Location = new System.Drawing.Point(131, 90);
-            this.FavorAlignUpdates_radioButtonDontHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FavorAlignUpdates_radioButtonDontHide.Margin = new System.Windows.Forms.Padding(2);
             this.FavorAlignUpdates_radioButtonDontHide.Name = "FavorAlignUpdates_radioButtonDontHide";
             this.FavorAlignUpdates_radioButtonDontHide.Size = new System.Drawing.Size(293, 17);
             this.FavorAlignUpdates_radioButtonDontHide.TabIndex = 32;
@@ -882,9 +882,9 @@
             this.label6.Location = new System.Drawing.Point(6, 5);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(308, 20);
+            this.label6.Size = new System.Drawing.Size(388, 20);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Wurm Assistant Configuration Wizard";
+            this.label6.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox10
             // 
@@ -892,7 +892,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox10.Location = new System.Drawing.Point(6, 170);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -908,7 +908,7 @@
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox11.Location = new System.Drawing.Point(130, 35);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -922,7 +922,7 @@
             this.FavorAlignUpdates_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.FavorAlignUpdates_buttonNext.Enabled = false;
             this.FavorAlignUpdates_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.FavorAlignUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FavorAlignUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.FavorAlignUpdates_buttonNext.Name = "FavorAlignUpdates_buttonNext";
             this.FavorAlignUpdates_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.FavorAlignUpdates_buttonNext.TabIndex = 27;
@@ -932,9 +932,9 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox6.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox6.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(120, 130);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -956,9 +956,9 @@
             this.tabPageSkillgainUpdates.Controls.Add(this.SkillgainUpdates_buttonNext);
             this.tabPageSkillgainUpdates.Controls.Add(this.pictureBox7);
             this.tabPageSkillgainUpdates.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSkillgainUpdates.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSkillgainUpdates.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageSkillgainUpdates.Name = "tabPageSkillgainUpdates";
-            this.tabPageSkillgainUpdates.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSkillgainUpdates.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageSkillgainUpdates.Size = new System.Drawing.Size(547, 352);
             this.tabPageSkillgainUpdates.TabIndex = 6;
             this.tabPageSkillgainUpdates.Text = "Skillgain";
@@ -968,7 +968,7 @@
             // 
             this.SkillgainUpdates_buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SkillgainUpdates_buttonBack.Location = new System.Drawing.Point(398, 322);
-            this.SkillgainUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SkillgainUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.SkillgainUpdates_buttonBack.Name = "SkillgainUpdates_buttonBack";
             this.SkillgainUpdates_buttonBack.Size = new System.Drawing.Size(70, 28);
             this.SkillgainUpdates_buttonBack.TabIndex = 41;
@@ -1061,9 +1061,9 @@
             this.label7.Location = new System.Drawing.Point(6, 5);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(308, 20);
+            this.label7.Size = new System.Drawing.Size(388, 20);
             this.label7.TabIndex = 31;
-            this.label7.Text = "Wurm Assistant Configuration Wizard";
+            this.label7.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox12
             // 
@@ -1071,7 +1071,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox12.Location = new System.Drawing.Point(6, 170);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
@@ -1087,7 +1087,7 @@
             this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox13.Location = new System.Drawing.Point(130, 35);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -1101,7 +1101,7 @@
             this.SkillgainUpdates_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SkillgainUpdates_buttonNext.Enabled = false;
             this.SkillgainUpdates_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.SkillgainUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SkillgainUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.SkillgainUpdates_buttonNext.Name = "SkillgainUpdates_buttonNext";
             this.SkillgainUpdates_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.SkillgainUpdates_buttonNext.TabIndex = 27;
@@ -1111,9 +1111,9 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox7.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox7.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(120, 130);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1131,9 +1131,9 @@
             this.tabPageAssistantUpdates.Controls.Add(this.AssistantUpdates_buttonNext);
             this.tabPageAssistantUpdates.Controls.Add(this.pictureBox8);
             this.tabPageAssistantUpdates.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAssistantUpdates.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAssistantUpdates.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAssistantUpdates.Name = "tabPageAssistantUpdates";
-            this.tabPageAssistantUpdates.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAssistantUpdates.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageAssistantUpdates.Size = new System.Drawing.Size(547, 352);
             this.tabPageAssistantUpdates.TabIndex = 7;
             this.tabPageAssistantUpdates.Text = "Updates";
@@ -1142,8 +1142,9 @@
             // AssistantUpdates_checkBoxChangelog
             // 
             this.AssistantUpdates_checkBoxChangelog.AutoSize = true;
+            this.AssistantUpdates_checkBoxChangelog.Enabled = false;
             this.AssistantUpdates_checkBoxChangelog.Location = new System.Drawing.Point(130, 111);
-            this.AssistantUpdates_checkBoxChangelog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AssistantUpdates_checkBoxChangelog.Margin = new System.Windows.Forms.Padding(2);
             this.AssistantUpdates_checkBoxChangelog.Name = "AssistantUpdates_checkBoxChangelog";
             this.AssistantUpdates_checkBoxChangelog.Size = new System.Drawing.Size(240, 17);
             this.AssistantUpdates_checkBoxChangelog.TabIndex = 40;
@@ -1155,7 +1156,7 @@
             // 
             this.AssistantUpdates_buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AssistantUpdates_buttonBack.Location = new System.Drawing.Point(398, 322);
-            this.AssistantUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AssistantUpdates_buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.AssistantUpdates_buttonBack.Name = "AssistantUpdates_buttonBack";
             this.AssistantUpdates_buttonBack.Size = new System.Drawing.Size(70, 28);
             this.AssistantUpdates_buttonBack.TabIndex = 27;
@@ -1166,8 +1167,9 @@
             // AssistantUpdates_checkBoxSummary
             // 
             this.AssistantUpdates_checkBoxSummary.AutoSize = true;
+            this.AssistantUpdates_checkBoxSummary.Enabled = false;
             this.AssistantUpdates_checkBoxSummary.Location = new System.Drawing.Point(130, 89);
-            this.AssistantUpdates_checkBoxSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AssistantUpdates_checkBoxSummary.Margin = new System.Windows.Forms.Padding(2);
             this.AssistantUpdates_checkBoxSummary.Name = "AssistantUpdates_checkBoxSummary";
             this.AssistantUpdates_checkBoxSummary.Size = new System.Drawing.Size(361, 17);
             this.AssistantUpdates_checkBoxSummary.TabIndex = 32;
@@ -1182,9 +1184,9 @@
             this.label8.Location = new System.Drawing.Point(6, 5);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(308, 20);
+            this.label8.Size = new System.Drawing.Size(388, 20);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Wurm Assistant Configuration Wizard";
+            this.label8.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBox14
             // 
@@ -1192,15 +1194,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox14.Location = new System.Drawing.Point(6, 170);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(538, 148);
             this.textBox14.TabIndex = 30;
             this.textBox14.TabStop = false;
-            this.textBox14.Text = "Wurm Assistant is always self-updating, this setting only affects what happens af" +
-    "terwards.";
+            this.textBox14.Text = "These options are disabled for Wurm Assistant Unlimited, as this version of progr" +
+    "am will not auto update.\r\n\r\nFollow the official thread for any updates and bugfi" +
+    "xes.";
             // 
             // textBox15
             // 
@@ -1209,7 +1212,7 @@
             this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox15.Location = new System.Drawing.Point(130, 35);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
@@ -1222,7 +1225,7 @@
             // 
             this.AssistantUpdates_buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.AssistantUpdates_buttonNext.Location = new System.Drawing.Point(472, 322);
-            this.AssistantUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AssistantUpdates_buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.AssistantUpdates_buttonNext.Name = "AssistantUpdates_buttonNext";
             this.AssistantUpdates_buttonNext.Size = new System.Drawing.Size(70, 28);
             this.AssistantUpdates_buttonNext.TabIndex = 41;
@@ -1232,9 +1235,9 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox8.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox8.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(120, 130);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1249,9 +1252,9 @@
             this.tabPageFinished.Controls.Add(this.Finish_buttonFinish);
             this.tabPageFinished.Controls.Add(this.pictureBox9);
             this.tabPageFinished.Location = new System.Drawing.Point(4, 22);
-            this.tabPageFinished.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFinished.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageFinished.Name = "tabPageFinished";
-            this.tabPageFinished.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageFinished.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageFinished.Size = new System.Drawing.Size(547, 352);
             this.tabPageFinished.TabIndex = 8;
             this.tabPageFinished.Text = "Finish";
@@ -1264,9 +1267,9 @@
             this.label9.Location = new System.Drawing.Point(6, 5);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(308, 20);
+            this.label9.Size = new System.Drawing.Size(388, 20);
             this.label9.TabIndex = 31;
-            this.label9.Text = "Wurm Assistant Configuration Wizard";
+            this.label9.Text = "Wurm Assistant Unlimited Configuration Wizard";
             // 
             // textBoxChangesSummary
             // 
@@ -1274,7 +1277,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxChangesSummary.Location = new System.Drawing.Point(6, 170);
-            this.textBoxChangesSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxChangesSummary.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxChangesSummary.Multiline = true;
             this.textBoxChangesSummary.Name = "textBoxChangesSummary";
             this.textBoxChangesSummary.ReadOnly = true;
@@ -1291,7 +1294,7 @@
             this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox17.Location = new System.Drawing.Point(130, 35);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
             this.textBox17.Multiline = true;
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
@@ -1307,7 +1310,7 @@
             this.Finish_buttonFinish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Finish_buttonFinish.Enabled = false;
             this.Finish_buttonFinish.Location = new System.Drawing.Point(472, 322);
-            this.Finish_buttonFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Finish_buttonFinish.Margin = new System.Windows.Forms.Padding(2);
             this.Finish_buttonFinish.Name = "Finish_buttonFinish";
             this.Finish_buttonFinish.Size = new System.Drawing.Size(70, 28);
             this.Finish_buttonFinish.TabIndex = 27;
@@ -1317,9 +1320,9 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantIcon;
+            this.pictureBox9.Image = global::Aldurcraft.WurmOnline.WurmAssistant2.Properties.Resources.WurmAssistantUnlimitedIcon;
             this.pictureBox9.Location = new System.Drawing.Point(6, 35);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(120, 130);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1332,7 +1335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 378);
             this.Controls.Add(this.tabControlWizard);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConfigWizard";

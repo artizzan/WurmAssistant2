@@ -84,6 +84,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 AhFreedomSkill = await ObtainAhSkill(WurmServer.ServerInfo.ServerGroup.Freedom, result);
                 AhEpicSkill = await ObtainAhSkill(WurmServer.ServerInfo.ServerGroup.Epic, result);
 
+                // WU hack:
+                AhFreedomSkill = await ObtainAhSkill(WurmServer.ServerInfo.ServerGroup.Unknown, result);
+
                 // we don't need result, but we do need PlayerServerTracker to establish it before this is ready to process anything
                 var sgResult = await sgSearchTask;
 
@@ -158,7 +161,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             else
             {
                 Logger.LogDebug("unknown server group for ah skill request, returning null, player: " + PlayerName, this);
-                return null;
+                // WU hack:
+                return AhFreedomSkill;
             }
         }
 
@@ -219,6 +223,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             else if (currentServerGroup == WurmServer.ServerInfo.ServerGroup.Epic)
             {
                 AhEpicSkill = skillLevel;
+            }
+            // WU hack:
+            else if (currentServerGroup == WurmServer.ServerInfo.ServerGroup.Unknown)
+            {
+                AhFreedomSkill = skillLevel;
             }
         }
 

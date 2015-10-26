@@ -79,12 +79,12 @@ namespace Aldurcraft.WurmOnline.Utility
             if (line.Contains("You are on"))
             {
                 string serverName; //not actually used
-                WurmServer.ServerInfo.ServerGroup group = WurmLogSearcherAPI.GetServerGroupFromLine(line, out serverName);
-                if (group != WurmServer.ServerInfo.ServerGroup.Unknown)
+                WurmServer.ServerInfo.ServerGroup? group = WurmLogSearcherAPI.TryGetServerGroupFromLine(line, out serverName);
+                if (group != null)
                 {
                     if (liveLogs)
                     {
-                        CurrentGroup = group;
+                        CurrentGroup = group.Value;
                         ServerGroupEstablished = true;
                     }
                     else
@@ -92,7 +92,7 @@ namespace Aldurcraft.WurmOnline.Utility
                         // basically if live logs found group, do not change it using log search results
                         // this should prevent a race
                         if (!ServerGroupEstablished)
-                            CurrentGroup = group;
+                            CurrentGroup = group.Value;
                     }
                 }
             }

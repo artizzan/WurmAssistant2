@@ -174,7 +174,7 @@ namespace Aldurcraft.WurmOnline.WurmLogsManager.Searcher
                             string dirpath = dir;
                             //Logger.WriteLine("Found dir: " + dirpath);
                             string playername = dirpath.Substring(dirpath.LastIndexOf(@"\") + 1, dirpath.Length - dirpath.LastIndexOf(@"\") - 1);
-                            dirpath += @"\logs";
+                            dirpath += @"\test_logs";
                             //Logger.WriteLine("About to save dir: " + dirpath + " (player name: ["+playername+"])");
                             SearchersDict.Add(playername, new LogFileSearcherV2(dirpath, SearchDB));
                         }

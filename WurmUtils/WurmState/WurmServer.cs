@@ -288,9 +288,9 @@ namespace Aldurcraft.WurmOnline.WurmState
                         _serverData = new WurmServerData();
                         Logger.LogInfo("problem while loading cached WurmServer state, recaching", THIS, _e);
                     }
-                    var webTask = ExtractFromWebAsync();
+                    //var webTask = ExtractFromWebAsync();
                     var logsTask = ExtractFromLogsAsync();
-                    await webTask;
+                    //await webTask;
                     await logsTask;
                     Logger.LogInfo("Init complete", THIS);
                 });
@@ -913,7 +913,7 @@ namespace Aldurcraft.WurmOnline.WurmState
                 ServerGroup[] groups = (ServerGroup[])Enum.GetValues(typeof(ServerGroup));
                 foreach (var group in groups)
                 {
-                    if (group != ServerGroup.Unknown) AllServerGroups.Add(group);
+                    AllServerGroups.Add(group);
                 }
             }
 

@@ -151,7 +151,7 @@ namespace Aldurcraft.WurmOnline.WurmLogsManager.Searcher
                             if (lgs.SearchCriteria.GameLogType == GameLogTypes.Event && line.Contains("You are on"))
                             {
                                 string server;
-                                ServerInfo.ServerGroup extractedGroup = GetServerGroupFromLine(line, out server);
+                                ServerInfo.ServerGroup? extractedGroup = TryGetServerGroupFromLine(line, out server);
                                 if (extractedGroup == group) validServerGroup = true;
                                 else validServerGroup = false;
                             }
@@ -384,9 +384,9 @@ namespace Aldurcraft.WurmOnline.WurmLogsManager.Searcher
                 if (line.Contains("You are on"))
                 {
                     string server;
-                    ServerInfo.ServerGroup group = GetServerGroupFromLine(line, out server);
-                    if (group != ServerInfo.ServerGroup.Unknown)
-                        timetable.Register(group, LogSearchManager.BuildDateForMatch(line));
+                    ServerInfo.ServerGroup? group = TryGetServerGroupFromLine(line, out server);
+                    if (group != null)
+                        timetable.Register(group.Value, LogSearchManager.BuildDateForMatch(line));
                 }
             }
             return timetable;
@@ -399,7 +399,7 @@ namespace Aldurcraft.WurmOnline.WurmLogsManager.Searcher
         /// <param name="line"></param>
         /// <param name="serverName"></param>
         /// <returns></returns>
-        public static ServerInfo.ServerGroup GetServerGroupFromLine(string line, out string serverName)
+        public static ServerInfo.ServerGroup? TryGetServerGroupFromLine(string line, out string serverName)
         {
             //[15:14:17] 75 other players are online. You are on Exodus (774 totally in Wurm).
             Match match = Regex.Match(line, @"\d+ other players are online.*\. You are on (.+) \(", RegexOptions.Compiled);
@@ -414,7 +414,7 @@ namespace Aldurcraft.WurmOnline.WurmLogsManager.Searcher
             {
                 serverName = null;
                 Logger.LogError("could not match server name from line: " + (line ?? "NULL"), THIS);
-                return ServerInfo.ServerGroup.Unknown;
+                return null;
             }
         }
 

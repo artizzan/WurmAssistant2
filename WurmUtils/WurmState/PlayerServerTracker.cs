@@ -106,13 +106,13 @@ namespace Aldurcraft.WurmOnline.WurmState
                         lastServerName = result;
 
                         string useless;
-                        var sg = WurmLogSearcherAPI.GetServerGroupFromLine(line, out useless);
-                        if (sg != WurmServer.ServerInfo.ServerGroup.Unknown)
+                        var sg = WurmLogSearcherAPI.TryGetServerGroupFromLine(line, out useless);
+                        if (sg != null)
                         {
                             DateTime thisLineStamp;
                             if (WurmLogSearcherAPI.TryParseDateTimeFromSearchResultLine(line, out thisLineStamp))
                             {
-                                ServerGroupsManager.Update(sg, thisLineStamp, result);
+                                ServerGroupsManager.Update(sg.Value, thisLineStamp, result);
                             }
                             else Logger.LogError("Could not process timestamp from line? "+thisLineStamp);
                         }
@@ -141,11 +141,7 @@ namespace Aldurcraft.WurmOnline.WurmState
                 WurmState.WurmServer.ServerInfo.ServerGroup group =
                     WurmState.WurmServer.ServerInfo.GetServerGroup(serverName);
 
-                if (group != WurmServer.ServerInfo.ServerGroup.Unknown)
-                {
-                    ServerGroupsManager.Update(group, stamp, serverName);
-                }
-                else Logger.LogError("Unknown server? " + serverName, this);
+                ServerGroupsManager.Update(group, stamp, serverName);
             }
         }
 

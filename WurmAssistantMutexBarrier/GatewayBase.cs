@@ -134,4 +134,18 @@ namespace Aldurcraft.WurmAssistantMutexes
             
         }
     }
+
+    public class WurmAssistantUnlimitedGateway : GatewayBase
+    {
+        private static readonly Guid Id = new Guid("652D2233-8E1B-42A8-8B3E-2611532C050B");
+        private const string Name = "AldurCraftWurmAssistantUnlimited";
+        public WurmAssistantUnlimitedGateway(string customError = null, int timeout = 1000, bool doNotAutoEnter = false)
+            : base(Name, Id, timeout, customError, doNotAutoEnter)
+        {
+        }
+        public WurmAssistantUnlimitedGateway()
+            : base(Name, Id, 1000, null, true)
+        {
+        }
+    }
 }

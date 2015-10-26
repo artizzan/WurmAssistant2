@@ -162,41 +162,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
 
         static void SetupDataDirectories()
         {
-            string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            string userFilePath = Path.Combine(localAppData, "AldurCraft", "WurmAssistant2");
-
-            // if running with args, this is new launcher, try use new data dirs
-            var args = Environment.GetCommandLineArgs();
-            string buildType = null;
-            if (args.Length > 0)
-            {
-                string argMode = null;;
-                foreach (var arg in args)
-                {
-                    if (argMode == "-b")
-                    {
-                        buildType = arg;
-                        argMode = null;
-                        continue;
-                    }
-
-                    if (arg == "-b")
-                    {
-                        // next argument is build type
-                        argMode = arg;
-                    }
-                }
-                if (!string.IsNullOrEmpty(buildType))
-                {
-                    userFilePath = Path.Combine(localAppData, "AldurCraft", "WurmAssistantData", buildType);
-                }
-            }
-
-            if (!Directory.Exists(userFilePath))
-            {
-                Directory.CreateDirectory(userFilePath);
-            }
-            DataDir = userFilePath;
+            // Wurm Unlimited tweak:
+            string localAssemblyDir = GeneralHelper.PathCombineWithCodeBasePath("UserData");
+            DataDir = localAssemblyDir;
         }
 
         //second part of init for starting engine
@@ -248,11 +216,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             Logger.LogInfo("checking for new assistant version");
             Version assistantVersion = Assembly.GetEntryAssembly().GetName().Version;
             HandleVersionUpdates(assistantVersion);
-            if (!Settings.Value.Wa3PromoDisplayed)
-            {
-                DisplayWa3Promo();
-                Settings.Value.Wa3PromoDisplayed = true;
-            }
+            //if (!Settings.Value.Wa3PromoDisplayed)
+            //{
+            //    DisplayWa3Promo();
+            //    Settings.Value.Wa3PromoDisplayed = true;
+            //}
         }
 
         public static void DisplayWa3Promo()

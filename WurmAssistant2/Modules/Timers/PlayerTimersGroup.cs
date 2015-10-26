@@ -105,17 +105,17 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
                     if (line.Contains("You are on"))
                     {
                         string serverName;
-                        ServerInfo.ServerGroup group = WurmLogSearcherAPI.GetServerGroupFromLine(line, out serverName);
-                        if (group != ServerInfo.ServerGroup.Unknown)
+                        ServerInfo.ServerGroup? group = WurmLogSearcherAPI.TryGetServerGroupFromLine(line, out serverName);
+                        if (group != null)
                         {
-                            if (!String.IsNullOrEmpty(serverName)) Settings.Value.GroupToServerMap[group] = serverName;
+                            if (!String.IsNullOrEmpty(serverName)) Settings.Value.GroupToServerMap[group.Value] = serverName;
                             mostRecentServerName = serverName;
-                            mostRecentGroup = group;
+                            mostRecentGroup = group.Value;
                         }
                     }
                 }
 
-                if (mostRecentGroup != ServerInfo.ServerGroup.Unknown && !currentServerGroupFound)
+                if (!currentServerGroupFound)
                 {
                     CurrentServerGroup = mostRecentGroup;
                     if (mostRecentServerName != null) Settings.Value.CurrentServerName = mostRecentServerName;
@@ -257,11 +257,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
                             if (line.Contains("You are on"))
                             {
                                 string serverName;
-                                ServerInfo.ServerGroup group = WurmLogSearcherAPI.GetServerGroupFromLine(line, out serverName);
-                                if (group != ServerInfo.ServerGroup.Unknown)
+                                ServerInfo.ServerGroup? group = WurmLogSearcherAPI.TryGetServerGroupFromLine(line, out serverName);
+                                if (group != null)
                                 {
-                                    if (!String.IsNullOrEmpty(serverName)) Settings.Value.GroupToServerMap[group] = serverName;
-                                    CurrentServerGroup = group;
+                                    if (!String.IsNullOrEmpty(serverName)) Settings.Value.GroupToServerMap[group.Value] = serverName;
+                                    CurrentServerGroup = group.Value;
                                     currentServerGroupFound = true;
                                     Settings.Value.LastServerGroupCheckup = DateTime.Now;
                                     Settings.Value.CurrentServerName = serverName;

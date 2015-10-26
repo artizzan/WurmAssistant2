@@ -332,11 +332,6 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                             }
                         }
                         //is new horse server group not within allowed ones?
-                        if (_newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Unknown)
-                        {
-                            sanityFail = true;
-                            sanityFailReason = "New creature data had unsupported server group: " + _newHorse.ServerGroup;
-                        }
                         //if old horse isEpic != new horse isEpic
                         bool oldIsEpic = oldHorse.EpicCurve ?? false;
                         bool newIsEpic = _newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Epic;
@@ -502,7 +497,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             newEntity.EpicCurve = newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Epic;
             if (newHorse.ServerGroup == WurmServer.ServerInfo.ServerGroup.Unknown)
             {
-                Logger.LogError("Adding creature with unknown server group, name: "+newHorse.Name);
+                Logger.LogInfo("Adding creature with unknown server group, name: "+newHorse.Name);
             }
 
             _context.InsertHorse(newEntity);
@@ -550,7 +545,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                     _grangerDebug.Log("object asumed to be a creature");
                     var ahSkill = _playerMan.GetAhSkill();
                     var currentGroup = _playerMan.GetCurrentServerGroup();
-                    if (ahSkill != null && currentGroup != WurmServer.ServerInfo.ServerGroup.Unknown)
+                    if (ahSkill != null)
                     {
                         _grangerDebug.Log("building new creature object and moving to processor");
 

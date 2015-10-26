@@ -37,6 +37,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
                 {
                     MessageBox.Show("Wurm Assistant has closed because configuration process was not completed.", "Note", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     Application.Exit();
+                    return;
                 }
 
                 toolTip1.SetToolTip(this.buttonBuyBeerYarr, "Fuel our work!");

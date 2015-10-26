@@ -6,6 +6,7 @@ using System.IO;
 using Microsoft.SqlServer.Server;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.IO.IsolatedStorage;
 using System.Text.RegularExpressions;
 using System.Timers;
 using System.Windows.Forms;
@@ -158,11 +159,11 @@ namespace Aldurcraft.WurmOnline.WurmState
             /// <summary>
             /// handles wurm main directory path
             /// </summary>
-            internal static class WurmDirManager
+            public static class WurmDirManager
             {
                 const string THIS = "WurmDirManager";
 
-                static string _cachedWurmDirFromRegistry;
+                static string _cachedWurmOnlineDirFromRegistry;
                 internal static string WurmDirManualOverride;
 
                 internal static bool AutoInit()
@@ -187,7 +188,7 @@ namespace Aldurcraft.WurmOnline.WurmState
                         wurmdir = wurmdir.Replace(@"/", @"");
                         wurmdir = wurmdir.Trim();
                         if (!wurmdir.EndsWith(@"\", StringComparison.Ordinal)) wurmdir += @"\";
-                        _cachedWurmDirFromRegistry = wurmdir;
+                        _cachedWurmOnlineDirFromRegistry = wurmdir;
                         return true;
                     }
                     catch (Exception _e)
@@ -199,13 +200,16 @@ namespace Aldurcraft.WurmOnline.WurmState
 
                 internal static string GetWurmDir()
                 {
-                    if (WurmDirManualOverride != null) return WurmDirManualOverride;
-                    else if (_cachedWurmDirFromRegistry != null) return _cachedWurmDirFromRegistry;
-                    else
+                    return WurmDirManualOverride;
+                }
+
+                public static string TryGetWoRegistryPath()
+                {
+                    if (_cachedWurmOnlineDirFromRegistry == null)
                     {
-                        if (CacheWurmDirFromRegistry()) return _cachedWurmDirFromRegistry;
-                        else return null;
+                        CacheWurmDirFromRegistry();
                     }
+                    return _cachedWurmOnlineDirFromRegistry;
                 }
             }
 
@@ -231,7 +235,19 @@ namespace Aldurcraft.WurmOnline.WurmState
                         foreach (var playerpath in allplayers)
                         {
                             string playername = GeneralHelper.GetLastDirNamefromDirPath(playerpath);
-                            newDict.Add(playername, Path.Combine(playerpath, @"logs\"));
+                            var dir = Path.Combine(playerpath, @"test_logs\");
+                            var info = new DirectoryInfo(dir);
+                            if (!info.Exists)
+                            {
+                                Logger.LogError(
+                                    "A player directory appears to be invalid, skipping. Directory path: "
+                                    + info.FullName,
+                                    THIS);
+                            }
+                            else
+                            {
+                                newDict.Add(playername, dir);
+                            }
                         }
                         if (newDict.Count > 0)
                         {

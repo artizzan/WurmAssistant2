@@ -45,7 +45,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
 
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 
-            WurmPath_textBoxPath.Text = WurmClient.WurmPaths.WurmDir;
+            //WurmPath_textBoxPath.Text = WurmClient.WurmPaths.WurmDir;
             WurmPath_checkIfEnableButtonNext();
         }
 
@@ -78,6 +78,17 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             {
                 WurmPath_textBoxPath.Text = folderBrowserDialogWurmPath.SelectedPath;
                 WurmPath_buttonReset.Visible = true;
+                if (IsWurmOnlinePath(WurmPath_textBoxPath.Text))
+                {
+                    MessageBox.Show(
+                        "This appears to be Wurm Online directory, please find Wurm Unlimited directory instead.",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                    WurmPath_checkIfEnableButtonNext();
+                    return;
+                }
+
                 bool initsuccess = WurmClient.OverrideWurmDir(WurmPath_textBoxPath.Text);
                 WurmPath_checkIfEnableButtonNext();
                 if (!initsuccess)
@@ -90,6 +101,17 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
                     results.OverrideWurmDir = WurmPath_textBoxPath.Text;
                 }
             }
+        }
+
+        bool IsWurmOnlinePath(string text)
+        {
+            var woDir = WurmClient.WurmPaths.WurmDirManager.TryGetWoRegistryPath();
+            if (!string.IsNullOrEmpty(woDir) && !string.IsNullOrEmpty(text))
+            {
+                if (woDir.EndsWith(@"\")) woDir = woDir.Substring(0, woDir.Length - 1);
+                return System.Ex.StringEx.Contains(woDir, text, StringComparison.InvariantCultureIgnoreCase);
+            }
+            else return false;
         }
 
         private void WurmPath_buttonExit_Click(object sender, EventArgs e)
