@@ -6,6 +6,7 @@ using Aldurcraft.WurmOnline.WurmState;
 using Aldurcraft.Utility;
 using System.Runtime.Serialization;
 using System.IO;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Backpack
 {
@@ -72,6 +73,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Backpack
             Settings.Save();
             if (gui != null) gui.Close();
             base.Stop();
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            base.PopulateDataTransfer(settingsDto);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Aldurcraft.WurmOnline.WurmLogsManager.Searcher;
 using Aldurcraft.Utility;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.LogSearcher
 {
@@ -24,6 +25,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.LogSearcher
             {
                 Logger.LogError("Could not open LogSearcher", this, _e);
             }
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            base.PopulateDataTransfer(settingsDto);
         }
     }
 }

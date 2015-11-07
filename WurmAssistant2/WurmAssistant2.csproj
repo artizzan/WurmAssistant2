@@ -36,6 +36,8 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -903,6 +905,14 @@
       <Project>{05f47f92-65ab-4067-bea7-603bd5fb96f1}</Project>
       <Name>Utility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WurmAssistantDataTransfer\WurmAssistantDataTransfer\WurmAssistantDataTransfer.Dtos\WurmAssistantDataTransfer.Dtos.csproj">
+      <Project>{c8867a15-9144-48fd-8816-0283fdb38c6b}</Project>
+      <Name>WurmAssistantDataTransfer.Dtos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WurmAssistantDataTransfer\WurmAssistantDataTransfer\WurmAssistantDataTransfer\WurmAssistantDataTransfer.csproj">
+      <Project>{c2591795-c58c-4b9a-a1dd-38669c0b0b3d}</Project>
+      <Name>WurmAssistantDataTransfer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WurmAssistantMutexBarrier\WurmAssistantMutexBarrier.csproj">
       <Project>{47400663-bb43-4963-90f7-935a90d0f0a0}</Project>
       <Name>WurmAssistantMutexBarrier</Name>
@@ -1053,6 +1063,13 @@
   <PropertyGroup>
     <PostBuildEvent>$(SolutionDir)\PublishRobot\PublishRobot\bin\Release\PublishRobot.exe Command::Publish BuildConfig::$(ConfigurationName) ProjDirRoot::$(ProjectDir) OutputDir::$(TargetDir)</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

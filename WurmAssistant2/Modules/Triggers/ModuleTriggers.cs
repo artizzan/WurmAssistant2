@@ -7,7 +7,9 @@ using System.IO;
 using System.Windows.Forms;
 using Aldurcraft.Utility.SoundEngine;
 using Aldurcraft.Utility;
+using Aldurcraft.Utility.Notifier;
 using Aldurcraft.WurmOnline.WurmState;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
 {
@@ -115,6 +117,122 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
             foreach (var notifier in _triggerManagers.Values.ToArray())
             {
                 notifier.Stop(new object(), new EventArgs());
+            }
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            foreach (var triggerManager in _triggerManagers.Values.ToArray())
+            {
+                foreach (var trigger in triggerManager.Settings.Value.Triggers)
+                {
+                    if (trigger is ActionQueueTrigger)
+                    {
+                        var t = trigger as ActionQueueTrigger;
+                        settingsDto.Triggers.Add(new Trigger()
+                        {
+                            TriggerKind = "ActionQueue",
+                            Name = t.Name,
+                            Active = t.Active,
+                            Condition = null,
+                            Cooldown = t.Cooldown,
+                            CooldownEnabled = t.CooldownEnabled,
+                            CooldownUntil = null,
+                            Delay = t.Delay,
+                            DelayEnabled = null,
+                            HasPopup = (t.Popup as PopupNotifier) != null,
+                            HasSound = (t.Sound as SoundNotifier) != null,
+                            LogTypes = null,
+                            NotificationDelay = t.NotificationDelay,
+                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier) t.Popup).Content : null,
+                            PopupDurationMillis = (t.Popup as PopupNotifier) != null
+                                ? (int?) ((PopupNotifier) t.Popup).Duration.TotalMilliseconds
+                                : null,
+                            PopupTitle = (t.Popup as PopupNotifier) != null
+                                ? ((PopupNotifier) t.Popup).Title
+                                : null,
+                            ResetOnConditonHit = t.ResetOnConditonHit,
+                            StayUntilClicked = null,
+                            TriggerId = null,
+                            Sound =
+                                settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
+                                    ? ((SoundNotifier) t.Sound).SoundName
+                                    : null),
+                        });
+                    }
+                    else if (trigger is RegexTrigger)
+                    {
+                        var t = trigger as RegexTrigger;
+                        settingsDto.Triggers.Add(new Trigger()
+                        {
+                            TriggerKind = "Regex",
+                            Name = t.Name,
+                            Active = t.Active,
+                            Condition = null,
+                            Cooldown = t.Cooldown,
+                            CooldownEnabled = t.CooldownEnabled,
+                            CooldownUntil = null,
+                            Delay = t.Delay,
+                            DelayEnabled = null,
+                            HasPopup = (t.Popup as PopupNotifier) != null,
+                            HasSound = (t.Sound as SoundNotifier) != null,
+                            LogTypes = null,
+                            NotificationDelay = null,
+                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier)t.Popup).Content : null,
+                            PopupDurationMillis = (t.Popup as PopupNotifier) != null
+                                ? (int?)((PopupNotifier)t.Popup).Duration.TotalMilliseconds
+                                : null,
+                            PopupTitle = (t.Popup as PopupNotifier) != null
+                                ? ((PopupNotifier)t.Popup).Title
+                                : null,
+                            ResetOnConditonHit = t.ResetOnConditonHit,
+                            StayUntilClicked = null,
+                            TriggerId = null,
+                            Sound =
+                                settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
+                                    ? ((SoundNotifier)t.Sound).SoundName
+                                    : null)
+                        });
+                    }
+                    else if (trigger is SimpleTrigger)
+                    {
+                        var t = trigger as SimpleTrigger;
+                        settingsDto.Triggers.Add(new Trigger()
+                        {
+                            TriggerKind = "Simple",
+                            Name = t.Name,
+                            Active = t.Active,
+                            Condition = null,
+                            Cooldown = t.Cooldown,
+                            CooldownEnabled = t.CooldownEnabled,
+                            CooldownUntil = null,
+                            Delay = t.Delay,
+                            DelayEnabled = null,
+                            HasPopup = (t.Popup as PopupNotifier) != null,
+                            HasSound = (t.Sound as SoundNotifier) != null,
+                            LogTypes = null,
+                            NotificationDelay = null,
+                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier)t.Popup).Content : null,
+                            PopupDurationMillis = (t.Popup as PopupNotifier) != null
+                                ? (int?)((PopupNotifier)t.Popup).Duration.TotalMilliseconds
+                                : null,
+                            PopupTitle = (t.Popup as PopupNotifier) != null
+                                ? ((PopupNotifier)t.Popup).Title
+                                : null,
+                            ResetOnConditonHit = t.ResetOnConditonHit,
+                            StayUntilClicked = null,
+                            TriggerId = null,
+                            Sound =
+                                settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
+                                    ? ((SoundNotifier)t.Sound).SoundName
+                                    : null)
+                        });
+                    }
+                    else
+                    {
+                        throw new ApplicationException("Unknown trigger kind for: " + trigger.GetType().FullName);
+                    }
+                }
             }
         }
 

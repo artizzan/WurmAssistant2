@@ -1,0 +1,3 @@
+[submodule "WurmAssistantDataTransfer"]
+	path = WurmAssistantDataTransfer
+	url = https://github.com/PeterAldur/WurmAssistantDataTransfer

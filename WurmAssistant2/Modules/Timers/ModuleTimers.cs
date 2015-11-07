@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.Windows.Forms;
 using Aldurcraft.Utility;
 using System.IO;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
 {
@@ -105,6 +106,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
                 timergroup.Stop();
             }
             ModuleUI.Dispose();
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            base.PopulateDataTransfer(settingsDto);
         }
 
         internal void RegisterTimersGroup(UControlPlayerLayout layoutControl)

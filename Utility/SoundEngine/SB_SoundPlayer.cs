@@ -90,5 +90,30 @@ namespace Aldurcraft.Utility.SoundEngine
         {
             if (soundRef != null) soundRef.Dispose();
         }
+
+        public SoundData TryGetSoundData()
+        {
+            var fileInfo = new FileInfo(filePath);
+            if (fileInfo.Exists)
+            {
+                return new SoundData()
+                {
+                    SoundName = SoundName,
+                    SoundFileBytes = File.ReadAllBytes(fileInfo.FullName),
+                    SoundFileName = fileInfo.Name
+                };
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+
+    public class SoundData
+    {
+        public string SoundName { get; set; }
+        public Byte[] SoundFileBytes { get; set; }
+        public string SoundFileName { get; set; }
     }
 }

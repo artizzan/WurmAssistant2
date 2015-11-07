@@ -12,6 +12,7 @@ using Aldurcraft.WurmOnline.WurmState;
 using Aldurcraft.Utility;
 using Aldurcraft.Utility.PopupNotify;
 using Aldurcraft.Utility.SoundEngine;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Calendar
 {
@@ -431,6 +432,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Calendar
         {
             Settings.Save();
             if (CalendarUI != null) CalendarUI.Close();
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            base.PopulateDataTransfer(settingsDto);
         }
 
         List<KeyValuePair<string, DateTime>> PopupQueue = new List<KeyValuePair<string, DateTime>>();

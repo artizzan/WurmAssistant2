@@ -399,5 +399,15 @@ namespace Aldurcraft.Utility.SoundEngine
         }
 
         #endregion
+
+        public static SoundData TryGetSoundData(string soundName)
+        {
+            SB_SoundPlayer player;
+            if (dictSoundBank.TryGetValue(soundName, out player))
+            {
+                return player.TryGetSoundData();
+            }
+            else return null;
+        }
     }
 }

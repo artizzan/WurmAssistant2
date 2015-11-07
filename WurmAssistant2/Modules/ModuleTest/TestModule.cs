@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Aldurcraft.Utility;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Test
 {
@@ -78,6 +79,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Test
             //AssistantEngine.Modules.RemoveButton(this.GetType());
             UI.Close();
             UI.Dispose();
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            base.PopulateDataTransfer(settingsDto);
         }
     }
 }

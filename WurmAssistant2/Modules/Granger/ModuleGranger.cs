@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Aldurcraft.Utility;
 using System.IO;
 using System.Data.SQLite;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 {
@@ -61,6 +62,38 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
             else Logger.LogError("Granger UI null when trying to save state on Stop", this);
             LogFeedMan.Dispose();
             Settings.Save();
+        }
+
+        public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
+        {
+            var allCreatures = Context.Horses.Select(entity => new Creature()
+            {
+                BirthDate = entity.BirthDate,
+                BrandedFor = entity.BrandedFor,
+                Comments = entity.Comments,
+                CreatureAge = entity.Age.ToString(),
+                CreatureColor = entity.Color.ToString(),
+                CreatureTraits = entity.Traits.Select(trait => trait.ToString()).ToArray(),
+                EpicCurve = entity.EpicCurve,
+                FatherName = entity.FatherName,
+                GlobalId = null,
+                GroomedOn = entity.GroomedOn,
+                HerdGlobalId = null,
+                HerdId = entity.Herd,
+                IsMale = entity.IsMale,
+                LocalId = entity.ID,
+                MotherName = entity.MotherName,
+                Name = entity.Name,
+                NotInMood = entity.NotInMood,
+                PairedWith = entity.PairedWith,
+                PregnantUntil = entity.PregnantUntil,
+                ServerName = null,
+                SpecialTags = entity.SpecialTags.ToArray(),
+                TakenCareOfBy = entity.TakenCareOfBy,
+                TraitsInspectedAtSkill = entity.TraitsInspectedAtSkill
+            });
+
+            settingsDto.Creatures.AddRange(allCreatures);
         }
 
         public override void OpenUI(object sender, EventArgs e)

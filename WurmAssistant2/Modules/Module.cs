@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Drawing;
 using Aldurcraft.Utility;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2
 {
@@ -229,6 +230,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
         /// Cleaning to do, when module is disabled by user
         /// </summary>
         public virtual void Stop()
+        {
+        }
+
+        public virtual void PopulateDataTransfer(WurmAssistantDto settingsDto)
         {
         }
     }
