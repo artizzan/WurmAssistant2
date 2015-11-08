@@ -68,6 +68,8 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonBuyBeerYarr = new System.Windows.Forms.Button();
+            this.exportAllDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.panelLog.SuspendLayout();
             this.tableLayoutPanelLog.SuspendLayout();
@@ -100,7 +102,9 @@
             this.changeSettingsToolStripMenuItem,
             this.toolStripSeparator2,
             this.rebuildLogsCacheToolStripMenuItem,
-            this.configurationWizardToolStripMenuItem});
+            this.configurationWizardToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.exportAllDataToolStripMenuItem});
             this.wurmAssistantToolStripMenuItem.Name = "wurmAssistantToolStripMenuItem";
             this.wurmAssistantToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.wurmAssistantToolStripMenuItem.Text = "Options";
@@ -145,7 +149,7 @@
             // modulesToolStripMenuItem
             // 
             this.modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modulesToolStripMenuItem.Text = "Toolbox";
             this.modulesToolStripMenuItem.Click += new System.EventHandler(this.modulesToolStripMenuItem_Click);
             // 
@@ -153,7 +157,7 @@
             // 
             this.rdPartyToolsToolStripMenuItem.Enabled = false;
             this.rdPartyToolsToolStripMenuItem.Name = "rdPartyToolsToolStripMenuItem";
-            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rdPartyToolsToolStripMenuItem.Text = "Other";
             this.rdPartyToolsToolStripMenuItem.Visible = false;
             this.rdPartyToolsToolStripMenuItem.Click += new System.EventHandler(this.rdPartyToolsToolStripMenuItem_Click);
@@ -161,12 +165,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(114, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // soundsToolStripMenuItem
             // 
             this.soundsToolStripMenuItem.Name = "soundsToolStripMenuItem";
-            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.soundsToolStripMenuItem.Text = "Sounds";
             this.soundsToolStripMenuItem.Click += new System.EventHandler(this.soundsToolStripMenuItem_Click);
             // 
@@ -458,6 +462,18 @@
             this.buttonBuyBeerYarr.UseVisualStyleBackColor = false;
             this.buttonBuyBeerYarr.Click += new System.EventHandler(this.buttonBuyBeerYarr_Click);
             // 
+            // exportAllDataToolStripMenuItem
+            // 
+            this.exportAllDataToolStripMenuItem.Name = "exportAllDataToolStripMenuItem";
+            this.exportAllDataToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exportAllDataToolStripMenuItem.Text = "Export all data";
+            this.exportAllDataToolStripMenuItem.Click += new System.EventHandler(this.exportAllDataToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
+            // 
             // WurmAssistant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,5 +557,7 @@
         private System.Windows.Forms.ToolStripMenuItem rebuildLogsCacheToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roadmapToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabelHighlightContent;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem exportAllDataToolStripMenuItem;
     }
 }

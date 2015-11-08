@@ -38,7 +38,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
             }
         }
 
-        List<WurmTimer> WurmTimers = new List<WurmTimer>();
+        public List<WurmTimer> WurmTimers = new List<WurmTimer>();
 
         public string Player { get; private set; }
 

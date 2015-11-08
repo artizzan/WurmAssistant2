@@ -257,8 +257,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
             {
                 // this needs to obtain latest options set, because custom timers 
                 // may be readded/edited after timertype was persisted elsewhere
-                var latestTimerTypeOptions = Descriptors.First(timerType.Equals).Options;
-                timer.ApplyCustomTimerOptions(latestTimerTypeOptions);
+                var upToDateTimerType = Descriptors.First(timerType.Equals);
+                timer.ApplyCustomTimerOptions(upToDateTimerType);
             }
             return (WurmTimer)newTimer;
         }

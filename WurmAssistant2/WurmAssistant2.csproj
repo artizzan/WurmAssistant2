@@ -170,6 +170,12 @@
     <Compile Include="Engine\ConfigWizard\TabControlNoTabs.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Engine\DataExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Engine\DataExportForm.Designer.cs">
+      <DependentUpon>DataExportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Engine\FormChangelog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,7 @@
     <Compile Include="Engine\FormCredits.Designer.cs">
       <DependentUpon>FormCredits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Engine\ModuleManager\WurmAssistantDtoExtensions.cs" />
     <Compile Include="Engine\OtherManager\FormOtherManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +216,7 @@
     <Compile Include="Engine\Wa3PromoForm.Designer.cs">
       <DependentUpon>Wa3PromoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Timers\DtoPopulator.cs" />
     <Compile Include="Modules\Triggers\SoundTriggersImporter.cs" />
     <Compile Include="Wa2SpellBook.cs" />
     <Compile Include="Engine\TrayContextMenuManager.cs" />
@@ -602,6 +610,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Engine\ConfigWizard\FormConfigWizard.resx">
       <DependentUpon>FormConfigWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine\DataExportForm.resx">
+      <DependentUpon>DataExportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Engine\FormChangelog.resx">
       <DependentUpon>FormChangelog.cs</DependentUpon>

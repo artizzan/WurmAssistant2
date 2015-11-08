@@ -13,6 +13,7 @@ using Aldurcraft.Utility.SoundEngine;
 using Aldurcraft.WurmOnline.WurmAssistant2.DebugWindows;
 using Aldurcraft.WurmOnline.WurmAssistant2.Engine;
 using Aldurcraft.WurmOnline.WurmLogsManager.Searcher;
+using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2
 {
@@ -460,5 +461,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             AssistantEngine.DisplayWa3Promo();
         }
 
+        private void exportAllDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new DataExportForm();
+            form.ShowDialog();
+        }
     }
 }

@@ -110,7 +110,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
 
         public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
         {
-            base.PopulateDataTransfer(settingsDto);
+            var populator = new DtoPopulator(TimerGroups);
+            populator.Populate(settingsDto);
         }
 
         internal void RegisterTimersGroup(UControlPlayerLayout layoutControl)

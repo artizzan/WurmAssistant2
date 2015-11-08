@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 using Aldurcraft.Utility;
-using Aldurcraft.Utility.SoundEngine;
 using Aldurcraft.WurmOnline.WurmState;
-using WurmAssistantDataTransfer.Dtos;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2
 {
@@ -131,29 +128,6 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
         internal static AssistantModule[] GetActiveModules()
         {
             return Modules.ToArray();
-        }
-    }
-
-    public static class WurmAssistantSettingsExtensions
-    {
-        public static Sound TryMergeSoundAndGet(this WurmAssistantDto dto, string soundName)
-        {
-            Sound sound = dto.Sounds.FirstOrDefault(sound1 => sound1.Name == soundName);
-            if (sound == null)
-            {
-                var soundData = SoundBank.TryGetSoundData(soundName);
-                if (soundData != null)
-                {
-                    sound = new Sound()
-                    {
-                        Name = soundData.SoundName,
-                        FileData = soundData.SoundFileBytes,
-                        FileNameWithExt = soundData.SoundFileName
-                    };
-                    dto.Sounds.Add(sound);
-                }
-            }
-            return sound;
         }
     }
 }

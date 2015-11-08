@@ -66,7 +66,9 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
 
         public override void PopulateDataTransfer(WurmAssistantDto settingsDto)
         {
-            var allCreatures = Context.Horses.Select(entity => new Creature()
+            // Context.Horses is IQueryable, we want everything anyway so enumerate early.
+            // PS. Horses == Creatures :)
+            var allCreatures = Context.Horses.ToArray().Select(entity => new Creature()
             {
                 BirthDate = entity.BirthDate,
                 BrandedFor = entity.BrandedFor,

@@ -132,6 +132,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                         settingsDto.Triggers.Add(new Trigger()
                         {
                             TriggerKind = "ActionQueue",
+                            CharacterName = triggerManager.Player,
                             Name = t.Name,
                             Active = t.Active,
                             Condition = null,
@@ -166,6 +167,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                         settingsDto.Triggers.Add(new Trigger()
                         {
                             TriggerKind = "Regex",
+                            CharacterName = triggerManager.Player,
                             Name = t.Name,
                             Active = t.Active,
                             Condition = null,
@@ -200,6 +202,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                         settingsDto.Triggers.Add(new Trigger()
                         {
                             TriggerKind = "Simple",
+                            CharacterName = triggerManager.Player,
                             Name = t.Name,
                             Active = t.Active,
                             Condition = null,

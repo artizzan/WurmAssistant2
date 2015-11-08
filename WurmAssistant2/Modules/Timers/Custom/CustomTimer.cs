@@ -26,10 +26,13 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
         }
         DateTime UptimeResetSince = DateTime.MinValue;
 
+        public WurmTimerDescriptors.TimerType TimerType { get; private set; }
+
         //happens before Initialize
-        public void ApplyCustomTimerOptions(WurmTimerDescriptors.CustomTimerOptions options)
+        public void ApplyCustomTimerOptions(WurmTimerDescriptors.TimerType timerType)
         {
-            Options = options;
+            Options = timerType.Options;
+            TimerType = timerType;
         }
 
         public override void Initialize(PlayerTimersGroup parentGroup, string player, string timerId, Aldurcraft.WurmOnline.WurmState.WurmServer.ServerInfo.ServerGroup serverGroup, string compactId)
