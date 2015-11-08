@@ -405,7 +405,9 @@ namespace Aldurcraft.Utility.SoundEngine
             SB_SoundPlayer player;
             if (dictSoundBank.TryGetValue(soundName, out player))
             {
-                return player.TryGetSoundData();
+                var data = player.TryGetSoundData();
+                data.SoundFileName = data.SoundFileName;
+                return data;
             }
             else return null;
         }

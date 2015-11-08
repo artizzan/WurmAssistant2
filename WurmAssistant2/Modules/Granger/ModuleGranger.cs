@@ -75,7 +75,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 Comments = entity.Comments,
                 CreatureAge = entity.Age.ToString(),
                 CreatureColor = entity.Color.ToString(),
-                CreatureTraits = entity.Traits.Select(trait => trait.ToString()).ToArray(),
+                CreatureTraits = entity.Traits.Select(trait => trait.ToString()).ToList(),
                 EpicCurve = entity.EpicCurve,
                 FatherName = entity.FatherName,
                 GlobalId = null,
@@ -90,7 +90,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Granger
                 PairedWith = entity.PairedWith,
                 PregnantUntil = entity.PregnantUntil,
                 ServerName = null,
-                SpecialTags = entity.SpecialTags.ToArray(),
+                SpecialTags = entity.SpecialTags.ToList(),
                 TakenCareOfBy = entity.TakenCareOfBy,
                 TraitsInspectedAtSkill = entity.TraitsInspectedAtSkill
             });

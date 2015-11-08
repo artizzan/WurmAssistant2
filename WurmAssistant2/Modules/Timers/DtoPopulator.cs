@@ -40,8 +40,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
                                 {
                                     LogType = condition.LogType.ToString().Replace("_", ""),
                                     Pattern = condition.RegexPattern
-                                }).ToArray()
-                            : new LegacyCustomTimerDefinition.Condition[0],
+                                }).ToList()
+                            : new List<LegacyCustomTimerDefinition.Condition>(),
                     ResetOnUptime = customTimerDescriptor.Options.ResetOnUptime,
                     TriggerConditions =
                         customTimerDescriptor.Options.TriggerConditions != null
@@ -50,8 +50,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Timers
                                 {
                                     LogType = condition.LogType.ToString().Replace("_", ""),
                                     Pattern = condition.RegexPattern
-                                }).ToArray()
-                            : new LegacyCustomTimerDefinition.Condition[0],
+                                }).ToList()
+                            : new List<LegacyCustomTimerDefinition.Condition>(),
                     LegacyServerGroupId = customTimerDescriptor.Group.ToString()
                 });
             }
