@@ -11,6 +11,7 @@ using Aldurcraft.Utility.Notifier;
 using Aldurcraft.Utility.PopupNotify;
 using Aldurcraft.Utility.SoundEngine;
 using Aldurcraft.Utility;
+using Aldurcraft.WurmOnline.WurmLogsManager;
 
 namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
 {

@@ -75,6 +75,8 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
             }
         }
 
+        public IEnumerable<GameLogTypes> LogTypes { get { return _logTypes; } }
+
         public void AddLogType(GameLogTypes type)
         {
             if (LogTypesLocked) throw new TriggerException("child has blocked adding log types to this trigger");

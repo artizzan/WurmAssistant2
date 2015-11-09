@@ -153,7 +153,10 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                                 ? ((PopupNotifier) t.Popup).Title
                                 : null,
                             ResetOnConditonHit = t.ResetOnConditonHit,
-                            StayUntilClicked = null,
+                            StayUntilClicked =
+                                (t.Popup as PopupNotifier) != null
+                                    ? (t.Popup as PopupNotifier).StayUntilClicked
+                                    : (bool?) null,
                             TriggerId = null,
                             Sound =
                                 settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
@@ -170,7 +173,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                             CharacterName = triggerManager.Player,
                             Name = t.Name,
                             Active = t.Active,
-                            Condition = null,
+                            Condition = t.Condition,
                             Cooldown = t.Cooldown,
                             CooldownEnabled = t.CooldownEnabled,
                             CooldownUntil = null,
@@ -178,21 +181,24 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                             DelayEnabled = null,
                             HasPopup = (t.Popup as PopupNotifier) != null,
                             HasSound = (t.Sound as SoundNotifier) != null,
-                            LogTypes = null,
+                            LogTypes = t.LogTypes.Select(types => types.ToString().Replace("_", "")).ToList(),
                             NotificationDelay = null,
-                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier)t.Popup).Content : null,
+                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier) t.Popup).Content : null,
                             PopupDurationMillis = (t.Popup as PopupNotifier) != null
-                                ? (int?)((PopupNotifier)t.Popup).Duration.TotalMilliseconds
+                                ? (int?) ((PopupNotifier) t.Popup).Duration.TotalMilliseconds
                                 : null,
                             PopupTitle = (t.Popup as PopupNotifier) != null
-                                ? ((PopupNotifier)t.Popup).Title
+                                ? ((PopupNotifier) t.Popup).Title
                                 : null,
                             ResetOnConditonHit = t.ResetOnConditonHit,
-                            StayUntilClicked = null,
+                            StayUntilClicked =
+                                (t.Popup as PopupNotifier) != null
+                                    ? (t.Popup as PopupNotifier).StayUntilClicked
+                                    : (bool?) null,
                             TriggerId = null,
                             Sound =
                                 settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
-                                    ? ((SoundNotifier)t.Sound).SoundName
+                                    ? ((SoundNotifier) t.Sound).SoundName
                                     : null)
                         });
                     }
@@ -205,7 +211,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                             CharacterName = triggerManager.Player,
                             Name = t.Name,
                             Active = t.Active,
-                            Condition = null,
+                            Condition = t.Condition,
                             Cooldown = t.Cooldown,
                             CooldownEnabled = t.CooldownEnabled,
                             CooldownUntil = null,
@@ -213,21 +219,24 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.ModuleNS.Triggers
                             DelayEnabled = null,
                             HasPopup = (t.Popup as PopupNotifier) != null,
                             HasSound = (t.Sound as SoundNotifier) != null,
-                            LogTypes = null,
+                            LogTypes = t.LogTypes.Select(types => types.ToString().Replace("_", "")).ToList(),
                             NotificationDelay = null,
-                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier)t.Popup).Content : null,
+                            PopupContent = (t.Popup as PopupNotifier) != null ? ((PopupNotifier) t.Popup).Content : null,
                             PopupDurationMillis = (t.Popup as PopupNotifier) != null
-                                ? (int?)((PopupNotifier)t.Popup).Duration.TotalMilliseconds
+                                ? (int?) ((PopupNotifier) t.Popup).Duration.TotalMilliseconds
                                 : null,
                             PopupTitle = (t.Popup as PopupNotifier) != null
-                                ? ((PopupNotifier)t.Popup).Title
+                                ? ((PopupNotifier) t.Popup).Title
                                 : null,
                             ResetOnConditonHit = t.ResetOnConditonHit,
-                            StayUntilClicked = null,
+                            StayUntilClicked =
+                                (t.Popup as PopupNotifier) != null
+                                    ? (t.Popup as PopupNotifier).StayUntilClicked
+                                    : (bool?) null,
                             TriggerId = null,
                             Sound =
                                 settingsDto.TryMergeSoundAndGet((t.Sound as SoundNotifier) != null
-                                    ? ((SoundNotifier)t.Sound).SoundName
+                                    ? ((SoundNotifier) t.Sound).SoundName
                                     : null)
                         });
                     }
