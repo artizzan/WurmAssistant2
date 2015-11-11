@@ -458,7 +458,7 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
 
         private void linkLabelHighlightContent_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AssistantEngine.DisplayWa3Promo();
+            AssistantEngine.DisplayMoveToWa3();
         }
 
         private void exportAllDataToolStripMenuItem_Click(object sender, EventArgs e)

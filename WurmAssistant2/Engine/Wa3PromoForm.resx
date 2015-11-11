@@ -118,18 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>Wurm Assistant 3 is close!
+    <value>Wurm Assistant 3 has been in dev for quite some time, but it's finally ready. It has all the features of this app, already with some minor improvements here and there.
 
-But did you know, that a cross-platform version of the app is also being worked on?
-Wurm Assistant Lite aims to bring some, perhaps even all, Wurm Assistant features, to other operating systems (Linux and Mac).
+Best of all, you can move all of your sounds, triggers, timers and creatures!
+In WA2, go to main menu, choose Options -&gt; Export All Data.  Save the file somewhere. Then go to newly installed WA3 and from same menu choose Import Data from WA 2, choose the file and follow the screens.
 
-However, making cross-platform app is not easy. In fact, WA Lite will probably not happen, without help from the Linux and Mac users!</value>
+You can continue to use WA 2, even at the same time with WA 3! Just remember, it won't get any more updates.</value>
+  </data>
+  <data name="labelAutowrap1.Text" xml:space="preserve">
+    <value>What about Linux and Mac?
+
+You are welcome to pioneer WA 3 under OS other than Windows. Unlike WA 2, new app is built so that it can work on these systems, it's just a matter of tweaking. 
+See here for joining the beta:</value>
   </data>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>Not only WA Lite could use your help. New features can be added to Wurm Assistant and existing ones can be improved. 
+    <value>Also, we now have a dedicated version for Wurm Unlimited. It's basically same app, but tweaked to support Wurm Unlimited and custom servers, with a promise to keep working for WU and perhaps even major mods in the future.
 
-Or, alternatively, completely new apps can be created, thanks to WurmApi project. This api is used by new Assistants and works on all systems, not just Windows.
-
-And you don't need to be a pro to work on WA! If you want to learn or master programming with this project, you are most welcome!</value>
+You can run WA 3 and WA Unlimited at the same time, they are independent of each other.
+</value>
   </data>
 </root>

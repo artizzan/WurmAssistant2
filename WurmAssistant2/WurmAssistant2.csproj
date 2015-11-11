@@ -597,6 +597,7 @@
     <None Include="Resources\transp_placeholder.png" />
     <None Include="Resources\lampsFlow.png" />
     <None Include="Resources\WurmAssistantLiteIcon.png" />
+    <None Include="Resources\WurmAssistantUnlimitedIcon.png" />
     <Content Include="WurmAssistantIcon.ico" />
     <Content Include="x64\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

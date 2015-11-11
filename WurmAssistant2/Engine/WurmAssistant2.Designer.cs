@@ -36,6 +36,8 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.rebuildLogsCacheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationWizardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportAllDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rdPartyToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,8 +70,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonBuyBeerYarr = new System.Windows.Forms.Button();
-            this.exportAllDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.panelLog.SuspendLayout();
             this.tableLayoutPanelLog.SuspendLayout();
@@ -135,6 +135,18 @@
             this.configurationWizardToolStripMenuItem.Text = "Run configuration wizard again";
             this.configurationWizardToolStripMenuItem.Click += new System.EventHandler(this.configurationWizardToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
+            // 
+            // exportAllDataToolStripMenuItem
+            // 
+            this.exportAllDataToolStripMenuItem.Name = "exportAllDataToolStripMenuItem";
+            this.exportAllDataToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.exportAllDataToolStripMenuItem.Text = "Export all data";
+            this.exportAllDataToolStripMenuItem.Click += new System.EventHandler(this.exportAllDataToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -149,7 +161,7 @@
             // modulesToolStripMenuItem
             // 
             this.modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modulesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.modulesToolStripMenuItem.Text = "Toolbox";
             this.modulesToolStripMenuItem.Click += new System.EventHandler(this.modulesToolStripMenuItem_Click);
             // 
@@ -157,7 +169,7 @@
             // 
             this.rdPartyToolsToolStripMenuItem.Enabled = false;
             this.rdPartyToolsToolStripMenuItem.Name = "rdPartyToolsToolStripMenuItem";
-            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rdPartyToolsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.rdPartyToolsToolStripMenuItem.Text = "Other";
             this.rdPartyToolsToolStripMenuItem.Visible = false;
             this.rdPartyToolsToolStripMenuItem.Click += new System.EventHandler(this.rdPartyToolsToolStripMenuItem_Click);
@@ -165,12 +177,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(113, 6);
             // 
             // soundsToolStripMenuItem
             // 
             this.soundsToolStripMenuItem.Name = "soundsToolStripMenuItem";
-            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.soundsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.soundsToolStripMenuItem.Text = "Sounds";
             this.soundsToolStripMenuItem.Click += new System.EventHandler(this.soundsToolStripMenuItem_Click);
             // 
@@ -384,12 +396,13 @@
             // linkLabelHighlightContent
             // 
             this.linkLabelHighlightContent.AutoSize = true;
+            this.linkLabelHighlightContent.LinkColor = System.Drawing.Color.Red;
             this.linkLabelHighlightContent.Location = new System.Drawing.Point(4, 4);
             this.linkLabelHighlightContent.Name = "linkLabelHighlightContent";
-            this.linkLabelHighlightContent.Size = new System.Drawing.Size(367, 13);
+            this.linkLabelHighlightContent.Size = new System.Drawing.Size(393, 13);
             this.linkLabelHighlightContent.TabIndex = 0;
             this.linkLabelHighlightContent.TabStop = true;
-            this.linkLabelHighlightContent.Text = "Take part in development of WA 3 and cross-platform WA Lite. Read more...";
+            this.linkLabelHighlightContent.Text = "Please upgrade to WA 3. WA 2 will receive no more updates. Click to read more...";
             this.linkLabelHighlightContent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHighlightContent_LinkClicked);
             // 
             // toolTip1
@@ -461,18 +474,6 @@
             this.buttonBuyBeerYarr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuyBeerYarr.UseVisualStyleBackColor = false;
             this.buttonBuyBeerYarr.Click += new System.EventHandler(this.buttonBuyBeerYarr_Click);
-            // 
-            // exportAllDataToolStripMenuItem
-            // 
-            this.exportAllDataToolStripMenuItem.Name = "exportAllDataToolStripMenuItem";
-            this.exportAllDataToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.exportAllDataToolStripMenuItem.Text = "Export all data";
-            this.exportAllDataToolStripMenuItem.Click += new System.EventHandler(this.exportAllDataToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(236, 6);
             // 
             // WurmAssistant
             // 

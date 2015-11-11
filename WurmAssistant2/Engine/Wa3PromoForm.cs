@@ -50,5 +50,20 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.Engine
         void Wa3PromoForm_Load(object sender, EventArgs e)
         {
         }
+
+        private void downloadWa3Btn_Click(object sender, EventArgs e)
+        {
+            StartProcess("http://resources.aldurslab.net/WA3-stable-launcher-clickonce/publish.htm");
+        }
+
+        private void downloadWauBtn_Click(object sender, EventArgs e)
+        {
+            StartProcess("http://resources.aldurslab.net/WAUnlimited-stable-launcher-clickonce/publish.htm");
+        }
+
+        private void Wa3BetaLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            StartProcess("http://aldurslab.net/wurm-assistant-3-beta/");
+        }
     }
 }
