@@ -53,12 +53,12 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2.Engine
 
         private void downloadWa3Btn_Click(object sender, EventArgs e)
         {
-            StartProcess("http://resources.aldurslab.net/WA3-stable-launcher-clickonce/publish.htm");
+            StartProcess("http://forum.wurmonline.com/index.php?/topic/68031-wurm-assistant-enrich-your-wurm-experience/");
         }
 
         private void downloadWauBtn_Click(object sender, EventArgs e)
         {
-            StartProcess("http://resources.aldurslab.net/WAUnlimited-stable-launcher-clickonce/publish.htm");
+            StartProcess("http://forum.wurmonline.com/index.php?/topic/133948-wurm-assistant-for-wurm-unlimited-beta/");
         }
 
         private void Wa3BetaLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
