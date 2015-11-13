@@ -403,6 +403,7 @@
             this.linkLabelHighlightContent.TabIndex = 0;
             this.linkLabelHighlightContent.TabStop = true;
             this.linkLabelHighlightContent.Text = "Please upgrade to WA 3. WA 2 will receive no more updates. Click to read more...";
+            this.linkLabelHighlightContent.Visible = false;
             this.linkLabelHighlightContent.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelHighlightContent_LinkClicked);
             // 
             // toolTip1
