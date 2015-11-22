@@ -251,13 +251,11 @@ namespace Aldurcraft.WurmOnline.WurmAssistant2
             Version assistantVersion = Assembly.GetEntryAssembly().GetName().Version;
             HandleVersionUpdates(assistantVersion);
 
-            // disabled until all WA3 issues are fixed
-
-            //if (!Settings.Value.MoveToWa3Displayed)
-            //{
-            //    DisplayMoveToWa3();
-            //    Settings.Value.MoveToWa3Displayed = true;
-            //}
+            if (!Settings.Value.MoveToWa3Displayed)
+            {
+                DisplayMoveToWa3();
+                Settings.Value.MoveToWa3Displayed = true;
+            }
         }
 
         public static void DisplayMoveToWa3()

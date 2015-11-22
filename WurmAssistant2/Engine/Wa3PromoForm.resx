@@ -120,8 +120,8 @@
   <data name="textBox1.Text" xml:space="preserve">
     <value>Wurm Assistant 3 has been in dev for quite some time, but it's finally ready. It has all the features of this app, already with some minor improvements here and there.
 
-Best of all, you can move all of your sounds, triggers, timers and creatures!
-In WA2, go to main menu, choose Options -&gt; Export All Data.  Save the file somewhere. Then go to newly installed WA3 and from same menu choose Import Data from WA 2, choose the file and follow the screens.
+EXPORT YOUR THINGS FROM WA2!
+In WA2, go to main menu, choose Options -&gt; Export All Data.  Save the file somewhere. Then go to newly installed WA3 and from same menu choose Import Data from WA 2, choose the file and follow the screens. Your active triggers, timers, herds and sounds can all be imported!
 
 You can continue to use WA 2, even at the same time with WA 3! Just remember, it won't get any more updates.</value>
   </data>
@@ -132,9 +132,8 @@ You are welcome to pioneer WA 3 under OS other than Windows. Unlike WA 2, new ap
 See here for joining the beta:</value>
   </data>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>Also, we now have a dedicated version for Wurm Unlimited. It's basically same app, but tweaked to support Wurm Unlimited and custom servers, with a promise to keep working for WU and perhaps even major mods in the future.
+    <value>New launcher can also run WA in Wurm Unlimited mode. It's basically same app, but tweaked to support Wurm Unlimited and custom servers, with it's own data and a promise to keep working for WU and perhaps even major mods in the future.
 
-You can run WA 3 and WA Unlimited at the same time, they are independent of each other.
-</value>
+You can run WA 3 and WA Unlimited at the same time, they are independent of each other.</value>
   </data>
 </root>
